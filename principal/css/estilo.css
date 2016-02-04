@@ -44,6 +44,7 @@ p{
 }
 .conteudo p {
 	line-height: 25px;
+	text-indent: 35px;
 }
 b{
 	font-size: 11px;
@@ -62,7 +63,7 @@ footer p {
 	width: 100%;
 }
 .t1{
-	margin-top: 15px;
+	margin-top: 30px;
 	margin-left: 0;
 	font-size: 26x;
 }
@@ -77,6 +78,9 @@ footer p {
 	border-bottom:3px solid #228B22;
 	height: 26.6px;
 	background-color:#FFFAFA;
+}
+#menu li:first-child {
+	border-left: 1px solid #c0c0c0;
 }
 *{margin: 0; padding: 0;}
 
@@ -130,7 +134,7 @@ body{
 .menu li ul li{
 	border:1px static #c0c0c0; 
 	display:block; 
-	width:150px;
+	width:100px;
 }
 .video {
 	width: 360px;
@@ -183,4 +187,7 @@ table tr td{
 h2 {
 	margin-top: 20px;
 	margin-bottom: 20px;
+}
+#p-contato {
+	text-indent: 0;
 }
