@@ -42,6 +42,9 @@ p{
 	margin-bottom: 100px;
 	text-align: justify;
 }
+.conteudo p {
+	line-height: 25px;
+}
 b{
 	font-size: 11px;
 	font-family: 
