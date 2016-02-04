@@ -170,6 +170,7 @@ section {
 	border: 1.5px solid lightgray;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	bottom: 20px;
 }
 .section-videos {
 	height: 1940px;
