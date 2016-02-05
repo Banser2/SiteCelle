@@ -12,7 +12,7 @@ p, a, label{
 }
 	/*w990 é o que faz o logo do ifpe ficar naquela ´posição e o #hearder é as configuraçoesdo logo! \*/
 .banner{
-	width: 100%;
+	width: 85%;
 	padding-left: 15%;
 	margin: 0 auto;
 	}	
@@ -57,10 +57,8 @@ footer{
 	bottom: 0;
 	text-align: center;
 	width: 100%;
-}
-footer p {
 	color: #FFFFFF;
-	width: 100%;
+	font-size: 14px;
 }
 .t1{
 	margin-top: 30px;
@@ -78,6 +76,7 @@ footer p {
 	border-bottom:3px solid #228B22;
 	height: 26.6px;
 	background-color:#FFFAFA;
+	width: 100%;
 }
 #menu li:first-child {
 	border-left: 1px solid #c0c0c0;
@@ -101,8 +100,8 @@ body{
 	position:relative; 
 	float:left; 
 	border-right:1px solid #c0c0c0;
-	padding-left: 39px;
-	padding-right: 39px;
+	padding-left: 51px;
+	padding-right: 51px;
 }
 
 .menu li a{
@@ -160,6 +159,7 @@ section {
 }
 #logo-reitoria {
 	margin: 0;
+	width: 70%;
 }
 #hr-top {
 	border: 1.5px solid #f00;
