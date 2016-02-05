@@ -112,7 +112,6 @@ $(function() {
 			height: "1px"
 		}
 	});
-	// testar dentro da funcao anterior, na linha 42
 	player.playCurrent = function() {
 		player.jPlayer("setMedia", playlist[currentTrack]).jPlayer("play");
 	}
