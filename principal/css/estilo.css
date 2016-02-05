@@ -6,11 +6,10 @@ html,body {
 	line-height: 1.4em; 
 	font-family: 'SegoeUI', Arial, Helvetica !important;
 	}
-p, a, label{
+p, a {
 	color: #333333;
 	font-size: 14px;
 }
-	/*w990 é o que faz o logo do ifpe ficar naquela ´posição e o #hearder é as configuraçoesdo logo! \*/
 .banner{
 	width: 85%;
 	padding-left: 15%;
@@ -28,7 +27,7 @@ p, a, label{
 h1{
 	font-size: 30px;
 	margin-right: 10px;
-	font-family: Segoe UI;
+	font-family: 'Segoe UI';
 	font-weight: lighter;
 }
 p{
@@ -46,12 +45,8 @@ p{
 	line-height: 25px;
 	text-indent: 35px;
 }
-b{
-	font-size: 11px;
-	font-family: 
-}
 footer{
-	background: #33A95B none repeat scroll 0% 0%;
+	background: #33A95B;
 	height: 70px; 
 	position: fixed;
 	bottom: 0;
@@ -84,7 +79,6 @@ footer{
 *{margin: 0; padding: 0;}
 
 body{
-	font-family: arial, helvetica, sans-serif;
 	font-size: 12px;
 }
 
@@ -114,8 +108,6 @@ body{
 .menu li a:hover{
 	background:#333; 
 	color:#fff;
-	-moz-box-shadow:0 3px 10px 0 #CCC;
-	-webkit-box-shadow:0 3px 10px 0 #ccc; 
 	text-shadow:0px 0px 5px #fff; 
 }
 
@@ -126,7 +118,7 @@ body{
 	display:none; 
 }
 
-.menu li:hover ul, .menu li.over ul{
+.menu li:hover ul {
 	display:block;
 }
 
@@ -139,11 +131,6 @@ body{
 	width: 360px;
 	height: 370px;
 	float: left;
-}
-#descricao {
-	padding-left: 15%;
-	padding-right: 15%;
-	width: 70%;
 }
 iframe {
 	width: 320px;
