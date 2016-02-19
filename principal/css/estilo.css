@@ -35,28 +35,21 @@ p{
 }
 #conteudo{
 	width: 70%;
-	margin-left:15%;
-	margin-right: 15%;
+	margin-left:20%;
+	margin-right: 20%;
 	height: 100%;
-<<<<<<< HEAD
 	text-align: justify;
-	padding-bottom: 10px;
+	padding-bottom: 100px;
 }
 #conteudo p {
-=======
-<<<<<<< HEAD
+
 	margin-bottom: 60px;
-=======
->>>>>>> ca514828cd27b747804a259738ce8f0a26dd403b
 	text-align: justify;
 	padding-bottom: 10px;
 }
-<<<<<<< HEAD
+
 .conteudo p {
-=======
-#conteudo p {
->>>>>>> ca514828cd27b747804a259738ce8f0a26dd403b
->>>>>>> a91fad0698a5b7c1fa7799fa117aeacbdce69ad1
+
 	line-height: 25px;
 	text-indent: 35px;
 }
@@ -96,7 +89,6 @@ footer{
 body{
 	font-size: 12px;
 }
-
 .menu{
 	list-style:none; 
 	border-top:1px solid #c0c0c0;
@@ -104,49 +96,41 @@ body{
 	margin-left:15%;
 	margin-right:15%;
 }
-
 .menu li{
 	position:relative; 
 	float:left; 
 	border-right:1px solid #c0c0c0;
-<<<<<<< HEAD
+
 	padding-left: 10px;
 	padding-right: 10px;
-=======
-<<<<<<< HEAD
+
 	padding-left: 38px;
 	padding-right: 38px;
-=======
+
 	padding-left: 10px;
 	padding-right: 10px;
->>>>>>> ca514828cd27b747804a259738ce8f0a26dd403b
->>>>>>> a91fad0698a5b7c1fa7799fa117aeacbdce69ad1
-}
 
+}
 .menu li a{
 	color:#333; 
 	text-decoration:none; 
 	padding:5px 10px; 
 	display:block;
 }
-
 .menu li a:hover{
-	background:#333; 
+	background:#66cc99; 
 	color:#fff;
 	text-shadow:0px 0px 5px #fff; 
 }
-
 .menu li ul{
 	position:absolute; 
 	left:0; 
 	background-color:#fff; 
 	display:none; 
 }
-
 .menu li:hover ul {
 	display:block;
 }
-
 .menu li ul li{
 	border:1px static #c0c0c0; 
 	display:block; 
@@ -195,9 +179,7 @@ h2 {
 	margin-bottom: 20px;
 	bottom: 20px;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
 .section-videos {
 	height: 1850px;
 }
@@ -215,9 +197,7 @@ h2 {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
-=======
->>>>>>> ca514828cd27b747804a259738ce8f0a26dd403b
->>>>>>> a91fad0698a5b7c1fa7799fa117aeacbdce69ad1
+
 #p-contato {
 	text-indent: 0;
 }
