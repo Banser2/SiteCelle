@@ -23,6 +23,10 @@ p, a {
 	padding: 0.714em 0; 
 	background-color: #33A95B;
 	display: block;
+    
+}
+#logoCelle{
+   float: left;  
 }
 h1{
 	font-size: 30px;
@@ -42,14 +46,14 @@ p{
 
 }
 #conteudo p {
-	margin-bottom: 60px;
+	margin-bottom: 0px;
 
 	text-align: justify;
-	padding-bottom: 10px;
+	padding-bottom: 0px;
 }
 #conteudo p {
-	line-height: 25px;
-	text-indent: 35px;
+	line-height: 20px;
+	text-indent: 0px;
 }
 footer{
 	background: #33A95B;
