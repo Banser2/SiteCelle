@@ -20,7 +20,7 @@ session_start();
     $indice = $_SESSION['indice'];
 	}
 
-$perguntas = [
+$comida = [
 ['meat.jpg ','Cheese','Meat','Chicken','Cooke','2'],
 ['candy.jpg','Eggs','Hot-dog','Candy','Milk','3'],
 ['eggs.jpg','Eggs','Potato','Apple','Guava','1'],
@@ -45,7 +45,8 @@ $perguntas = [
 ['guava.jpg','Eggs','Hot-dog','Guava','Milk','3'],
 ['orange.jpg','Orange','Potato','Eggs','Guava','1'],
 ['coconut.jpg','Bacon','Beans','Banana','Coconut','4'],
-['popcorn.jpg','Peas','Beans','Pop Corn','Bread','3']
+['popcorn.jpg','Peas','Beans','Pop Corn','Bread','3'] ];
+$escola = [
 ['auditorium.jpg ','Class','Auditorium','Stadium','Parking','2'],
 ['blackboard.jpg','Teacher','Classmate','blackboard','Board','3'],
 ['book.jpg','Book','Notebook','Chair','Desk','1'],
@@ -55,7 +56,8 @@ $perguntas = [
 ['library.jpg','Library','Book','Room','Pencil','1'],
 ['student.jpg','Coconut','Desk','Human','Student','4'],
 ['teacher.jpg','Student','Classmate','Teacher','Board','3'],
-['pen.jpg ','Pencil','Pen','Case','Paper','2'],
+['pen.jpg ','Pencil','Pen','Case','Paper','2'] ];
+$transporte = [
 ['skateboard.jpg','Roller Skates','Skate','Skateboard','Wheels','3'],
 ['car.jpg','Car','Bus','Road','Asphalt','1'],
 ['airplane.jpg','Helicopter','Sky','Clouds','Airplane','4'],
