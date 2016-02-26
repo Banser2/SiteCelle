@@ -1,44 +1,44 @@
  Palavras do contexto de utensílios de cozinha :
 
-Panela - Pan
+Forma de bolo  -  Cake Pan
 
-Frigideira - Frying Pan
-
-Garfo - Fork 
-
-Faca - Knife
-
-Colher - Spoon 
-
-Espátula - Spatula 
-
-Concha - Ladle
- 
-xicaras - Cup 
+coedor de café - Coffee Filter 
 
 Copos - Cup
 
-Pratos - Plates
+xicaras - Cup
 
-Garrafa Térmica - Thermal Bottle 
+Cuscuzeira -  Cuscuzeira
+
+Escorredor - Drainer
+
+Garfo - Fork 
+
+Frigideira - Frying Pan
+
+Jarras - Jar
 
 Chaleira - Kettle 
 
-Escorredor - Drainer 
+Faca - Knife
 
-Panela de Pressão - Pressure Cooker 
+Panela - Pan
 
-Colheres de Pau - Wooden Spoon 
+Pratos - Plates
 
-coedor de café - Coffee Filter
+Panela de Pressão - Pressure Cooker
 
-Cuscuzeira -  Cuscuzeira 
+Travessas - Serving Platter
 
-Forma de bolo  -  Cake Pan 
+Concha - Shell
 
-Travessas - Serving Dish 
+Espátula - Spatula
 
-Jarras - Jar 
+Colher - Spoon
+
+Garrafa Térmica - Thermal Bottle
+
+Colheres de Pau - Wooden Spoon
 
  Palavras do contexto de mobília :
 
