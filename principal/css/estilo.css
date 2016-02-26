@@ -67,8 +67,8 @@ footer{
 
 #menu ul li  {
 	background-color:#FFFAFA;
+	border-bottom: 3px solid #228B22;
 	color:#000000;
-	border-bottom:3px solid #228B22;
 	font-size: 1.0cm;			
 }
 #menu {
