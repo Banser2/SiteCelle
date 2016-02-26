@@ -101,10 +101,10 @@ $perguntas = [
 <h2>Selecione a palavra correspondente à Imagem</h2>
 	<p><span><b>Pergunta: <b><?php echo $indice+1; ?></span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"> 
-   	<img src="Imagens/55/<?php echo $perguntas[$indice][0]; ?>" /><br>
+   	<img src="../imagens/55/<?php echo $perguntas[$indice][0]; ?>" /><br>
    	<br/><br/>
    	<audio controls autoplay>
-   		<source src="Audio/<?php echo $perguntas[$indice][6]; ?>"/>
+   		<source src="../audios/<?php echo $perguntas[$indice][6]; ?>"/>
    	</audio><br/>
    	<br/>
 	<?php	
