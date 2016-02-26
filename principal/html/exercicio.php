@@ -45,7 +45,7 @@ $perguntas = [
 ['goiaba.jpg','Eggs','Hot-dog','Guava','Milk','3'],
 ['laranja.jpg','Orange','Potato','Eggs','Guava','1'],
 ['coco.jpg','Bacon','Beans','Banana','Coconut','4'],
-['pipoca.jpg','Peas','Beans','Pop Corn','Bread','3']
+['pipoca.jpg','Peas','Beans','Pop Corn','Bread','3'],
 ['auditorio.jpg ','Class','Auditorium','Stadium','Parking','2'],
 ['quadro_negro.jpg','Teacher','Classmate','blackboard','Board','3'],
 ['livro.jpg','Book','Notebook','Chair','Desk','1'],
@@ -86,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		}else{
 			$_SESSION['indice'] = $indice;
 		}
-		}else{
+	}else{
 		echo "ERROU";
 ?><p><span class="error">* Tente Novamente.</span></p>
 	<?php	
@@ -94,16 +94,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	}
 
 ?>
-
-	
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
-   	<img src="<?php echo $perguntas[$indice][0];?>" />
+   	<img src="../Imagens/imagens_exercicios/<?php echo $perguntas[$indice][0];?>" />
 	<?php	
 		for($i = 1 ; $i <= 4 ; $i++){
 	?>
 		<br>
    		<input type="radio" name="escolha"  value="<?php echo $i;?>">
-
+   		<src="audios/<?php echo $perguntas[$indice][$i];?>.mp3">
 	<?php echo $perguntas[$indice][$i];?>
 	
 	<?php } ?>
