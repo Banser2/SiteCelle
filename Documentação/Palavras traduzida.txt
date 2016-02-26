@@ -1,96 +1,96 @@
  Palavras do contexto de utensílios de cozinha :
 
-Panela - Silencer 
+Panela - Pan
 
-Frigideira - Pan 
+Frigideira - Frying Pan
 
-Garfo - fok 
+Garfo - Fork 
 
-Faca - do it 
+Faca - Knife
 
-Colher - spoon 
+Colher - Spoon 
 
-Espátula - spatula 
+Espátula - Spatula 
 
-Concha - shell 
+Concha - Ladle
  
-xicáras - cups 
+xicaras - Cup 
 
-Copos - cups 
+Copos - Cup
 
-Pratos - dish 
+Pratos - Plates
 
-Garrafa Térmica - thermal bottle 
+Garrafa Térmica - Thermal Bottle 
 
-Chaleira - kettle 
+Chaleira - Kettle 
 
-Escorredor - drainer 
+Escorredor - Drainer 
 
-Panela de Pressão - pressure cooker 
+Panela de Pressão - Pressure Cooker 
 
-Colheres de Pau - wooden spoon 
+Colheres de Pau - Wooden Spoon 
 
-coedor de café - coffee filter  
+coedor de café - Coffee Filter
 
-Cuscuzeira -  cuscuzeira 
+Cuscuzeira -  Cuscuzeira 
 
-Forma de bolo  -  cake pan 
+Forma de bolo  -  Cake Pan 
 
-Travessas - serving dish 
+Travessas - Serving Dish 
 
-Jarras - jar 
+Jarras - Jar 
 
  Palavras do contexto de mobília :
 
-Mesa - table 
+Mesa - Table 
 
-Cadeira - chair 
+Cadeira - Chair 
 
-Sofá - couch 
+Sofá - Couch 
 
-cama -bed 
+cama -Bed 
 
-Guarda Roupas - wardrobe 
+Guarda Roupas - Wardrobe 
 
-Cômoda - dresser 
+Cômoda - Dresser 
 
-Armário - wardrobe 
+Armário - Wardrobe 
 
-Criado mudo - nightstand 
+Criado mudo - Nightstand 
  
-Fruteira - fruit bowl 
+Fruteira - Fruit bowl 
 
-Cortinas - blinds 
+Cortinas - Curtains
 
  Palavras do contexto de eletrodomésticos:
 
-Microondas - microware 
+Microondas - Microwave 
 
-Fogão - cooker 
+Fogão - Cooker 
 
-Máquina de lavar roupas - clothing home machine 
+Máquina de lavar roupas - Washing Machine
 
-Ventilador - fan 
+Ventilador - Fan 
 
-Geladeira - refrigerator 
+Geladeira - Refrigerator 
 
-Televisão - tv 
+Televisão - Television 
 
-Aspirador - aspirator 
+Aspirador - Aspirator 
 
-Sanduicheira - sandwich maker 
+Sanduicheira - Sandwich Maker 
 
-Liquidificador - blender 
+Liquidificador - Blender 
 
-Rádio - radio 
+Rádio - Radio 
 
-Freezer - freezer 
+Freezer - Freezer 
 
-Cafeteira - coffe machine 
+Cafeteira - Coffe Machine 
 
-Ar condicionado - air conditioning 
+Ar condicionado - Air Conditioning 
 
-Ferro de passar roupas - clothes iron 
+Ferro de passar roupas - Clothes Iron 
 
-Batedeira - food mixer 
+Batedeira - Food Mixer 
 
