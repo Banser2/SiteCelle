@@ -45,7 +45,32 @@ $perguntas = [
 ['goiaba.jpg','Eggs','Hot-dog','Guava','Milk','3'],
 ['laranja.jpg','Orange','Potato','Eggs','Guava','1'],
 ['coco.jpg','Bacon','Beans','Banana','Coconut','4'],
-['pipoca.jpg','Peas','Beans','Pop Corn','Bread','3'] ];
+['pipoca.jpg','Peas','Beans','Pop Corn','Bread','3']
+['auditorio.jpg ','Cheese','auditorium','Chicken','Cooke','2'],
+['quadro_negro.jpg','Eggs','Hot-dog','blackboard','Milk','3'],
+['livro.jpg','book','Potato','Apple','Guava','1'],
+['sala_de_aula.jpg','peas','beans','banana','classroom','4'],
+['borracha.jpg ','Cheese','eraser','Chicken','Cooke','2'],
+['prova.jpg','Eggs','Hot-dog','exam','Milk','3'],
+['biblioteca.jpg','Library','Potato','Eggs','Guava','1'],
+['estudante.jpg','Coconut','Beans','Banana','Student','4'],
+['professor.jpg','Peas','Beans','teacher','Bread','3'],
+['caneta.jpg ','Cheese','pen','Chicken','Cooke','2'],
+['skate.jpg','roller skates','skate','skateboard','Milk','3'],
+['carro.jpg','car','Potato','Apple','Guava','1'],
+['aviao.jpg','peas','beans','banana','airplane','4'],
+['barco.jpg ','Cheese','boat','Chicken','Cooke','2'],
+['bicicleta.jpg','Eggs','Hot-dog','bicycle','Milk','3'],
+['bonde.jpg','streetcar','Potato','Eggs','Guava','1'],
+['caminhonete.jpg','Coconut','Beans','Banana','pickup truck','4'],
+['metro.jpg','Peas','Beans','Subway','Bread','3'],
+['motocicleta.jpg','motorbike','Potato','Apple','Guava','1'],
+['navio.jpg','peas','beans','banana','ship','4'],
+['onibus.jpg ','Cheese','bus','Chicken','Cooke','2'],
+['patinete.jpg','Eggs','Hot-dog','scooter','Milk','3'],
+['patins.jpg','roller skates','Potato','Eggs','Guava','1'],
+['taxi.jpg','Bacon','Beans','Banana','taxi cab','4'],
+['trem.jpg','Peas','Beans','train','Bread','3'] ];
 ?>
 <h2>Exercicio de Revisão</h2>
 		<p><span><b>o que você vê ? <b><?php echo $indice;?></span></p>
