@@ -20,13 +20,13 @@ Watermelon - Melancia
 Coconut - Coco
 Tomato - Tomate
 Potato - Batata
-Guava
-Tomato
-Potato
-Beans
-Carrots
-Garlic
-Pop Corn
+Guava - goiaba
+Tomato - tomate
+Potato - batata
+Beans - feijão
+Carrots - cenoura
+Garlic - alho
+Pop Corn - pipoca
 
 PALAVRAS RELATIVAS AO CONTEXTO ESCOLAR EM INGLÊS
 
@@ -38,7 +38,7 @@ Eraser - Borracha
 Book - Livro
 Exam - Prova
 Library - Biblioteca
-Principal - Diretor
+Blackboard - Quadro Negro
 Auditorium - Auditório
 
 PALAVRAS RELACIONADAS A MEIO DE TRANSPORTE EM INGLÊS
