@@ -120,9 +120,10 @@ body{
 	display:block;
 }
 .menu li a:hover{ 
-	background:#66cc99; 
+	background-color:#66cc99; 
 	color:#fff;
-	text-shadow:0px 0px 5px #fff; 
+	text-shadow:0px 0px 5px #fff;
+    
 }
 .menu li ul{
 	position:absolute; 
