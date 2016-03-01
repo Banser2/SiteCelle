@@ -23,6 +23,10 @@ p, a {
 	padding: 0.714em 0; 
 	background-color: #33A95B;
 	display: block;
+    
+}
+#logoCelle{
+   float: left;  
 }
 h1{
 	font-size: 30px;
@@ -35,21 +39,21 @@ p{
 }
 #conteudo{
 	width: 70%;
-	margin-left:20%;
-	margin-right: 20%;
+	margin-left:15%;
+	margin-right: 15%;
 	height: 100%;
 	text-align: justify;
 
 }
 #conteudo p {
-	margin-bottom: 60px;
+	margin-bottom: 0px;
 
 	text-align: justify;
-	padding-bottom: 10px;
+	padding-bottom: 0px;
 }
 #conteudo p {
-	line-height: 25px;
-	text-indent: 35px;
+	line-height: 20px;
+	text-indent: 0px;
 }
 footer{
 	background: #33A95B;
@@ -116,9 +120,10 @@ body{
 	display:block;
 }
 .menu li a:hover{ 
-	background:#66cc99; 
+	background-color:#66cc99; 
 	color:#fff;
-	text-shadow:0px 0px 5px #fff; 
+	text-shadow:0px 0px 5px #fff;
+    
 }
 .menu li ul{
 	position:absolute; 
