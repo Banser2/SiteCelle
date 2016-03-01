@@ -64,20 +64,26 @@ if (!isset($_SESSION['erros'])) {
 
 
 $perguntas = [
-/*Índice 0, pergunta 1 */	['spoon.mp3','spoon.jpg','knife.jpg','cup_c.jpg','air_conditioning.jpg','1'],
-/*Índice 1, pergunta 2 */	['knife.mp3','fork.jpg','coffee_filter.jpg','knife.jpg','refrigerator.jpg','3'],
-/*Índice 2, pergunta 3 */	['table.mp3','cup_x.jpg','table.jpg','freezer.jpg','pan.jpg','2'],
-/*Índice 3, pergunta 4 */	['plates.mp3','wardrobe_arm.jpg','jar.jpg','couch.jpg','plates.jpg','4'],
-/*Índice 4, pergunta 5 */	['chair.mp3','bed.jpg','dresser.jpg','spatula.jpg','chair.jpg','4'],
-/*Índice 5, pergunta 6 */	['cup_c.mp3','cup_c.jpg','clothes_iron.jpg','fruit_bowl.jpg','frying_pan.jpg','1'],
-/*Índice 6, pergunta 7 */	['fork.mp3','shell.jpg','kettle.jpg','fork.jpg','microwave.jpg','3'],
-/*Índice 7, pergunta 8 */	['refrigerator.mp3','washing_machine.jpg','refrigerator.jpg','wooden_spoon.jpg','tv.jpg','2'],
-/*Índice 8, pergunta 9 */	['air_conditioning.mp3','air_conditioning.jpg','wardrobe_gr.jpg','serving_platter.jpg','pan.jpg','1'],
-/*Índice 9, pergunta 10 */	['wardrobe_arm.mp3','radio.jpg','thermal_bottle.jpg','chair.jpg','wardrobe_arm.jpg','4'],
-/*Índice 10, pergunta 11 */	['aspirator.mp3','drainer.jpg','cup_x.jpg','aspirator.jpg','food_mixer.jpg','3'],
-/*Índice 11, pergunta 12 */	['food_mixer.mp3','fan.jpg','food_mixer.jpg','bendle.jpg','jar.jpg','2'],
-/*Índice 12, pergunta 13 */	['coffee_machine.mp3','coffee_machine.jpg','cake_pan.jpg','cooker.jpg','coffee_filter.jpg','1'],
-/*Índice 13, pergunta 14 */	['bed.mp3','tv.jpg','nightstand.jpg','curtains.jpg','bed.jpg','4']
+/*Índice 0, pergunta 1 */	['spoon.mp3','spoon.jpg','knife.jpg','cup_c.jpg','cup_x.jpg','1'],
+/*Índice 1, pergunta 2 */	['knife.mp3','fork.jpg','coffee_filter.jpg','knife.jpg','drainer.jpg','3'],
+/*Índice 2, pergunta 3 */	['shell.mp3','cup_x.jpg','shell.jpg','spatula.jpg','pan.jpg','2'],
+/*Índice 3, pergunta 4 */	['plates.mp3','cuscuzeira.jpg','jar.jpg','cake_pan.jpg','plates.jpg','4'],
+/*Índice 4, pergunta 5 */	['kettle.mp3','coffee_filter.jpg','fork.jpg','spatula.jpg','kettle.jpg','4'],
+/*Índice 5, pergunta 6 */	['cup_c.mp3','cup_c.jpg','drainer.jpg','pressure_cooker.jpg','frying_pan.jpg','1'],
+/*Índice 6, pergunta 7 */	['fork.mp3','shell.jpg','kettle.jpg','fork.jpg','serving_platter.jpg','3'],
+/*Índice 7, pergunta 8 */	['drainer.mp3','cake_pan.jpg','drainer.jpg','wooden_spoon.jpg','thermal_bottle.jpg','2'],
+/*Índice 8, pergunta 9 */	['jar.mp3','jar.jpg','spoon.jpg','serving_platter.jpg','pan.jpg','1'],
+/*Índice 9, pergunta 10 */	['frying_pan.mp3','pan.jpg','thermal_bottle.jpg','fork.jpg','frying_pan.jpg','4'],
+/*Índice 10, pergunta 11 */	['thermal_bottle.mp3','drainer.jpg','cup_c.jpg','thermal_bottle.jpg','cup_x.jpg','3'],
+/*Índice 11, pergunta 12 */	['cup_x.mp3','pan.jpg','cup_x.jpg','kettle.jpg','jar.jpg','2'],
+/*Índice 12, pergunta 13 */	['spatula.mp3','spatula.jpg','cake_pan.jpg','cuscuzeira.jpg','coffee_filter.jpg','1'],
+/*Índice 13, pergunta 14 */	['pressure_cooker.mp3','jar.jpg','spatula.jpg','plates.jpg','pressure_cooker.jpg','4'],
+/*Índice 14, pergunta 15 */	['cake_pan.mp3','shell.jpg','drainer.jpg','cake_pan.jpg','thermal_bottle.jpg','3'],
+/*Índice 15, pergunta 16 */	['serving_platter.mp3','plates.jpg','fork.jpg','pan.jpg','serving_platter.jpg','4'],
+/*Índice 16, pergunta 17 */	['cuscuzeira.mp3','shell.jpg','cuscuzeira.jpg','coffee_filter.jpg','knife.jpg','2'],
+/*Índice 17, pergunta 18 */	['wooden_spoon.mp3','wooden_spoon.jpg','spatula.jpg','serving_platter.jpg','frying_pan.jpg','1'],
+/*Índice 18, pergunta 19 */	['pan.mp3','plates.jpg','pressure_cooker.jpg','fork.jpg','drainer.jpg','2'],
+/*Índice 19, pergunta 20 */	['coffee_filter.mp3','coffee_filter.jpg','pressure_cooker.jpg','drainer.jpg','spoon.jpg','1']
 ];
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	   $escolha = $_POST["escolha"];
@@ -156,12 +162,12 @@ $perguntas = [
 		for($i = 1 ; $i <= 4 ; $i++){
 	?>
    		<li>
-   			<input class="img" id="img_<?= $i?>" type="image" name="escolha" value="<?= $i; ?>" src="imagens/55/<?= $perguntas[$indice][$i]; ?>" />
+   			<input class="img" id="img_<?= $i?>" type="image" name="escolha" value="<?= $i; ?>" src="../imagens/imagens_quiz/utensilios_cozinha/<?= $perguntas[$indice][$i]; ?>" />
    		</li>
 	<?php } ?>
 	</ul>
    	<audio class="audio" controls autoplay>
-   		<source src="../audios/<?= $perguntas[$indice][6]; ?>"/>
+   		<source src="../audios/<?= $perguntas[$indice][0]; ?>"/>
    	</audio><br/>
    <br>
    <input type="submit" name="escolha" value="Início">
