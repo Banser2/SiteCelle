@@ -100,47 +100,15 @@ $perguntas = [
 			}
 		}else{
 			$erros++;
-			if($escolha == 1){
-				echo '<style type="text/css"> 
-			        	#img_1 {
-			            	border-color: red;
-			        	}
-	        		</style> 
-	        		<audio autoplay>
-						<source src="../audios/erro.mp3"/>
-					</audio>';
-        	}
-        	if ($escolha == 2) {
-        		echo '<style type="text/css"> 
-		        	#img_2 {
+			echo '<style type="text/css"> 
+		        	#img_' . $escolha .' {
 		            	border-color: red;
 		        	}
         		</style> 
         		<audio autoplay>
-						<source src="../audios/erro.mp3"/>
-					</audio>';
-        	}
-        	if ($escolha == 3) {
-        		echo '<style type="text/css"> 
-		        	#img_3 {
-		            	border-color: red;
-		        	}
-        		</style> 
-        		<audio autoplay>
-						<source src="../audios/erro.mp3"/>
-					</audio>';
-        	}
-        	if ($escolha == 4) {
-        		echo '<style type="text/css"> 
-		        	#img_4 {
-		            	border-color: red;
-		        	}
-        		</style>
-        		<audio autoplay>
-						<source src="../audios/erro.mp3"/>
-					</audio>';
-        		
-        	}
+					<source src="../audios/erro.mp3"/>
+				</audio>';
+        	
         	if($escolha == "Início"){
         		$indice = 0;
         	}
@@ -166,7 +134,7 @@ $perguntas = [
    		</li>
 	<?php } ?>
 	</ul>
-   	<audio class="audio" controls autoplay>
+   	<audio class="audio" controls>
    		<source src="../audios/<?= $perguntas[$indice][0]; ?>"/>
    	</audio><br/>
    <br>
