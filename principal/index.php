@@ -60,7 +60,7 @@ celle@igarassu.ifpe.edu.br
 			
         $('.botaoMenu').click(function(event) {
 			var pagina = event.target.id;
-            $('#conteudo').load('php/' +pagina);
+            $('#conteudo').load('php/' + pagina);
         });
 		
 
