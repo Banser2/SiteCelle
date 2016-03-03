@@ -1,0 +1,11 @@
+Policiais - Police Officers
+Faixa de Pedestre - Crosswalk
+Carro de Bombeiro - Fire Truck
+Bombeiros - Firefighters
+Estacionamento - Parking lot
+Banca de Jornais - Newsstand
+Ponto de Metrô - Subway Stop
+Placa Pare - Stop Sign
+Emgarrafamento - Traffic jam
+Semáforo - Traffic light
+
