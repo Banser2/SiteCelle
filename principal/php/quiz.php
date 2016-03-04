@@ -140,7 +140,6 @@ $perguntas = $cozinha;
 			$perguntas = $vestuario;
 			$pasta = "vestuario";
 			$_SESSION['contexto'] = $contexto;
-            header("location:quiz.php");
 	   	}
 		if($contexto === "cozinha"){
 		   	$perguntas = $cozinha;
