@@ -19,7 +19,7 @@
 			if(isset($_POST['submit'])){
 				$_SESSION['acertos'] = 0;
 				$_SESSION['erros'] = 0;
-				header("location: novo_quiz.php");
+				header("location: quiz.php");
 
 			}
 
