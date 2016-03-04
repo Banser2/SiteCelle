@@ -140,6 +140,7 @@ $perguntas = $cozinha;
 			$perguntas = $vestuario;
 			$pasta = "vestuario";
 			$_SESSION['contexto'] = $contexto;
+            header("location:quiz.php");
 	   	}
 		if($contexto === "cozinha"){
 		   	$perguntas = $cozinha;
@@ -195,11 +196,12 @@ $perguntas = $cozinha;
 		<option <?php if(isset($_POST["contexto"])) echo $_POST["contexto"] === "vestuario" ? 'selected' : '' ; ?> value="vestuario" >Vestuário</option>
 	</select>
 	</form>
-	<h2>Selecione a imagem correspondente ao áudio</h2>
-		<p><span><b>Pergunta: <b><?= $indice+1; ?></span></p><br>
+	
 <?php	
 		if(isset($_POST["contexto"]) && $_POST["contexto"] !== "default"){	
 		?>
+    <h2>Selecione a imagem correspondente ao áudio</h2>
+		<p><span><b>Pergunta: <b><?= $indice+1; ?></span></p><br>
    	<audio class="audio" controls autoplay>
    		<source src="../audios/<?= $perguntas[$indice][0]; ?>"/>
    	</audio><br/>
