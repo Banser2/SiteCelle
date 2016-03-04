@@ -168,7 +168,7 @@ $perguntas = $cozinha;
 						}
 					</style> 
 					<audio autoplay>
-						<source src="audios/erro.mp3"/>
+						<source src="../audios/erro.mp3"/>
 					</audio>';
 				
 				if($escolha == "Início"){
@@ -198,7 +198,7 @@ $perguntas = $cozinha;
 		if(isset($_POST["contexto"]) && $_POST["contexto"] !== "default"){	
 		?>
    	<audio class="audio" controls autoplay>
-   		<source src="audios/<?= $perguntas[$indice][0]; ?>"/>
+   		<source src="../audios/<?= $perguntas[$indice][0]; ?>"/>
    	</audio><br/>
    	<br/>
    	<br/>
@@ -213,7 +213,7 @@ $perguntas = $cozinha;
 		for($i = 1 ; $i <= 4 ; $i++){
 	?>
    		<li>
-   			<input class="img" id="img_<?= $i?>" type="image" name="escolha" value="<?= $i; ?>" src="imagens/<?= $pasta; ?>/<?= $perguntas[$indice][$i]; ?>" />
+   			<input class="img" id="img_<?= $i?>" type="image" name="escolha" value="<?= $i; ?>" src="../imagens/imagens_quiz/<?= $pasta; ?>/<?= $perguntas[$indice][$i]; ?>" />
    		</li>
 	<?php } ?>
 	</ul>
