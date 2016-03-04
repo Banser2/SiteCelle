@@ -31,7 +31,7 @@
         </li>
         <li><a href="#" id="#">Atividades</a>
             <ul>
-                <li><a href="#" class="botaoMenu" id="#">Quiz</a></li>
+                <li><a href="#" class="botaoMenu" id="quiz.php">Quiz</a></li>
             </ul>
         </li>
         <li><a href="#" class="botaoMenu" id="sites_relacionados.php">Sites Relacionados</a></li>
