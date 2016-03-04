@@ -1,42 +1,34 @@
 <?php
-// Start the session
+// Inicia a Sessão
 session_start();
 ?>
 <!DOCTYPE HTML> 
-<html lang="pt-br">
-<head>
-	<meta charset="utf-8">
-	<script src="jquery-1.12.0.min.js"></script>
-	<style>
-		* {
-			font-size: 12px;
-			font-family: sans-serif;
-		}
-		.img:hover {
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style>
+		img:hover {
 			border-color: #21b4d0;
 		}
-		/*.error:hover {
-			border-color: #FF1212;
-		}*/
+		.content {
+			width: 100%;
+		}
+		.item {
+			width: 50%;
+			float: left;
+		}
 		ul li {
 			float: left;
 			list-style-type: none;
 			margin-right: 15px;
 		}
 		h2, span, input, form, .audio, option, label, body{
-			margin-left: 0%;
-			margin-right: 0%;
+			margin-left: 10%;
+			margin-right: 10%;
 		}
 		select {
 			margin-left: 0;
 			margin-right: 0;
-		}
-		.img {
-			height: 180px;
-			width: 220px;
-			border: 7px solid white;
-			margin-left: 0%;
-			margin-right: 0%;
 		}
 		audio {
 			margin-left: 14%;
@@ -46,47 +38,40 @@ session_start();
 			font-size: 30px;
 			text-align: center;
 		}
-	</style>
-</head>
-<body>
-    <h1 class="t1"> QUIZ </h1> 
-    <hr id="hr-top"></hr>
-    <br>
+		label > input{ /* HIDE RADIO */
+			visibility: hidden; /* Makes input not-clickable */
+			position: absolute; /* Remove input from document flow */
+		}
+		label > input + img{ /* IMAGE STYLES */
+		  	cursor:pointer;
+		  	border:7px solid transparent;
+			
+			
+		}
+		label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+			border: 7px solid gray;
+		}
+		img {
+			border:7px solid white;
+			height: 180px;
+			width: 200px;
+		}
+		</style>
+	</head>
+	<body>
+		<label>Escolha o Contexto:</label><br/><br/>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
+ <select name="contexto" onchange="this.form.submit()">
+	<option value="default">Selecione</option>
+	<option value="cozinha">Cozinha</option>
+	<option value="vestuario">Vestuario</option>
+  
+</select> 
+</form>
 
 <?php
 
-if (!isset($_SESSION['indice'])) {
-    $_SESSION['indice'] = 0;
-	$indice = 0;
-} else {
-    $indice = $_SESSION['indice'];
-}
-
-if (!isset($_SESSION['acertos'])) {
-    $_SESSION['acertos'] = 0;
-	$acertos = 0;
-} else {
-    $acertos = $_SESSION['acertos'];
-}
-
-if (!isset($_SESSION['erros'])) {
-    $_SESSION['erros'] = 0;
-	$erros = 0;
-} else {
-    $erros = $_SESSION['erros'];
-}
-
-
-	/*if (!isset($_SESSION['contexto'])) {
-	    $_SESSION['contexto'] = "default";
-		$contexto = "default";
-	} else {
-	    $contexto = $_SESSION['contexto'];
-	}
-	$_SESSION['contexto'] = $contexto;*/
-
-$pasta = "utensilios_cozinha";
-
+// define variables and set to empty values
 
 $cozinha = [
 /*Índice 0, pergunta 1 */	['spoon.mp3','spoon.jpg','knife.jpg','glass.jpg','cup.jpg','1', 'Spoon'],
@@ -122,109 +107,137 @@ $vestuario = [
 /*Índice 7, pergunta 8 */	['pants.mp3','dress.jpg','pants.jpg','pijamas.jpg','blazer.jpg','2', 'Pants'],
 /*Índice 8, pergunta 9 */	['pijamas.mp3','swimwear.jpg','pijamas.jpg','tie.jpg','hat.jpg','2', 'Pijamas'],
 /*Índice 9, pergunta 10 */	['shirt.mp3','jumpsuit.jpg','shoes.jpg','skirt.jpg','shirt.jpg','4', 'Shirt'],
-/*Índice 10, pergunta 11 */	['shoes.mp3','shoes.jpg','blouse.jpg','blazer.jpg','pants.jpg','1', 'Shoes'],
+/*Índice 10, pergunta 11 */	['shoe.mp3','shoes.jpg','blouse.jpg','blazer.jpg','pants.jpg','1', 'Shoes'],
 /*Índice 11, pergunta 12 */	['skirt.mp3','coat.jpg','swimwear.jpg','skirt.jpg','dress.jpg','3', 'Skirt'],
 /*Índice 12, pergunta 13 */	['swimwear.mp3','nightdress.jpg','jumpsuit.jpg','swimwear.jpg','coat.jpg','3', 'Swimwear'],
 /*Índice 13, pergunta 14 */	['tie.mp3','blouse.jpg','hat.jpg','shoes.jpg','tie.jpg','4', 'Tie'],
 /*Índice 14, pergunta 15 */	['vest.mp3','vest.jpg','dress.jpg','shirt.jpg','pants.jpg','1', 'Vest']
 ];
 
-$perguntas = $cozinha;
-
-	if(isset($_POST['contexto'])) {
-	    // Set session variables
-	    $_SESSION["contexto"] = $_POST['contexto'];
-	    $contexto = $_SESSION['contexto'];
-
-		if($contexto === "vestuario"){
-			$perguntas = $vestuario;
-			$pasta = "vestuario";
-			$_SESSION['contexto'] = $contexto;
-	   	}
-		if($contexto === "cozinha"){
-		   	$perguntas = $cozinha;
-			$pasta = "utensilios_cozinha";
-		   	$_SESSION['contexto'] = $contexto;
-		}
-	}
-
-	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-		if(isset($escolha)){
-			$escolha = $_POST["escolha"];
-
-			if($escolha === $perguntas[$indice][5]){
-				$indice++;
-				$acertos++;
-				if($indice === sizeof($perguntas)){
-					$indice = 0;
-					echo "<br/>Total de acertos: ". $acertos . "<br/>";
-					echo "Total de erros: ". $erros . "<br/><br/>";
-					$acertos = 0;
-					$erros = 0;
-				}
-			}else{
-				$erros++;
-				echo '<style type="text/css"> 
-						#img_' . $escolha .' {
-							border-color: red;
-						}
-					</style> 
-					<audio autoplay>
-						<source src="../audios/erro.mp3"/>
-					</audio>';
-				
-				if($escolha == "Início"){
-					$indice = 0;
-				}
-			}
-				$_SESSION['indice'] = $indice;
-				$_SESSION['acertos'] = $acertos;
-				$_SESSION['erros'] = $erros;
-		}
-	}
-	/* <?= "string" ?> equivale a <?php echo "string" ?> */
-?>
-	<label>Selecione o Contexto:</label>
-	<br>
-	<br>
-	<form method="POST" action="#">
-	<select name="contexto" onchange="this.form.submit()">
-		<option value="default">Default</option>
-		<option <?php if(isset($_POST["contexto"])) echo $_POST["contexto"] === "cozinha" ? 'selected' : '' ; ?> value="cozinha">Utensílios de Cozinha</option>
-		<option <?php if(isset($_POST["contexto"])) echo $_POST["contexto"] === "vestuario" ? 'selected' : '' ; ?> value="vestuario" >Vestuário</option>
-	</select>
-	</form>
+if ( $_SERVER["REQUEST_METHOD"] == "POST" && (isset($_POST['contexto']) && $_POST['contexto'] !== "default")) {
+	$contexto = $_POST['contexto'];
+	$_SESSION['contexto'] = $contexto;
 	
-<?php	
-		if(isset($_POST["contexto"]) && $_POST["contexto"] !== "default"){	
-		?>
-    <h2>Selecione a imagem correspondente ao áudio</h2>
+}
+
+if ($_SESSION['contexto'] === 'cozinha'){
+		$perguntas = $cozinha;
+		$pasta = "utensilios_cozinha";
+	} else if ($_SESSION['contexto'] === 'vestuario'){
+		$perguntas = $vestuario;
+		$pasta = "vestuario";
+	}
+
+if ( $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["reset"])) {
+	$_SESSION['contexto'] = 'default';
+	$_SESSION['indice'] = 0;
+	$_POST['contexto'] = 'default';
+	$contexto = 'default';
+	$indice = 0;
+}
+
+
+if (!isset($_SESSION['contexto'])) {
+    $_SESSION['contexto'] = 'default';
+	$contexto = 'default';
+	}
+
+// some code here
+
+
+if (!isset($_SESSION['indice'])) {
+	$_SESSION['indice'] = 0;
+	$indice = 0;
+} else {
+	$indice = $_SESSION['indice'];
+}
+
+if (!isset($_SESSION['acertos'])) {
+    $_SESSION['acertos'] = 0;
+	$acertos = 0;
+} else {
+    $acertos = $_SESSION['acertos'];
+}
+
+if (!isset($_SESSION['erros'])) {
+    $_SESSION['erros'] = 0;
+	$erros = 0;
+} else {
+    $erros = $_SESSION['erros'];
+}
+
+?>
+<h2>Quiz</h2>
+<?php
+if (isset($_POST["escolha"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
+   $escolha = $_POST["escolha"];
+	if($escolha === $perguntas[$indice][5]){
+		$indice++;
+		$acertos++;
+		if($indice === sizeof($perguntas)){
+			$indice = 0;
+			
+			header("location:resultado_final.php");
+			// echo "<br/>Total de acertos: ". $acertos . "<br/>";
+			// echo "Total de erros: ". $erros . "<br/><br/>";
+			/*$acertos = 0;
+			$erros = 0;*/
+		}
+	}else{
+		$erros++;
+		echo '<style type="text/css"> 
+				#img_' . $escolha .' {
+					border-color: red;
+				}
+			</style> 
+			<audio autoplay>
+				<source src="../audios/erro.mp3"/>
+			</audio>';
+	}
+		$_SESSION['indice'] = $indice;
+		$_SESSION['acertos'] = $acertos;
+		$_SESSION['erros'] = $erros;
+}
+
+?>
+
+	<?php
+		if($_SESSION['contexto'] !== "default"){
+	?>
+	<h2>Selecione a imagem correspondente ao áudio</h2>
 		<p><span><b>Pergunta: <b><?= $indice+1; ?></span></p><br>
+		<p><span><?= $perguntas[$indice][6]; ?></span></p><br>
    	<audio class="audio" controls autoplay>
    		<source src="../audios/<?= $perguntas[$indice][0]; ?>"/>
    	</audio><br/>
    	<br/>
    	<br/>
-   	<label class="palavra"><?= $perguntas[$indice][6]; ?></label>
-   <br>
-	<form method="POST" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]); ?>"> 
-   	<br/><br/>
-   	<br/>
-   	<div class="lista">
-   	<ul>
-	<?php
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
+	<div class="content">
+		<ul>
+	<?php	
 		for($i = 1 ; $i <= 4 ; $i++){
 	?>
-   		<li>
-   			<input class="img" id="img_<?= $i?>" type="image" name="escolha" value="<?= $i; ?>" src="../imagens/imagens_quiz/<?= $pasta; ?>/<?= $perguntas[$indice][$i]; ?>" />
+	<div clas="item">
+		<li>
+   			<label>
+  				<input type="radio" name="escolha" value="<?= $i; ?>" />
+  				<img id="img_<?= $i;?>" src="../imagens/imagens_quiz/<?= $pasta; ?>/<?= $perguntas[$indice][$i]; ?>">
+			</label>
    		</li>
-	<?php } ?>
-	</ul>
 	</div>
-
-   <input type="submit" name="escolha" value="Início">
-   <?php } ?>
+	<?php } ?>
+		</ul>
+	</div>
+   	<br><br>
+   		<input type="submit" name="submit" value="Submit"> 
 </form>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
+		<br/>
+   		<input type="submit" name="reset" value="Reset"> 
+</form>
+<?php 
+	}
+?>
 </body>
 </html>
