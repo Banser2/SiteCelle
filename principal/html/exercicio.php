@@ -6,19 +6,20 @@
 		</style>
 	</head>
 	<body> 
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
+ <select name="contexto" onchange="this.form.submit()">
+	<option value="default">Selecione</option>
+	<option value="comida">Comida</option>
+	<option value="escola">Escola</option>
+	<option value="transporte">Transporte</option>
+  
+</select> 
+</form>
 
 <?php
+
 // define variables and set to empty values
 session_start();
-
-// some code here
-
-	if (!isset($_SESSION['indice'])) {
-    $_SESSION['indice'] = 0;
-	$indice = 0;
-	} else {
-    $indice = $_SESSION['indice'];
-	}
 
 $comida = [
 ['meat.jpg ','Cheese','Meat','Chicken','Cooke','2'],
@@ -73,11 +74,51 @@ $transporte = [
 ['rollerskates.jpg','Roller Skates','Rollercoaster','Wain','Horse','1'],
 ['yellowcab.jpg','Bus','Car','Ship','Yellow Cab','4'],
 ['train.jpg','Streetcar','Subway','Train','Monster Truck','3'] ];
+
+if ( $_SERVER["REQUEST_METHOD"] == "POST" && (isset($_POST['contexto']) && $_POST['contexto'] !== "default")) {
+	$contexto = $_POST['contexto'];
+	$_SESSION['contexto'] = $contexto;
+	
+}
+
+if ($_SESSION['contexto'] === 'comida'){
+		$perguntas = $comida;
+	} else if ($_SESSION['contexto'] === 'escola'){
+		$perguntas = $escola;
+	} else if ($_SESSION['contexto'] === 'transporte'){
+		$perguntas = $transporte;
+	} 
+if ( $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["reset"])) {
+	$_SESSION['contexto'] = 'default';
+	$_SESSION['indice'] = 0;
+	$_POST['contexto'] = 'default';
+	$contexto = 'default';
+	$indice = 0;
+}
+
+
+if (!isset($_SESSION['contexto'])) {
+    $_SESSION['contexto'] = 'default';
+	$contexto = 'default';
+	}
+
+// some code here
+
+
+	if (!isset($_SESSION['indice'])) {
+    $_SESSION['indice'] = 0;
+	$indice = 0;
+	} else {
+    $indice = $_SESSION['indice'];
+	}
+
+
+
 ?>
 <h2>Exercicio de Revisão</h2>
 		<p><span><b>o que você vê ? <b><?php echo $indice;?></span></p>
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if (isset($_POST["escolha"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
    $escolha = $_POST["escolha"];
 	if($escolha === $perguntas[$indice][5]){
 		echo "ACERTOU";
@@ -97,9 +138,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 ?>
 
-	
+	<?php
+		if($_SESSION['contexto'] !== "default"){
+	?>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
-   	<img src="<?php echo $perguntas[$indice][0];?>" />
+   	<img src="../Imagens/imagens_exercicios/<?php echo $_SESSION['contexto'];?>/<?php echo $perguntas[$indice][0];?>" />
 	<?php	
 		for($i = 1 ; $i <= 4 ; $i++){
 	?>
@@ -112,5 +155,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    	<br><br>
    		<input type="submit" name="submit" value="Submit"> 
 </form>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
+   	
+   		<input type="submit" name="reset" value="reset"> 
+</form>
+<?php 
+	}
+?>
 </body>
 </html>
