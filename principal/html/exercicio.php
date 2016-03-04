@@ -6,19 +6,20 @@
 		</style>
 	</head>
 	<body> 
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
+ <select name="contexto" onchange="this.form.submit()">
+	<option value="default">Selecione</option>
+	<option value="comida">Comida</option>
+	<option value="escola">Escola</option>
+	<option value="transporte">Transporte</option>
+  
+</select> 
+</form>
 
 <?php
+
 // define variables and set to empty values
 session_start();
-
-// some code here
-
-	if (!isset($_SESSION['indice'])) {
-    $_SESSION['indice'] = 0;
-	$indice = 0;
-	} else {
-    $indice = $_SESSION['indice'];
-	}
 
 $comida = [
 [<audio controls>'meat.jpg ','Cheese',<source src="Cheese.mp3" type="audio/mpeg">,'Meat','Chicken','Cooke','2'],
@@ -29,7 +30,7 @@ $comida = [
 ['pepper.jpg','Eggs','Hot-dog','Pepper','Milk','3'],
 ['apple.jpg','Apple','Potato','Eggs','Guava','1'],
 ['tomato.jpg','Coconut','Beans','Banana','Tomato','4'],
-['strawberries.jpg','Peas','Beans','Strawberries','Bread','3'],
+['strawberry.jpg','Peas','Beans','Strawberry','Bread','3'],
 ['pineapple.jpg ','Cheese','Pineapple','Chicken','Cooke','2'],
 ['sugar.jpg','Eggs','Hot-dog','Sugar','Milk','3'],
 ['rice.jpg','Rice','Potato','Apple','Guava','1'],
@@ -48,9 +49,9 @@ $comida = [
 ['popcorn.jpg','Peas','Beans','Pop Corn','Bread','3']</audio> ];
 $escola = [
 ['auditorium.jpg ','Class','Auditorium','Stadium','Parking','2'],
-['blackboard.jpg','Teacher','Classmate','blackboard','Board','3'],
-['book.jpg','Book','Notebook','Chair','Desk','1'],
-['classroom.jpg','Room','Bathroom','Snack Bar','classroom','4'],
+['blackboard.jpg','Teacher','Classmate','Blackboard','Board','3'],
+['books.jpg','Books','Notebook','Chair','Desk','1'],
+['classroom.jpg','Room','Bathroom','Snack Bar','Classroom','4'],
 ['eraser.jpg ','Pencil','Eraser','Door','Bike','2'],
 ['exam.jpg','Pencil','Pen','Exam','Room','3'],
 ['library.jpg','Library','Book','Room','Pencil','1'],
@@ -66,18 +67,58 @@ $transporte = [
 ['streetcar.jpg','Streetcar','Train','Subway','Bus','1'],
 ['pickuptruck.jpg','Car Truck','Truck','Car','Pickup Truck','4'],
 ['subway.jpg','Vehicle','Micro Bus','Subway','Station','3'],
-['motorbike.jpg','Motorbike','Bike','Scooter','Cart','1'],
+['motorcycle.jpg','Motorcycle','Bike','Scooter','Cart','1'],
 ['ship.jpg','Boat','Motor Boat','Canoe','Ship','4'],
 ['bus.jpg ','Truck','Bus','Train','Skate','2'],
 ['scooter.jpg','Taxi Cab','Cigar','Scooter','Wheels','3'],
 ['rollerskates.jpg','Roller Skates','Rollercoaster','Wain','Horse','1'],
 ['yellowcab.jpg','Bus','Car','Ship','Yellow Cab','4'],
 ['train.jpg','Streetcar','Subway','Train','Monster Truck','3'] ];
+
+if ( $_SERVER["REQUEST_METHOD"] == "POST" && (isset($_POST['contexto']) && $_POST['contexto'] !== "default")) {
+	$contexto = $_POST['contexto'];
+	$_SESSION['contexto'] = $contexto;
+	
+}
+
+if ($_SESSION['contexto'] === 'comida'){
+		$perguntas = $comida;
+	} else if ($_SESSION['contexto'] === 'escola'){
+		$perguntas = $escola;
+	} else if ($_SESSION['contexto'] === 'transporte'){
+		$perguntas = $transporte;
+	} 
+if ( $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["reset"])) {
+	$_SESSION['contexto'] = 'default';
+	$_SESSION['indice'] = 0;
+	$_POST['contexto'] = 'default';
+	$contexto = 'default';
+	$indice = 0;
+}
+
+
+if (!isset($_SESSION['contexto'])) {
+    $_SESSION['contexto'] = 'default';
+	$contexto = 'default';
+	}
+
+// some code here
+
+
+	if (!isset($_SESSION['indice'])) {
+    $_SESSION['indice'] = 0;
+	$indice = 0;
+	} else {
+    $indice = $_SESSION['indice'];
+	}
+
+
+
 ?>
 <h2>Exercicio de Revisão</h2>
 		<p><span><b>o que você vê ? <b><?php echo $indice;?></span></p>
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if (isset($_POST["escolha"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
    $escolha = $_POST["escolha"];
 	if($escolha === $perguntas[$indice][5]){
 		echo "ACERTOU";
@@ -97,9 +138,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 ?>
 
-	
+	<?php
+		if($_SESSION['contexto'] !== "default"){
+	?>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
-   	<img src="<?php echo $perguntas[$indice][0];?>" />
+   	<img src="../Imagens/imagens_exercicios/<?php echo $_SESSION['contexto'];?>/<?php echo $perguntas[$indice][0];?>" />
 	<?php	
 		for($i = 1 ; $i <= 4 ; $i++){
 	?>
@@ -112,5 +155,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    	<br><br>
    		<input type="submit" name="submit" value="Submit"> 
 </form>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
+   	
+   		<input type="submit" name="reset" value="reset"> 
+</form>
+<?php 
+	}
+?>
 </body>
 </html>
