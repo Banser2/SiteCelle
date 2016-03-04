@@ -89,18 +89,18 @@ $pasta = "utensilios_cozinha";
 
 
 $cozinha = [
-/*Índice 0, pergunta 1 */	['spoon.mp3','spoon.jpg','knife.jpg','cup_c.jpg','cup_x.jpg','1', 'Spoon'],
+/*Índice 0, pergunta 1 */	['spoon.mp3','spoon.jpg','knife.jpg','glass.jpg','cup.jpg','1', 'Spoon'],
 /*Índice 1, pergunta 2 */	['knife.mp3','fork.jpg','coffee_filter.jpg','knife.jpg','drainer.jpg','3', 'Knife'],
-/*Índice 2, pergunta 3 */	['shell.mp3','cup_x.jpg','shell.jpg','spatula.jpg','pan.jpg','2', 'Shell'],
+/*Índice 2, pergunta 3 */	['shell.mp3','cup.jpg','shell.jpg','spatula.jpg','pan.jpg','2', 'Shell'],
 /*Índice 3, pergunta 4 */	['plates.mp3','cuscuzeira.jpg','jar.jpg','cake_pan.jpg','plates.jpg','4', 'Plates'],
 /*Índice 4, pergunta 5 */	['kettle.mp3','coffee_filter.jpg','fork.jpg','spatula.jpg','kettle.jpg','4', 'Kettle'],
-/*Índice 5, pergunta 6 */	['cup_c.mp3','cup_c.jpg','drainer.jpg','pressure_cooker.jpg','frying_pan.jpg','1', 'Cup'],
+/*Índice 5, pergunta 6 */	['glass.mp3','glass.jpg','drainer.jpg','pressure_cooker.jpg','frying_pan.jpg','1', 'Cup'],
 /*Índice 6, pergunta 7 */	['fork.mp3','shell.jpg','kettle.jpg','fork.jpg','serving_platter.jpg','3', 'Fork'],
 /*Índice 7, pergunta 8 */	['drainer.mp3','cake_pan.jpg','drainer.jpg','wooden_spoon.jpg','thermal_bottle.jpg','2', 'Drainer'],
 /*Índice 8, pergunta 9 */	['jar.mp3','jar.jpg','spoon.jpg','serving_platter.jpg','pan.jpg','1', 'Jar'],
 /*Índice 9, pergunta 10 */	['frying_pan.mp3','pan.jpg','thermal_bottle.jpg','fork.jpg','frying_pan.jpg','4', 'Frying Pan'],
-/*Índice 10, pergunta 11 */	['thermal_bottle.mp3','drainer.jpg','cup_c.jpg','thermal_bottle.jpg','cup_x.jpg','3', 'Thermal Bottle'],
-/*Índice 11, pergunta 12 */	['cup_x.mp3','pan.jpg','cup_x.jpg','kettle.jpg','jar.jpg','2', 'Cup'],
+/*Índice 10, pergunta 11 */	['thermal_bottle.mp3','drainer.jpg','glass.jpg','thermal_bottle.jpg','cup.jpg','3', 'Thermal Bottle'],
+/*Índice 11, pergunta 12 */	['cup.mp3','pan.jpg','cup.jpg','kettle.jpg','jar.jpg','2', 'Cup'],
 /*Índice 12, pergunta 13 */	['spatula.mp3','spatula.jpg','cake_pan.jpg','cuscuzeira.jpg','coffee_filter.jpg','1', 'Spatula'],
 /*Índice 13, pergunta 14 */	['pressure_cooker.mp3','jar.jpg','spatula.jpg','plates.jpg','pressure_cooker.jpg','4', 'Pressure Cooker'],
 /*Índice 14, pergunta 15 */	['cake_pan.mp3','shell.jpg','drainer.jpg','cake_pan.jpg','thermal_bottle.jpg','3', 'Cake Pan'],
