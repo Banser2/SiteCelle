@@ -9,7 +9,7 @@ session_start();
 	<script src="jquery-1.12.0.min.js"></script>
 	<style>
 		* {
-			font-size: 20px;
+			font-size: 12px;
 			font-family: sans-serif;
 		}
 		.img:hover {
@@ -21,11 +21,11 @@ session_start();
 		ul li {
 			float: left;
 			list-style-type: none;
-			margin-right: 40px;
+			margin-right: 15px;
 		}
 		h2, span, input, form, .audio, option, label, body{
-			margin-left: 20%;
-			margin-right: 20%;
+			margin-left: 0%;
+			margin-right: 0%;
 		}
 		select {
 			margin-left: 0;
@@ -49,6 +49,9 @@ session_start();
 	</style>
 </head>
 <body>
+    <h1 class="t1"> QUIZ </h1> 
+    <hr id="hr-top"></hr>
+    <br>
 
 <?php
 
