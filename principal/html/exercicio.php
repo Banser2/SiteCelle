@@ -21,7 +21,7 @@ session_start();
 	}
 
 $comida = [
-['meat.jpg ','Cheese','Meat','Chicken','Cooke','2'],
+[<audio controls>'meat.jpg ','Cheese',<source src="Cheese.mp3" type="audio/mpeg">,'Meat','Chicken','Cooke','2'],
 ['candy.jpg','Eggs','Hot-dog','Candy','Milk','3'],
 ['eggs.jpg','Eggs','Potato','Apple','Guava','1'],
 ['bread.jpg','Peas','Beans','Banana','Bread','4'],
@@ -45,7 +45,7 @@ $comida = [
 ['guava.jpg','Eggs','Hot-dog','Guava','Milk','3'],
 ['orange.jpg','Orange','Potato','Eggs','Guava','1'],
 ['coconut.jpg','Bacon','Beans','Banana','Coconut','4'],
-['popcorn.jpg','Peas','Beans','Pop Corn','Bread','3'] ];
+['popcorn.jpg','Peas','Beans','Pop Corn','Bread','3']</audio> ];
 $escola = [
 ['auditorium.jpg ','Class','Auditorium','Stadium','Parking','2'],
 ['blackboard.jpg','Teacher','Classmate','blackboard','Board','3'],
