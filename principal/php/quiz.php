@@ -7,14 +7,17 @@ session_start();
 	<head>
 		<meta charset="utf-8">
 		<style>
-		img:hover {
+		* {
+			font-family: 'SegoeUI', Arial, Helvetica !important;
+		}
+		.img:hover {
 			border-color: #21b4d0;
 		}
 		.content {
-			width: 100%;
+			/*width: 100%;*/
 		}
 		.item {
-			width: 50%;
+			/*width: 50%;*/
 			float: left;
 		}
 		ul li {
@@ -23,15 +26,15 @@ session_start();
 			margin-right: 15px;
 		}
 		h2, span, input, form, .audio, option, label, body{
-			margin-left: 10%;
-			margin-right: 10%;
+			/*margin-left: 10%;
+			margin-right: 10%;*/
 		}
 		select {
 			margin-left: 0;
 			margin-right: 0;
 		}
 		audio {
-			margin-left: 14%;
+			/*margin-left: 14%;*/
 		 	position: relative;
 		}
 		.palavra {
@@ -42,23 +45,26 @@ session_start();
 			visibility: hidden; /* Makes input not-clickable */
 			position: absolute; /* Remove input from document flow */
 		}
-		label > input + img{ /* IMAGE STYLES */
+		label > input + .img{ /* IMAGE STYLES */
 		  	cursor:pointer;
 		  	border:7px solid transparent;
 			
 			
 		}
-		label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+		label > input:checked + .img{ /* (RADIO CHECKED) IMAGE STYLES */
 			border: 7px solid gray;
 		}
-		img {
-			border:7px solid white;
+		.img {
+			border: 7px solid white;
 			height: 180px;
 			width: 200px;
 		}
 		</style>
 	</head>
 	<body>
+		<h1 class="t1"> QUIZ </h1> 
+		<hr id="hr-top"></hr>
+		<br>
 		<label>Escolha o Contexto:</label><br/><br/>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
  <select name="contexto" onchange="this.form.submit()">
@@ -222,7 +228,7 @@ if (isset($_POST["escolha"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
 		<li>
    			<label>
   				<input type="radio" name="escolha" value="<?= $i; ?>" />
-  				<img id="img_<?= $i;?>" src="../imagens/imagens_quiz/<?= $pasta; ?>/<?= $perguntas[$indice][$i]; ?>">
+  				<img class="img" id="img_<?= $i;?>" src="../imagens/imagens_quiz/<?= $pasta; ?>/<?= $perguntas[$indice][$i]; ?>">
 			</label>
    		</li>
 	</div>
