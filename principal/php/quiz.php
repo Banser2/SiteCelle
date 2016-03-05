@@ -202,9 +202,6 @@ if (isset($_POST["escolha"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
 		$_SESSION['erros'] = $erros;
 }
 
-?>
-
-	<?php
 		if($_SESSION['contexto'] !== "default"){
 	?>
 	<h2>Selecione a imagem correspondente ao áudio</h2>
