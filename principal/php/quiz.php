@@ -172,9 +172,6 @@ if (!isset($_SESSION['erros'])) {
     $erros = $_SESSION['erros'];
 }
 
-?>
-<h2>Quiz</h2>
-<?php
 if (isset($_POST["escolha"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
    $escolha = $_POST["escolha"];
 	if($escolha === $perguntas[$indice][5]){
