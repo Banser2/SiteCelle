@@ -88,7 +88,7 @@ $cozinha = [
 /*Índice 5, pergunta 6 */	['glass.mp3','glass.jpg','drainer.jpg','pressure_cooker.jpg','frying_pan.jpg','1', 'Cup'],
 /*Índice 6, pergunta 7 */	['fork.mp3','shell.jpg','kettle.jpg','fork.jpg','serving_platter.jpg','3', 'Fork'],
 /*Índice 7, pergunta 8 */	['drainer.mp3','cake_pan.jpg','drainer.jpg','wooden_spoon.jpg','thermal_bottle.jpg','2', 'Drainer'],
-/*Índice 8, pergunta 9 */	['jar.mp3','jar.jpg','spoon.jpg','serving_platter.jpg','pan.jpg','1', 'Jar'],
+/*Índice 8, pergunta 9 */	['jar.mp3','jar.jpg','spoon.jpg','serving_platter.jpg','spatula.jpg','1', 'Jar'],
 /*Índice 9, pergunta 10 */	['frying_pan.mp3','pan.jpg','thermal_bottle.jpg','fork.jpg','frying_pan.jpg','4', 'Frying Pan'],
 /*Índice 10, pergunta 11 */	['thermal_bottle.mp3','drainer.jpg','glass.jpg','thermal_bottle.jpg','cup.jpg','3', 'Thermal Bottle'],
 /*Índice 11, pergunta 12 */	['cup.mp3','pan.jpg','cup.jpg','kettle.jpg','jar.jpg','2', 'Cup'],
@@ -98,7 +98,7 @@ $cozinha = [
 /*Índice 15, pergunta 16 */	['serving_platter.mp3','plates.jpg','fork.jpg','pan.jpg','serving_platter.jpg','4', 'Serving Platter'],
 /*Índice 16, pergunta 17 */	['cuscuzeira.mp3','shell.jpg','cuscuzeira.jpg','coffee_filter.jpg','knife.jpg','2', 'Cuscuzeira'],
 /*Índice 17, pergunta 18 */	['wooden_spoon.mp3','wooden_spoon.jpg','spatula.jpg','serving_platter.jpg','frying_pan.jpg','1', 'Wooden Spoon'],
-/*Índice 18, pergunta 19 */	['pan.mp3','plates.jpg','pressure_cooker.jpg','fork.jpg','drainer.jpg','2', 'Pan'],
+/*Índice 18, pergunta 19 */	['pan.mp3','plates.jpg','pan.jpg','fork.jpg','drainer.jpg','2', 'Pan'],
 /*Índice 19, pergunta 20 */	['coffee_filter.mp3','coffee_filter.jpg','pressure_cooker.jpg','drainer.jpg','spoon.jpg','1', 'Coffee Filter']
 ];
 
