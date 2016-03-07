@@ -12,8 +12,8 @@ session_start();
 	<h1 class="t1"> QUIZ </h1> 
 	<hr id="hr-top"></hr>
 	<br>
-	<label>Escolha o Contexto:</label><br/><br/>
-	<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
+	<label id="contexto">Escolha o Contexto:</label><br/><br/>
+	<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
 		<select name="contexto" onchange="this.form.submit()">
 			<option value="default">Selecione</option>
 			<option value="cozinha">Utensílios de Cozinha</option>
@@ -211,27 +211,27 @@ session_start();
 				$indice = 0;
 
 				header("location:resultado_final.php");
-		}
-	}else{
-		$erros++;
-		echo '<style type="text/css"> 
+			}
+		}else{
+			$erros++;
+			echo '<style type="text/css"> 
 				#img_' . $escolha .' {
-		border-color: red;
-	}
-	</style> 
-	<audio autoplay>
-	<source src="../audios/erro.mp3"/>
-	</audio>';
-	}
-$_SESSION['indice'] = $indice;
-$_SESSION['acertos'] = $acertos;
-$_SESSION['erros'] = $erros;
+					border-color: red;
+				}
+			</style> 
+			<audio autoplay>
+			<source src="../audios/erro.mp3"/>
+			</audio>';
+		}
+	$_SESSION['indice'] = $indice;
+	$_SESSION['acertos'] = $acertos;
+	$_SESSION['erros'] = $erros;
 }
 
 if($_SESSION['contexto'] !== "default"){
 	?>
 	<h2>Selecione a imagem correspondente ao áudio</h2>
-	<p><span><b>Pergunta: <b><?= $indice+1; ?></span></p><br>
+	<p><span><b>Pergunta: <b><?= $indice+1; ?></span></p>
 	<h2><?= $perguntas[$indice][6]; ?></h2><br>
 	<audio class="audio" controls autoplay>
 		<source src="../audios/<?= $perguntas[$indice][0]; ?>"/>
@@ -255,7 +255,8 @@ if($_SESSION['contexto'] !== "default"){
 						<?php } ?>
 					</ul>
 				</div>
-				<br><br>
+				<br>
+				<br>
 				<input type="submit" name="submit" value="Responder"> 
 			</form>
 			<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
