@@ -1,0 +1,54 @@
+* {
+	font-family: 'SegoeUI', Arial, Helvetica !important;
+}
+.img:hover {
+	border-color: #21b4d0;
+}
+.content {
+	width: 80%;
+	height: 500px;
+}
+.item {
+	width: 40%;
+	float: left;
+	height: 250px;
+}
+ul li {
+	float: left;
+	list-style-type: none;
+	margin-right: 15px;
+}
+h2, span, input, form, .audio, option, label, body{
+	margin-left: 10%;
+	margin-right: 10%;
+}
+select {
+	margin-left: 0;
+	margin-right: 0;
+}
+audio {
+	/*margin-left: 14%;*/
+	position: relative;
+}
+.palavra {
+	font-size: 30px;
+	text-align: center;
+}
+label > input{ /* Esconde o radio */
+	visibility: hidden; /* Faz o input não clicável */
+	position: absolute; /* Retira o input do fluxo do documento */
+}
+label > input + .img{ /* Estilo da Imagen */
+	cursor:pointer;
+	border:7px solid transparent;
+	
+	
+}
+label > input:checked + .img{ /* Estilo da imagen quando selecionada */
+	border: 7px solid gray;
+}
+.img {
+	border: 7px solid white;
+	height: auto;
+	width: auto;
+}
