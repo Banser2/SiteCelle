@@ -12,6 +12,9 @@
 	<option value="comida">Comida</option>
 	<option value="escola">Escola</option>
 	<option value="transporte">Transporte</option>
+	<option value="animais">Animais</option>
+	<option value="esportes">Esportes</option>
+	<option value="partedocorpo">Partes do Corpo</option>
   
 </select> 
 </form>
@@ -22,7 +25,7 @@
 session_start();
 
 $comida = [
-[<audio controls>'meat.jpg ','Cheese',<source src="Cheese.mp3" type="audio/mpeg">,'Meat','Chicken','Cooke','2'],
+['meat.jpg ','Cheese','Meat','Chicken','Cooke','2'],
 ['candy.jpg','Eggs','Hot-dog','Candy','Milk','3'],
 ['eggs.jpg','Eggs','Potato','Apple','Guava','1'],
 ['bread.jpg','Peas','Beans','Banana','Bread','4'],
@@ -46,7 +49,7 @@ $comida = [
 ['guava.jpg','Eggs','Hot-dog','Guava','Milk','3'],
 ['orange.jpg','Orange','Potato','Eggs','Guava','1'],
 ['coconut.jpg','Bacon','Beans','Banana','Coconut','4'],
-['popcorn.jpg','Peas','Beans','Pop Corn','Bread','3']</audio> ];
+['popcorn.jpg','Peas','Beans','Pop Corn','Bread','3'] ];
 $escola = [
 ['auditorium.jpg ','Class','Auditorium','Stadium','Parking','2'],
 ['blackboard.jpg','Teacher','Classmate','Blackboard','Board','3'],
@@ -74,6 +77,42 @@ $transporte = [
 ['rollerskates.jpg','Roller Skates','Rollercoaster','Wain','Horse','1'],
 ['yellowcab.jpg','Bus','Car','Ship','Yellow Cab','4'],
 ['train.jpg','Streetcar','Subway','Train','Monster Truck','3'] ];
+$animais = [
+['bear.jpg','Bird','Fox','Owl','Bear','4'],
+['butterfly.jpg','Butterfly','Fox','Horse','Bird','1'],
+['bird.jpg','Dog','Bird','Bug','Brid','2'],
+['dolphin.jpg','Whale','Shark','Fish','Dolphin','4'],
+['wolf.jpg','Fox','Lion','Wolf','Horse','3'],
+['horse.jpg','House','Horse','Wolf','Bear','2'],
+['fox.jpg','Owl','Wolf','Dragon','Fox','4'],
+['owl.jpg','Parrot','Owl','Bird','Hawk','2'],
+['shark.jpg','Shark','Dolphin','Wolf','Bear','1'],
+['parrot.jpg','Bird','Owl','Parrot','Hawk','3'] ];
+$esportes = [
+['archery.jpg','','archery','','','2'],
+['baseball.jpg','','','','baseball','4'],
+['boxing.jpg','','','boxing','','3'],
+['canoeing.jpg','canoeing','','','','1'],
+['cycling.jpg','','','','cycling','4'],
+['fencing.jpg','','fencing','','','2'],
+['american_football.jpg','American football','','','','1'],
+['horsemanship.jpg','','','horsemanship','','3'],
+['ice_hockey.jpg','','ice hockey','','','2'],
+['long_jump.jpg','','','','long jump','4'],
+['motoring.jpg','motoring','','','','1'],
+['parachuting.jpg','','','parachuting','','3'],
+['pole_vault.jpg','pole vault','','','','1'],
+['race.jpg','','race','','','2'],
+['roller_skating','','','','roller skating','4'],
+['rowing.jpg','','','rowing','','3'],
+['rugby.jpg','','rugby','','','2'],
+['sailing.jpg','','','','sailing','4'],
+['shot.jpg','shot','','','','1'],
+['slakeline.jpg','','','slakeline','','3'],
+['soccer.jpg','','soccer','','','2'],
+['swimming.jpg','swimming','','','','1'],
+['tennis.jpg','','','','tennis','4'],
+['track_field.jpg','','track field','','','2']];
 
 if ( $_SERVER["REQUEST_METHOD"] == "POST" && (isset($_POST['contexto']) && $_POST['contexto'] !== "default")) {
 	$contexto = $_POST['contexto'];
@@ -87,7 +126,11 @@ if ($_SESSION['contexto'] === 'comida'){
 		$perguntas = $escola;
 	} else if ($_SESSION['contexto'] === 'transporte'){
 		$perguntas = $transporte;
-	} 
+	} else if ($_SESSION['contexto'] === 'animais'){
+		$perguntas = $animais;
+	}else if ($_SESSION['contexto'] === 'esportes'){
+		$perguntas = $esportes;
+	}
 if ( $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["reset"])) {
 	$_SESSION['contexto'] = 'default';
 	$_SESSION['indice'] = 0;
