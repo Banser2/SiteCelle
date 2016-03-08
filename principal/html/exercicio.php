@@ -89,30 +89,30 @@ $animais = [
 ['shark.jpg','Shark','Dolphin','Wolf','Bear','1'],
 ['parrot.jpg','Bird','Owl','Parrot','Hawk','3'] ];
 $esportes = [
-['archery.jpg','','archery','','','2'],
-['baseball.jpg','','','','baseball','4'],
-['boxing.jpg','','','boxing','','3'],
-['canoeing.jpg','canoeing','','','','1'],
-['cycling.jpg','','','','cycling','4'],
-['fencing.jpg','','fencing','','','2'],
-['american_football.jpg','American football','','','','1'],
-['horsemanship.jpg','','','horsemanship','','3'],
-['ice_hockey.jpg','','ice hockey','','','2'],
-['long_jump.jpg','','','','long jump','4'],
-['motoring.jpg','motoring','','','','1'],
-['parachuting.jpg','','','parachuting','','3'],
-['pole_vault.jpg','pole vault','','','','1'],
-['race.jpg','','race','','','2'],
-['roller_skating','','','','roller skating','4'],
-['rowing.jpg','','','rowing','','3'],
-['rugby.jpg','','rugby','','','2'],
-['sailing.jpg','','','','sailing','4'],
-['shot.jpg','shot','','','','1'],
-['slakeline.jpg','','','slakeline','','3'],
-['soccer.jpg','','soccer','','','2'],
-['swimming.jpg','swimming','','','','1'],
-['tennis.jpg','','','','tennis','4'],
-['track_field.jpg','','track field','','','2']];
+['archery.jpg','Arrow','Archery','Wrestling','Boxing','2'],
+['baseball.jpg','Soccer','Karate','Parachuting','Baseball','4'],
+['boxing.jpg','Gloves','Cycling','Boxing','Tennis','3'],
+['canoeing.jpg','Canoeing','Surfing','Rugby','Swimming','1'],
+['cycling.jpg','Motocross','Race','Snowboard','Cycling','4'],
+['fencing.jpg','Sword','Fencing','Boxing','Fencer','2'],
+['american_football.jpg','American Football','Soccer','Rugby','Tennis','1'],
+['horsemanship.jpg','Horse Racing','Horse','Horsemanship','Cowboy','3'],
+['ice_hockey.jpg','Field Hockey','Ice Hockey','Ice Skating','Javelin Throw','2'],
+['long_jump.jpg','Triple Jump','Pole Vault','Sand Jump','Long Jump','4'],
+['motoring.jpg','Motoring','Motocross','F1','Top Gear','1'],
+['parachuting.jpg','Hang Gliding','Football','Parachuting','Bowling','3'],
+['pole_vault.jpg','Pole Vault','Javelin Throw','Pole Dance','Shooting','1'],
+['race.jpg','Snowboard','Race','Fencing','Cycling','2'],
+['roller_skating','Sailing','Race','Horsemanship','Roller Skating','4'],
+['rowing.jpg','Canoeing','Boating','Rowing','Swimming','3'],
+['rugby.jpg','Football','Rugby','Soccer','Fencing','2'],
+['sailing.jpg','Canoeing','Rowing','Swimming','Sailing','4'],
+['shot.jpg','Shot','Hunting','Track Field','Cycling','1'],
+['slackline.jpg','Rugby','Wrestling','Slackline','Boxing','3'],
+['soccer.jpg','Rugby','Soccer','Volleyball','Tennis','2'],
+['swimming.jpg','Swimming','Canoeing','Track Field','Ice Skating','1'],
+['tennis.jpg','Ping Pong','Volleyball','Wrestling','Tennis','4'],
+['track_field.jpg','Triathlon','Track Field','Athletism','Pole Vault','2']];
 
 if ( $_SERVER["REQUEST_METHOD"] == "POST" && (isset($_POST['contexto']) && $_POST['contexto'] !== "default")) {
 	$contexto = $_POST['contexto'];
@@ -130,6 +130,8 @@ if ($_SESSION['contexto'] === 'comida'){
 		$perguntas = $animais;
 	}else if ($_SESSION['contexto'] === 'esportes'){
 		$perguntas = $esportes;
+    }else if ($_SESSION['contexto'] === 'partedocorpo'){
+		$perguntas = $partedocorpo;
 	}
 if ( $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["reset"])) {
 	$_SESSION['contexto'] = 'default';
