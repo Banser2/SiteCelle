@@ -31,7 +31,7 @@ ul li:nth-child(1), ul li:nth-child(3) {
 	padding-top: 5px;
 	padding-bottom: 5px;
 }	
-h2, span, input, form, .audio, option, body, #contexto {
+h2, span, input, form, .audio, option, body, #contexto,button {
 	margin-left: 10%;
 	margin-right: 10%;
 }
@@ -64,4 +64,13 @@ label > input:checked + .img{ /* Estilo da imagen quando selecionada */
 	height: auto; /* 180px */
 	width: auto; /* 190px */
 	/*max-width: 100%;*/
+}
+button{
+	background-image:url("../botão_play_quiz/play_button_quiz.png");
+	 height:45px;
+	 width:45px;
+	 border-radius:30px; 
+	 border:solid white;
+    cursor: pointer;
+    background-repeat: no-repeat;
 }

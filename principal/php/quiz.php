@@ -233,9 +233,12 @@ if($_SESSION['contexto'] !== "default"){
 	<h2>Selecione a imagem correspondente ao áudio</h2>
 	<p><span><b>Pergunta: <b><?= $indice+1; ?></span></p>
 	<h2><?= $perguntas[$indice][6]; ?></h2><br>
-	<audio class="audio" controls autoplay>
-		<source src="../audios/<?= $perguntas[$indice][0]; ?>"/>
-		</audio><br/>
+        
+	<audio id="#" autoplay src="../audios/<?= $perguntas[$indice][0]; ?>"/></audio>
+<div>
+  <button onclick="document.getElementById('#').play()"></button>
+ </div>
+		<br/>
 		<br/>
 		<br/>
 		<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
