@@ -32,6 +32,14 @@
 			margin-left: 14%;
 		 	position: relative;
 		}
+        button{
+	    background-image:url("botão_play_quiz/play_button.png");
+	    height:33px;
+	    width: 33px;
+	    border-radius:30px;
+	    border: solid  white;
+        }
+       
 	</style>
 </head>
 <body> 
@@ -134,9 +142,11 @@ $perguntas = [
    		</li>
 	<?php } ?>
 	</ul>
-   	<audio class="audio" controls>
-   		<source src="../audios/<?= $perguntas[$indice][0]; ?>"/>
-   	</audio><br/>
+<audio id="#" src="../audios/<?= $perguntas[$indice][0]; ?>"/> autoplay></audio>
+<div>
+  <button onclick="document.getElementById('#').play()"></button>
+ </div>
+    <br/>
    <br>
    <input type="submit" name="escolha" value="Início">
 </form>

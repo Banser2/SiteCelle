@@ -1,0 +1,76 @@
+* {
+	font-family: sans-serif;
+}
+.img:hover {
+	border-color: #21b4d0;
+}
+.content {
+	width: 465px;
+	height: 370px;
+	margin: 0;
+}
+.item {
+	width: 200px;
+	height: 175px;
+	float: left;
+}
+ul {
+	width: 460px;
+	display: block;
+}
+ul li {
+	float: left;
+	list-style-type: none;
+	width: 200px;
+	height: 190px;
+	display: block;
+	padding: 0;
+}
+ul li:nth-child(1), ul li:nth-child(3) {
+	padding-left: 30px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}	
+h2, span, input, form, .audio, option, body, #contexto,button {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+select {
+	margin-left: 0;
+	margin-right: 0;
+}
+audio {
+	/*margin-left: 14%;*/
+	position: relative;
+}
+/*.palavra {
+	font-size: 30px;
+}*/
+label > input{ /* Esconde o radio */
+	visibility: hidden; /* Faz o input não clicável */
+	position: absolute; /* Retira o input do fluxo do documento */
+}
+label > input + .img{ /* Estilo da Imagen */
+	cursor: pointer;
+	border: 7px solid transparent;
+	
+	
+}
+label > input:checked + .img{ /* Estilo da imagen quando selecionada */
+	border: 7px solid #3CB371;
+}
+.img {
+	border: 7px solid transparent;
+	height: auto; /* 180px */
+	width: auto; /* 190px */
+	/*max-width: 100%;*/
+}
+button{
+	background-image:url("../botão_play_quiz/play_button_quiz.png");
+	 height:45px;
+	 width:45px;
+	 border-radius:30px; 
+	 border:solid white;
+    cursor: pointer;
+    background-repeat: no-repeat;
+}
