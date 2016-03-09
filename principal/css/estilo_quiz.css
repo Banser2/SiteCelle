@@ -26,7 +26,7 @@ ul li {
 	display: block;
 	padding: 0;
 }
-ul li:nth-child(1), ul li:nth-child(3) {
+ul li:nth-child(2), ul li:nth-child(4) {
 	padding-left: 30px;
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -47,7 +47,7 @@ audio {
 	font-size: 30px;
 }*/
 label > input{ /* Esconde o radio */
-	visibility: hidden; /* Faz o input não clicável */
+	visibility: hidden; /* Esconde o input */
 	position: absolute; /* Retira o input do fluxo do documento */
 }
 label > input + .img{ /* Estilo da Imagen */
