@@ -141,33 +141,35 @@ session_start();
 		$_SESSION['contexto'] = $_POST['contexto'];
 	}
 
-	if ($_SESSION['contexto'] === 'cozinha'){
+	$contexto = $_SESSION['contexto'];
+
+	if ($contexto === 'cozinha'){
 		$perguntas = $cozinha;
 		$pasta = "utensilios_cozinha";
 	}
-	else if ($_SESSION['contexto'] === 'vestuario'){
+	else if ($contexto === 'vestuario'){
 		$perguntas = $vestuario;
 		$pasta = "vestuario";
 	}
-	else if ($_SESSION['contexto'] === 'jardim'){
+	else if ($contexto === 'jardim'){
 		$perguntas = $jardim;
 		$pasta = "jardim";
 	}
-	else if ($_SESSION['contexto'] === 'mobilias'){
+	else if ($contexto === 'mobilias'){
 		$perguntas = $mobilias;
 		$pasta = "mobilias";
 	}
-	else if ($_SESSION['contexto'] === 'profissoes'){
+	else if ($contexto === 'profissoes'){
 		$perguntas = $profissoes;
 		$pasta = "profissoes";
 	}
-	else if ($_SESSION['contexto'] === 'eletrodomesticos'){
+	else if ($contexto === 'eletrodomesticos'){
 		$perguntas = $eletrodomesticos;
 		$pasta = "eletrodomesticos";
 	}
 
 	if ( $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["reset"])) {
-		$_SESSION['contexto'] = 'default';
+		$contexto = 'default';
 		$_SESSION['indice'] = 0;
 		$_POST['contexto'] = 'default';
 		$contexto = 'default';
@@ -228,7 +230,7 @@ session_start();
 	$_SESSION['erros'] = $erros;
 }
 
-if($_SESSION['contexto'] !== "default"){
+if($contexto !== "default"){
 	?>
 	<h2>Selecione a imagem correspondente ao áudio</h2>
 	<p><span><b>Pergunta: <b><?= $indice+1; ?></span></p>
@@ -238,9 +240,6 @@ if($_SESSION['contexto'] !== "default"){
 <div>
   <button onclick="document.getElementById('#').play()"></button>
  </div>
-		<br/>
-		<br/>
-		<br/>
 		<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
 			<div class="content">
 				<ul>
