@@ -1,3 +1,8 @@
+<?php 
+require 'cabecalho.php';   
+?>
+<section>
+    <div id="conteudo">
 <h1 class="t1">Sobre</h1>
     <hr id="hr-top"></hr>
     <p style="text-align: justify;">O CELLE é um espaço destinado à promoção de oportunidade de aquisição de conhecimentos em outras línguas e participação em atividades culturais inerentes à internacionalização para os discentes, servidores, pesquisadores e comunidade do IFPE.</p><br>
@@ -44,3 +49,8 @@
     - Docentes atuantes no CELLE; <br>
     - Representação estudantil</p><br>
 
+<?php 
+require 'rodape.php';   
+?>
+    </div>
+</section>

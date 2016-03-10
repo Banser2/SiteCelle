@@ -9,9 +9,9 @@
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
  <select name="contexto" onchange="this.form.submit()">
 	<option value="default">Selecione</option>
-	<option value="comida">Comida</option>
-	<option value="escola">Escola</option>
-	<option value="transporte">Transporte</option>
+	<option value="comidas">Comida</option>
+	<option value="escolar">Escola</option>
+	<option value="transportes">Transporte</option>
 	<option value="animais">Animais</option>
 	<option value="esportes">Esportes</option>
 	<option value="partedocorpo">Partes do Corpo</option>
@@ -135,7 +135,7 @@ $partedocorpo = [
 ['shoulder.jpg','Shoulder','Arm','Knee','Leg','1'],
 ['thigh.jpg','Shank Leg','Spine','Thigh','Leg','3'],
 ['tooth.jpg','Mouth','Tooth','Lips','Tongue','2'],
-['wrist.jpg','Wrist','Vein','Thumb','Forearm','1'], ]
+['wrist.jpg','Wrist','Vein','Thumb','Forearm','1']];
 
 if ( $_SERVER["REQUEST_METHOD"] == "POST" && (isset($_POST['contexto']) && $_POST['contexto'] !== "default")) {
 	$contexto = $_POST['contexto'];
@@ -143,11 +143,11 @@ if ( $_SERVER["REQUEST_METHOD"] == "POST" && (isset($_POST['contexto']) && $_POS
 	
 }
 
-if ($_SESSION['contexto'] === 'comida'){
+if ($_SESSION['contexto'] === 'comidas'){
 		$perguntas = $comida;
-	} else if ($_SESSION['contexto'] === 'escola'){
+	} else if ($_SESSION['contexto'] === 'escolar'){
 		$perguntas = $escola;
-	} else if ($_SESSION['contexto'] === 'transporte'){
+	} else if ($_SESSION['contexto'] === 'transportes'){
 		$perguntas = $transporte;
 	} else if ($_SESSION['contexto'] === 'animais'){
 		$perguntas = $animais;
@@ -218,6 +218,9 @@ if (isset($_POST["escolha"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
    		<input type="radio" name="escolha"  value="<?php echo $i;?>">
 
 	<?php echo $perguntas[$indice][$i];?>
+	<audio class="audio" controls>
+		<source src="../../audios/<?= $_SESSION['contexto'].'/'?><?= str_replace(" ", "_", strtolower($perguntas[$indice][$i].'.mp3')) ; ?>"/>
+		</audio><br/>
 	
 	<?php } ?>
    	<br><br>

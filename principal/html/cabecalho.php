@@ -36,30 +36,3 @@
 <br><br><br>
  </nav>
 </header>
-<section>
-    <div id="conteudo">
-		
-    </div>
-</section>
-<footer>
-<br>
-Avenida Alfredo Bandeira de Melo, BR 101 norte - km 44
-Centro, Igarassu - PE, Cep: 53610-000<br>
-Fale com o CELLE:
-celle@igarassu.ifpe.edu.br
- (81) 3334 - 3507    
-</footer>
-		<script>
-		$( window ).load(function() {
-		  $('#conteudo').load('html/sobre.html');
-		});
-			
-        $('.botaoMenu').click(function(event) {
-			var pagina = event.target.id;
-            $('#conteudo').load('html/' +pagina);
-        });
-		
-
-      </script>
-    </body>
-    </html>
