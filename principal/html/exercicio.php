@@ -103,7 +103,7 @@ $esportes = [
 ['parachuting.jpg','Hang Gliding','Football','Parachuting','Bowling','3'],
 ['pole_vault.jpg','Pole Vault','Javelin Throw','Pole Dance','Shooting','1'],
 ['race.jpg','Snowboard','Race','Fencing','Cycling','2'],
-['roller_skating','Sailing','Race','Horsemanship','Roller Skating','4'],
+['roller_skating.jpg','Sailing','Race','Horsemanship','Roller Skating','4'],
 ['rowing.jpg','Canoeing','Boating','Rowing','Swimming','3'],
 ['rugby.jpg','Football','Rugby','Soccer','Fencing','2'],
 ['sailing.jpg','Canoeing','Rowing','Swimming','Sailing','4'],
@@ -113,6 +113,29 @@ $esportes = [
 ['swimming.jpg','Swimming','Canoeing','Track Field','Ice Skating','1'],
 ['tennis.jpg','Ping Pong','Volleyball','Wrestling','Tennis','4'],
 ['track_field.jpg','Triathlon','Track Field','Athletism','Pole Vault','2']];
+$partedocorpo = [
+['arm.jpg','Leg','Arm','Eye','Shoulder','2'],
+['back.jpg','Knee','Head','Nails','Back','4'],
+['belly.jpg','Elbow','Eyebrown','Belly','Back','3'],
+['chin.jpg','Chin','Neck','Tooth','Mouth','1'],
+['ear.jpg','Nose','Chin','Finger','Ear','4'],
+['elbow.jpg','Wrist','Elbow','Nose','Knee','2'],
+['eye.jpg','Eye','Eyelashes','Hair','Eyebrows','1'],
+['eyebrows.jpg','Eyelashes','Ear','Eyebrows','Arm','3'],
+['finger.jpg','Mouth','Finger','Foot','Nails','2'],
+['foot.jpg','Leg','Thigh','Hands','Foot','4'],
+['hair.jpg','Hair','Shoulder','Chin','Wrist','1'],
+['hands.jpg','Wrist','Finger','Hands','Thigh','3'],
+['knee.jpg','Knee','Foot','Hands','Elbow','1'],
+['leg.jpg','Feet','Leg','Thigh','Neck','2'],
+['mouth.jpg','Tooth','Leg','Finger','Mouth','4'],
+['nails.jpg','Hands','Eyebrows','Nails','Tooth','3'],
+['neck.jpg','Necklace','Neck','Chin','Shoulder','2'],
+['nose.jpg','Mouth','Eye','Tongue','Nose','4'],
+['shoulder.jpg','Shoulder','Arm','Knee','Leg','1'],
+['thigh.jpg','Shank Leg','Spine','Thigh','Leg','3'],
+['tooth.jpg','Mouth','Tooth','Lips','Tongue','2'],
+['wrist.jpg','Wrist','Vein','Thumb','Forearm','1'], ]
 
 if ( $_SERVER["REQUEST_METHOD"] == "POST" && (isset($_POST['contexto']) && $_POST['contexto'] !== "default")) {
 	$contexto = $_POST['contexto'];
