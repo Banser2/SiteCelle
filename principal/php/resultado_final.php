@@ -4,6 +4,9 @@
 ?>
 <section>
 	<div id="conteudo">
+		<h1 class="t1"> Resultado </h1> 
+		<hr id="hr-top"></hr>
+		<br>
 		<div class="resultado">
 			<?php
 			if(isset($_POST['submit'])){
