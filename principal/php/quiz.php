@@ -1,17 +1,10 @@
 <?php
 // Inicia a Sessão
 session_start();
+include_once 'cabecalho.php';
 ?>
-<!DOCTYPE HTML> 
-<html>
-<head>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="../css/estilo_quiz.css">
-</head>
-<body>
-	<h1 class="t1"> QUIZ </h1> 
-	<hr id="hr-top"></hr>
-	<br>
+<section>
+	<div id="conteudo">
 	<label id="contexto">Escolha o Contexto:</label><br/><br/>
 	<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
 		<select name="contexto" onchange="this.form.submit()">
@@ -24,6 +17,7 @@ session_start();
 			<option value="eletrodomesticos">Eletrodomésticos</option>
 		</select> 
 	</form>
+
 
 	<?php
 
@@ -268,5 +262,8 @@ if($contexto !== "default"){
 			<?php 
 		}
 		?>
-	</body>
-	</html>
+	</div>
+</section>
+<?php 
+	include_once 'rodape.php';
+?>
