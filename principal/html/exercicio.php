@@ -99,7 +99,7 @@ $esportes = [
 ['horsemanship.jpg','Horse Racing','Horse','Horsemanship','Cowboy','3'],
 ['ice_hockey.jpg','Field Hockey','Ice Hockey','Ice Skating','Javelin Throw','2'],
 ['long_jump.jpg','Triple Jump','Pole Vault','Sand Jump','Long Jump','4'],
-['motoring.jpg','Motoring','Motocross','F1','Top Gear','1'],
+['motoring.jpg','Motoring','Motocross','Formula One','Top Gear','1'],
 ['parachuting.jpg','Hang Gliding','Football','Parachuting','Bowling','3'],
 ['pole_vault.jpg','Pole Vault','Javelin Throw','Pole Dance','Shooting','1'],
 ['race.jpg','Snowboard','Race','Fencing','Cycling','2'],
