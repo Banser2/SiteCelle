@@ -241,7 +241,7 @@ if($contexto !== "default"){
 					for($i = 1 ; $i <= 4 ; $i++){
 						?>
 						<div clas="item">
-							<li>
+							<li class="itens">
 								<label>
 									<input type="radio" name="escolha" value="<?= $i; ?>" />
 									<img class="img" id="img_<?= $i;?>" src="../imagens/imagens_quiz/<?= $pasta; ?>/<?= $perguntas[$indice][$i]; ?>">
