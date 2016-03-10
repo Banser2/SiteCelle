@@ -48,11 +48,8 @@ p{
 }
 #conteudo p {
 	margin-bottom: 0px;
-
 	text-align: justify;
 	padding-bottom: 0px;
-}
-#conteudo p {
 	line-height: 20px;
 	text-indent: 0px;
 }
@@ -105,14 +102,9 @@ body{
 	border-right:1px solid #c0c0c0;
 	padding-left: 10px;
 	padding-right: 10px;
-
-	padding-right: 10px;
-
-	padding-left: 38px;
-	padding-right: 38px;
-
-	padding-left: 10px;
-	padding-right: 10px;
+}
+#menu ul li:hover {
+	background-color:#66cc99; 
 }
 .menu li a{
 	color:#333; 
