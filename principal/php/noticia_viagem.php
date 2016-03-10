@@ -1,3 +1,6 @@
+<?php 
+	include_once 'cabecalho.php';
+?>
 <section>
 	<div id="conteudo">
 		<h1 class="t1">Docentes do IFPE selecionados para capacitação nos Estados Unidos</h1>
@@ -10,3 +13,6 @@
 	    <p>Você pode conferir o resultado final da Chamada Pública SETEC-CAPES/NOVA clicando <a href="http://portal.mec.gov.br/index.php?option=com_docman&amp;view=download&amp;alias=27331-chamada-publica-n01-resultado-final-pdf&amp;category_slug=novembro-2015-pdf&amp;Itemid=30192" target="_blank"><strong><u>AQUI</u></strong></a>.</p>  
    </div>
 </section>
+<?php 
+	include_once 'rodape.php';
+?>

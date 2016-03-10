@@ -1,3 +1,6 @@
+<?php 
+	include_once 'cabecalho.php';
+?>
 <section>
 	<div id="conteudo">
 		<h1 class="t1">Alunos participam da 1ª aula do CELLE Igarassu</h1>
@@ -9,3 +12,6 @@
 	    <p> Quem desejar ajudar ou mais informações pode ligar para 3543-0258.</p>
 	</div>
 </section>
+<?php 
+	include_once 'rodape.php';
+?>
