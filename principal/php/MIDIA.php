@@ -16,7 +16,7 @@ require 'cabecalho.php';
     <table>
             <tr>
                 <td class="exerc">Exercício 01</td>
-                <td><input type="image" title="Ouvir" src="../Imagens/play_button.png" onclick="window.open('../audios/Unidade_01/Unit01_Pg002_Ex01_Conversation_PtA.mp3', 'pagina', 'width=305, height=70');">
+                <td><input type="image" title="Ouvir" src="../Imagens/play_button.png" onclick="window.open('', 'pagina', 'width=305, height=70');">
                 <input type="image" title="Baixar" src="../Imagens/download_button.png" onclick="location.href='http://www.cambridge.org/interchange/audioprogram/level0/Interchange4thEd_ClassAudio0_Unit01_Pg002_Ex01_Conversation_PtA.mp3' "></td>
                 <td class="exerc">Exercício 02</td>
                 <td><input type="image" title="Ouvir" src="../Imagens/play_button.png" onclick="window.open('../audios/Unidade_01/Unit01_Pg002_Ex02_Snapshot.mp3', 'pagina', 'width=305, height=70');">
