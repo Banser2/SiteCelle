@@ -6,44 +6,6 @@ include_once 'cabecalho.php';
 	<meta charset="utf-8">
 	<title>Tabela</title>
 </head>
-<style type="text/css">
-* {
-    font-family: 'SegoeUI', Arial, Helvetica !important;
-}
-table, tr, td, th{
-    border-collapse: collapse;
-    padding: 8px 10px;
-    font-size: 14.5px;
-}
-table tr:first-child{
-    background-color: #353535;
-    color: #FFF
-}
-table tr:nth-child(even){
-    background-color: #DFDFDF;
-}
-table th{
-    text-align: left;
-}
-#conteudo{
-    padding-left: 10px;
-    padding-right: 10px;
-}
-.next_prev {
-    text-decoration: none;
-    float: right;
-    padding-left: 15px;
-}
-.next_prev:hover {
-    color: #00F;
-}
-th:first-child, th:nth-child(2), th:last-child {
-    width: 220px;
-}
-.paises {
-    width: 680px;
-}
-</style>
 <body>
     <section>
         <div id="conteudo">
@@ -143,6 +105,7 @@ th:first-child, th:nth-child(2), th:last-child {
                     </tr>
                 </table>
                 <br/>
+                <span><small>Page 3 of 3</small></span>
                 <a class="next_prev" href="paises_nacionalidades.php">Início</a>
                 <a class="next_prev" href="paises_nacionalidades1.php">Anterior</a>
                 <br/>

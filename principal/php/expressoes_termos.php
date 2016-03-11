@@ -6,46 +6,12 @@ include_once 'cabecalho.php';
     <meta charset="utf-8">
     <title>Tabela</title>
 </head>
-<style type="text/css">
-* {
-    font-family:sans-serif;
-}
-table, tr, td, th{
-    border-collapse: collapse;
-    padding: 8px 10px;
-}
-table tr:first-child{
-    background-color: #353535;
-    color: #FFF
-}
-table td:first-child {
-    font-weight: bold;
-}
-table tr:nth-child(even){
-    background-color: #DFDFDF;
-}
-table th{
-    text-align: left;
-}
-#conteudo{
-    padding-left: 10px;
-    padding-right: 10px;
-}
-.td_1 {
-    font-weight: bold;
-    width: 130px;
-}
-.paises {
-    font-size: 14.5px;
-    width: 680px;
-}
-</style>
 <body>
     <section>
         <div id="conteudo">  
             <h1 class="t1">Expressões e Termos da Língua Inglesa de Uso Frequente</h1>
             <hr id="hr-top"></hr>
-            <div class="paises">
+            <div class="expressoes">
                 <table>
                     <tr>
                         <th>Expressão</th>

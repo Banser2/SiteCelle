@@ -179,3 +179,46 @@ h2 {
 #p-contato {
 	text-indent: 0;
 }
+
+/* Estilos das expressões e países */
+
+.paises table, tr, th, td, .expressoes table, tr, th, td {
+	border-collapse: collapse;
+    padding: 8px 10px;
+}
+.paises table tr:first-child, .expressoes table tr:first-child {
+	background-color: #353535;
+    color: #FFF;
+}
+.paises table tr:nth-child(even), .expressoes table tr:nth-child(even) {
+    background-color: #DFDFDF;
+}
+.paises table th, .expressoes table th {
+    text-align: left;
+}
+.paises th:first-child, .paises th:nth-child(2), .paises th:last-child {
+    width: 220px;
+}
+.paises {
+    font-size: 14.5px;
+    width: 680px;
+}
+.expressoes {
+    font-size: 14.5px;
+    width: auto;
+}
+.next_prev {
+    text-decoration: none;
+    float: right;
+    padding-left: 15px;
+}
+.next_prev:hover {
+    color: #00F;
+}
+span {
+    float: left;
+}
+.td_1 {
+    font-weight: bold;
+    width: 130px;
+}
