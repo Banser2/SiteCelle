@@ -24,13 +24,19 @@
     th{
         text-align: left;
     }
+    #conteudo{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
 
 </style>
 <body>
     <section>
-        <div class="conteudo">
-            <center><table></center>
-                <h2>Paises e Nacionalidades</h2>		
+        <div id="conteudo">
+            <table>
+                <h2>Paises e Nacionalidades</h2>
+                <hr id="hr-top"></hr>
                         <tr>
                             <th>Português</th>
                             <th>Inglês</th>
