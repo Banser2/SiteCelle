@@ -51,7 +51,7 @@ p{
 	text-align: justify;
 	padding-bottom: 0px;
 	line-height: 20px;
-	text-indent: 0px;
+	text-indent: 0;
 }
 footer{
 	background: #33A95B;
@@ -176,7 +176,7 @@ h2 {
 	bottom: 20px;
 }
 .section-videos {
-	height: 1850px;
+	height: 100%;
 }
 table {
 	margin-left: 0px;
