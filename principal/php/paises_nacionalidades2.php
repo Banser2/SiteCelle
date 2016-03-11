@@ -1,5 +1,5 @@
 <?php
-    include_once 'cabecalho.php';
+include_once 'cabecalho.php';
 ?>
 <html lang="pt-br">
 <head>
@@ -7,39 +7,54 @@
 	<title>Tabela</title>
 </head>
 <style type="text/css">
-    * {
-        font-family:sans-serif;
-    }
-    table, tr, td, th{
-        border-collapse: collapse;
-        padding: 8px 10px;
-    }
-    table tr:first-child{
-        background-color: #353535;
-        color: #FFF
-    }
-    table tr:nth-child(even){
-        background-color: #DFDFDF;
-    }
-    th{
-        text-align: left;
-    }
-    #conteudo{
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
+* {
+    font-family: 'SegoeUI', Arial, Helvetica !important;
+}
+table, tr, td, th{
+    border-collapse: collapse;
+    padding: 8px 10px;
+    font-size: 14.5px;
+}
+table tr:first-child{
+    background-color: #353535;
+    color: #FFF
+}
+table tr:nth-child(even){
+    background-color: #DFDFDF;
+}
+table th{
+    text-align: left;
+}
+#conteudo{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.next_prev {
+    text-decoration: none;
+    float: right;
+    padding-left: 15px;
+}
+.next_prev:hover {
+    color: #00F;
+}
+th:first-child, th:nth-child(2), th:last-child {
+    width: 220px;
+}
+.paises {
+    width: 680px;
+}
 </style>
 <body>
     <section>
         <div id="conteudo">
-            <table>
-                <h2>Países e Nacionalidades</h2>
-                <hr id="hr-top"></hr>
+            <h1 class="t1">Países e Nacionalidades</h1>
+            <hr id="hr-top"></hr>
+            <div class="paises">
+                <table>
                     <tr>
-                        <td>Português</td>
-                        <td>Inglês</td>
-                        <td>Nacionalidade</td>
+                        <th>Português</th>
+                        <th>Inglês</th>
+                        <th>Nacionalidade</th>
                     </tr>
                     <tr>
                         <td>Mônaco</td>
@@ -126,13 +141,16 @@
                         <td>Vietnam</td>
                         <td>Vietnamese</td>
                     </tr>
-            </table>
-                <a href="paises_nacionalidades.php">Inicio</a>
-            <a href="paises_nacionalidades1.php">Anterior</a>
+                </table>
+                <br/>
+                <a class="next_prev" href="paises_nacionalidades.php">Início</a>
+                <a class="next_prev" href="paises_nacionalidades1.php">Anterior</a>
+                <br/>
+            </div>
         </div>
     </section>
 </body>
 </html>
 <?php 
-	include_once 'rodape.php';
+include_once 'rodape.php';
 ?>	
