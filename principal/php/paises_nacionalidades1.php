@@ -34,12 +34,12 @@
     <section>
         <div id="conteudo">
             <table>
-                <h2>Paises e Nacionalidades</h2>
+                <h2>Países e Nacionalidades</h2>
                 <hr id="hr-top"></hr>
                     <tr>
                         <th>Português</th>
                         <th>Inglês</th>
-                        <th>Nacionalidades</th>
+                        <th>Nacionalidade</th>
                     </tr>
                     <tr>
                         <td>Escócia</td>
@@ -49,7 +49,7 @@
                     <tr>
                         <td>Espanha</td>
                         <td>Spain</td>
-                        <td>Spaniard, Spanis</td>
+                        <td>Spaniard, Spanish</td>
                     </tr>	
                     <tr>
                         <td>Estados Unidos da América</td>
@@ -148,8 +148,8 @@
                     </tr>
 
                 </table>
-                    <a href="paises_nacionalidades.php">Anterior</a>
-                    <a href="paises_nacionalidades2.php">Proximo</a>
+                    <a class="next_prev" href="paises_nacionalidades.php">Anterior</a>
+                    <a class="next_prev" href="paises_nacionalidades2.php">Próximo</a>
         </div>
     </section>
 </body>

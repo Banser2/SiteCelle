@@ -34,12 +34,12 @@
     <section>
         <div id="conteudo">
             <table>
-                <h2>Paises e Nacionalidades</h2>
+                <h2>Países e Nacionalidades</h2>
                 <hr id="hr-top"></hr>
                     <tr>
-                        <td>Portugal</td>
-                        <td>Portugal</td>
-                        <td>Portuguese</td>
+                        <td>Português</td>
+                        <td>Inglês</td>
+                        <td>Nacionalidade</td>
                     </tr>
                     <tr>
                         <td>Mônaco</td>
@@ -54,7 +54,7 @@
                     <tr>
                         <td>Nova Zelâdia</td>
                         <td>New Zeland</td>
-                        <td>New Zeland</td>
+                        <td>New Zelander</td>
                     </tr>
                     <tr>
                         <td>Panamá</td>
