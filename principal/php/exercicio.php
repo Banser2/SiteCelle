@@ -120,7 +120,7 @@ $esportes = [
 $partedocorpo = [
 ['arm.jpg','Leg','Arm','Eye','Shoulder','2'],
 ['back.jpg','Knee','Head','Nails','Back','4'],
-['belly.jpg','Elbow','Eyebrown','Belly','Back','3'],
+['belly.jpg','Elbow','Eyebrows','Belly','Back','3'],
 ['chin.jpg','Chin','Neck','Tooth','Mouth','1'],
 ['ear.jpg','Nose','Chin','Finger','Ear','4'],
 ['elbow.jpg','Wrist','Elbow','Nose','Knee','2'],
@@ -223,18 +223,19 @@ if (isset($_POST["escolha"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
 	<?php
 		if($_SESSION['contexto'] !== "default"){
 	?>
+            <div style="text-align : center;":>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
    	<img src="../Imagens/imagens_exercicios/<?php echo $_SESSION['contexto'];?>/<?php echo $perguntas[$indice][0];?>" />
 	<?php	
 		for($i = 1 ; $i <= 4 ; $i++){
 	?>
+   
 		<br>
    		<input type="radio" name="escolha"  value="<?php echo $i;?>">
-
+            
 	<?php echo $perguntas[$indice][$i];?>
-	<audio class="audio" controls>
-		<source src="../../audios/<?= $_SESSION['contexto'].'/'?><?= str_replace(" ", "_", strtolower($perguntas[$indice][$i].'.mp3')) ; ?>"/>
-		</audio><br/>
+    <audio id="<?=$perguntas[$indice][$i]?>"  style="width: 45px;" controls src="../../audios/<?= $_SESSION['contexto'].'/'?><?= str_replace(' ', '_', strtolower($perguntas[$indice][$i].'.mp3')) ; ?>"/></audio>
+	<br/>
 	
 	<?php } ?>
    	<br><br>
@@ -252,5 +253,6 @@ if (isset($_POST["escolha"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
 <?php 
 require 'rodape.php';   
 ?>
+ </div>
 </body>
 </html>   
