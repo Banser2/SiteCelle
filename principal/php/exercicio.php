@@ -223,7 +223,6 @@ if (isset($_POST["escolha"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
 	<?php
 		if($_SESSION['contexto'] !== "default"){
 	?>
-            <div style="text-align : center;":>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
    	<img src="../Imagens/imagens_exercicios/<?php echo $_SESSION['contexto'];?>/<?php echo $perguntas[$indice][0];?>" />
 	<?php	
@@ -253,6 +252,3 @@ if (isset($_POST["escolha"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
 <?php 
 require 'rodape.php';   
 ?>
- </div>
-</body>
-</html>   
