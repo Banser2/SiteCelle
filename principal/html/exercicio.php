@@ -26,27 +26,27 @@ session_start();
 
 $comida = [
 ['meat.jpg ','Cheese','Meat','Chicken','Cooke','2'],
-['candy.jpg','Eggs','Hot-dog','Candy','Milk','3'],
+['candy.jpg','Eggs','Hot dog','Candy','Milk','3'],
 ['eggs.jpg','Eggs','Potato','Apple','Guava','1'],
 ['bread.jpg','Peas','Beans','Banana','Bread','4'],
 ['fish.jpg ','Cheese','Fish','Chicken','Cooke','2'],
-['pepper.jpg','Eggs','Hot-dog','Pepper','Milk','3'],
+['pepper.jpg','Eggs','Hot dog','Pepper','Milk','3'],
 ['apple.jpg','Apple','Potato','Eggs','Guava','1'],
 ['tomato.jpg','Coconut','Beans','Banana','Tomato','4'],
 ['strawberry.jpg','Peas','Beans','Strawberry','Bread','3'],
 ['pineapple.jpg ','Cheese','Pineapple','Chicken','Cooke','2'],
-['sugar.jpg','Eggs','Hot-dog','Sugar','Milk','3'],
+['sugar.jpg','Eggs','Hot dog','Sugar','Milk','3'],
 ['rice.jpg','Rice','Potato','Apple','Guava','1'],
 ['potato.jpg','Peas','Beans','Banana','Potato','4'],
 ['carrots.jpg ','Cheese','Carrots','Chicken','Cooke','2'],
-['cheese.jpg','Eggs','Hot-dog','Cheese','Milk','3'],
+['cheese.jpg','Eggs','Hot dog','Cheese','Milk','3'],
 ['beans.jpg','Beans','Potato','Eggs','Guava','1'],
 ['watermelon.jpg','Coconut','Beans','Banana','Watermelon','4'],
 ['papaya.jpg','Peas','Beans','Papaya','Bread','3'],
 ['lemon.jpg','Lemon','Potato','Apple','Guava','1'],
 ['fruits.jpg','Peas','Beans','Banana','Fruits','4'],
 ['peaches.jpg ','Cheese','Peaches','Chicken','Cooke','2'],
-['guava.jpg','Eggs','Hot-dog','Guava','Milk','3'],
+['guava.jpg','Eggs','Hot dog','Guava','Milk','3'],
 ['orange.jpg','Orange','Potato','Eggs','Guava','1'],
 ['coconut.jpg','Bacon','Beans','Banana','Coconut','4'],
 ['popcorn.jpg','Peas','Beans','Pop Corn','Bread','3'] ];
@@ -191,6 +191,11 @@ if (isset($_POST["escolha"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
 	if($escolha === $perguntas[$indice][5]){
 		echo "ACERTOU";
 		$indice++;
+			?>
+			<audio class="audio" autoplay>
+		<source src="../../audiocertoerrado/correto.mp3">
+		</audio><br/>
+			<?php
 		if($indice === 50){
 			$indice = 0;
 			$_SESSION['indice'] = $indice;
@@ -199,6 +204,11 @@ if (isset($_POST["escolha"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
 		}
 		}else{
 		echo "ERROU";
+		?>
+		<audio class="audio" autoplay>
+		<source src="../../audiocertoerrado/error.mp3">
+		</audio><br/>
+<?php
 ?><p><span class="error">* Tente Novamente.</span></p>
 	<?php	
 		}
