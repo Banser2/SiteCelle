@@ -1,3 +1,6 @@
+<?php 
+	include_once 'cabecalho.php';
+?>
 <html lang="pt-br">
 <head>
   <meta charset="utf-8">
@@ -13,8 +16,10 @@ text-align: left;
 } 
 </style>
 <body>
-<center><table></center>
-<h3>EXPRESSÕES E TERMOS DA LÍNGUA INGLESA DE USO FREQUÊNTE</h3>
+
+<div>  
+ <center><table></center>
+    <h3>EXPRESSÕES E TERMOS DA LÍNGUA INGLESA DE USO FREQUÊNTE</h3>
 <tr>
     <th>all right</th>
     <td>tudo certo, tudo bem</td>    
@@ -227,6 +232,10 @@ text-align: left;
     <th>windsurf</th>
     <td>tipo de disputa por barco</td>    
 </tr>
+    </div>   
 </table>
 </body>
 </html>
+<?php 
+	include_once 'rodape.php';
+?>

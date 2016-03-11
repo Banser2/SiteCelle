@@ -35,7 +35,7 @@
                 <li><a href="quiz.php" class="botaoMenu" id="quiz.php">Quiz</a></li>
             </ul>
         </li>
-        <li><a href="#" class="botaoMenu" id="#">Conteúdo</a>
+        <li><a href="#" id="#">Conteúdo</a>
             <ul>
                 <li><a href="paises_nacionalidades.php" class="botaoMenu" id="paises_nacionalidades.php">Paises e nacionalidades</a></li>
                 <li><a href="expressoes_termos.php" class="botaoMenu" id="expressoes_termos.php">Expressoes e termos</a></li>

@@ -1,3 +1,6 @@
+<?php
+    include_once 'cabecalho.php';
+?>
 <html lang="pt-br">
 <head>
   <meta charset="utf-8">
@@ -15,157 +18,122 @@ text-align: left;
 <body>
 <center><table></center>
 <h2>Paises e Nacionalidades</h2>    
-  <tr>
-    <th>Português</th>
-    <th>Inglês</th>
-    <th>Nacionalidades</th>
-  </tr>
- <tr>
-     <td>Hungria</td>
-     <td>Hungary</td>
-     <td>Hungarian</td>
-</tr>
-<tr>
-     <td>Índia</td>
-     <td>India</td>
-     <td>Indian</td>
-</tr>
-<tr>
-     <td>Inglaterra</td>
-     <td>England</td>
-     <td>English</td>
-</tr>
-<tr>
-     <td>Indonésia</td>
-     <td>Indonesia</td>
-     <td>Indonesian</td>
-</tr>
-<tr>
-     <td>Iraque</td>
-     <td>Iraq</td>
-     <td>Iraqi</td>
-</tr>
-<tr>
-     <td>Israel</td>
-     <td>Israel</td>
-     <td>Israeli</td>
-</tr>
-<tr>
-     <td>Itália</td>
-     <td>Italy</td>
-     <td>Italian</td>
-</tr>
-<tr>
-     <td>Jamaica</td>
-     <td>Jamaica</td>
-     <td>Jamaican</td>
-</tr>
-<tr>
-     <td>Japão</td>
-     <td>Japan</td>
-     <td>Japanese</td>
-</tr>
-<tr>
-     <td>Líbano</td>
-     <td>Lebanon</td>
-     <td>Lebanese</td>
-</tr>
-<tr>
-     <td>Marrocos</td>
-     <td>Marrocco</td>
-     <td>Marroccan</td>
-</tr>
-<tr>
-     <td>México</td>
-     <td>Mexico</td>
-     <td>Mexican</td>
-</tr>
-<tr>
-     <td>Mônaco</td>
-     <td>Monaco</td>
-     <td>Monacan</td>
-</tr>
-<tr>
-     <td>Noruega</td>
-     <td>Norway</td>
-     <td>Norwegian</td>
-</tr>
-<tr>
-     <td>Nova Zelâdia</td>
-     <td>New Zeland</td>
-     <td>New Zeland</td>
-</tr>
-<tr>
-     <td>Panamá</td>
-     <td>Panama</td>
-     <td>Panamanian</td>
-</tr>
-<tr>
-     <td>Paquistão</td>
-     <td>Pakistan</td>
-     <td>Pakistani</td>
-</tr>
-<tr>
-     <td>Paraguai</td>
-     <td>Paraguay</td>
-     <td>Paraguayan</td>
-</tr>
-<tr>
-     <td>Peru</td>
-     <td>Peru</td>
-     <td>Peruvian</td>
-</tr>
-<tr>
-     <td>Polônia</td>
-     <td>Poland</td>
-     <td>Pole</td>
-</tr>
-<tr>
-     <td>Portugal</td>
-     <td>Portugal</td>
-     <td>Portuguese</td>
-</tr>
-<tr>
-     <td>Rússia</td>
-     <td>Russia</td>
-     <td>Russian</td>
-</tr>
-<tr>
-     <td>Suécia</td>
-     <td>Sweden</td>
-     <td>Swede</td>
-</tr>
-<tr>
-     <td>Suíça</td>
-     <td>Swizerland</td>
-     <td>Swiss</td>
-</tr>
-<tr>
-     <td>Tailândia</td>
-     <td>Thailand</td>
-     <td>Thai</td>
-</tr>
-<tr>
-     <td>Turquia</td>
-     <td>Turkey</td>
-     <td>Turkish</td>
-</tr>
-<tr>
-     <td>Venezuela</td>
-     <td>Venezuela</td>
-     <td>Venezuelan</td>
-</tr>
-<tr>
-     <td>Uruguai</td>
-     <td>Uruguay</td>
-     <td>Uruguayan</td>
-</tr>
-<tr>
-     <td>Vietnã</td>
-     <td>Vietnam</td>
-     <td>Vietnamese</td>
-</tr>
+            <tr>
+                <th>Português</th>
+                <th>Inglês</th>
+                <th>Nacionalidades</th>
+            </tr>
+            <tr>
+                <td>Escócia</td>
+  	             <td>Scotland</td>
+  	             <td>Scot, Scottish</td>
+            </tr>	
+            <tr>
+                <td>Espanha</td>
+  	             <td>Spain</td>
+  	             <td>Spaniard, Spanis</td>
+            </tr>	
+            <tr>
+                <td>Estados Unidos da América</td>
+  	             <td>United States of America</td>
+  	             <td>American</td>
+            </tr>	
+            <tr>
+                <td>Filipinas</td>
+  	             <td>Philippines</td>
+  	             <td>Philippine</td>
+            </tr>	
+            <tr>
+                <td>Finlândia</td>
+                <td>Finland</td>
+                <td>Finn</td>
+            </tr> 
+            <tr>
+                <td>França</td>
+                <td>France</td>
+                <td>French</td>
+            </tr> 
+            <tr>
+    <td>Gales</td>
+    <td>Wales</td>
+    <td>Welsh</td>
+  </tr> 
+            <tr>
+                <td>Grécia</td>
+                <td>Greece</td>
+                <td>Greek</td>
+            </tr> 
+            <tr>
+                <td>Holanda</td>
+                <td>Holland</td>
+                <td>Dutch</td>
+            </tr> 
+            <tr>
+                <td>Hungria</td>
+                <td>Hungary</td>
+                <td>Hungarian</td>
+            </tr>
+            <tr>
+                <td>Índia</td>
+                <td>India</td>
+                <td>Indian</td>
+            </tr>
+            <tr>
+                <td>Inglaterra</td>
+                <td>England</td>
+                <td>English</td>
+            </tr>
+            <tr>
+                <td>Indonésia</td>
+                <td>Indonesia</td>
+                <td>Indonesian</td>
+            </tr>
+            <tr>
+                <td>Iraque</td>
+                <td>Iraq</td>
+                <td>Iraqi</td>
+            </tr>
+            <tr>
+                <td>Israel</td>
+                <td>Israel</td>
+                <td>Israeli</td>
+            </tr>
+            <tr>
+                <td>Itália</td>
+                <td>Italy</td>
+                <td>Italian</td>
+            </tr>
+            <tr>
+                <td>Jamaica</td>
+                <td>Jamaica</td>
+                <td>Jamaican</td>
+            </tr>
+            <tr>
+                <td>Japão</td>
+                <td>Japan</td>
+                <td>Japanese</td>
+            </tr>
+            <tr>
+                <td>Líbano</td>
+                <td>Lebanon</td>
+                <td>Lebanese</td>
+            </tr>
+            <tr>
+                <td>Marrocos</td>
+                <td>Marrocco</td>
+                <td>Marroccan</td>
+            </tr>
+            <tr>
+                <td>México</td>
+                <td>Mexico</td>
+                <td>Mexican</td>
+            </tr>
+
 </table>
 <a href="paises_nacionalidades.php">Anterior</a>
+<a href="paises_nacionalidades2.php">Proximo</a>
 </body>
 </html>
+<?php 
+	include_once 'rodape.php';
+?>
