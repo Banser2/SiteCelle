@@ -1,3 +1,8 @@
+<?php 
+require 'cabecalho.php';   
+?>
+<section>
+    <div id="conteudo">
     <h1 class="t1">Vídeos</h1>
     <hr id="hr-top"></hr>
      <br>
@@ -10,3 +15,10 @@
             <div class="video"><h3>Present Continuous Tense</h3><iframe src="https://www.youtube.com/embed/iMDJcs1CPjk" frameborder="0" allowfullscreen></iframe></div>
             <div class="video"><h3>Verb to be Song - Lesson 1</h3><iframe src="https://www.youtube.com/embed/dh94zQJSC0M" frameborder="0" allowfullscreen></iframe></div>
             <div class="video"><h3>Possessive Adjectives and Pronouns Song</h3><iframe src="https://www.youtube.com/embed/6hWlHOYv8rE" frameborder="0" allowfullscreen></iframe></div>
+</div>
+</section> 
+<?php 
+require 'rodape.php';   
+?>
+
+            

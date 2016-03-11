@@ -1,3 +1,8 @@
+<?php 
+require 'cabecalho.php';   
+?>
+<section>
+	<div id="conteudo">
 <h1 class="t1">Sites Relacionados</h1>
 <hr id="hr-top"></hr>
 <ul>
@@ -7,3 +12,9 @@
 <li style="list-style-type:none; line-height: 25px;"><a href="http://www.really-learn-english.com/simple-present-exercises.html" target="_blank">Really Learn English - Simple Present - Exercises</a></li>
 <li style="list-style-type:none; line-height: 25px;"><a href="http://www.agendaweb.org/verbs/to-be-exercises.html" target="_blank">Agenda Web - Verbs/to be - Exercises</a></li>
 </ul>
+
+</div>
+</section>
+    <?php 
+require 'rodape.php';   
+?>

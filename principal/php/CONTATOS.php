@@ -1,7 +1,12 @@
+<?php 
+require 'cabecalho.php';   
+?>
+<section>
+    <div id="conteudo">
 <h1 class="t1">Contato</h1>
 <hr id="hr-top"></hr>
 <p id="p-contato">
-     Coordenador do CELLE - IFPE (Campus Igarassu):
+    <br>Coordenador do CELLE - IFPE (Campus Igarassu):
         <br> Professor Ivo Felix Gualberto de Sá
    <br> celle@igarassu.ifpe.edu.br
     <br>Avenida Alfredo Bandeira de Melo S/N, BR-101 Norte, Km 44, Igarassu-PE
@@ -12,3 +17,8 @@
     <br>Professora Rita Fabiana
     <br>celle@reitoria.ifpe.edu.br
 </p>
+</div>
+</section>
+<?php 
+require 'rodape.php';   
+?>

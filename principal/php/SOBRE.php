@@ -48,9 +48,8 @@ require 'cabecalho.php';
     - Técnico-administrativo; <br>
     - Docentes atuantes no CELLE; <br>
     - Representação estudantil</p><br>
-
+</div>
+</section>
 <?php 
 require 'rodape.php';   
 ?>
-    </div>
-</section>

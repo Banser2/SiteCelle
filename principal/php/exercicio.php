@@ -1,4 +1,8 @@
-<!DOCTYPE HTML> 
+<?php 
+require 'cabecalho.php';   
+?>
+<section>
+	<div id="conteudo">
 <html>
 	<head>
 		<style>
@@ -238,10 +242,15 @@ if (isset($_POST["escolha"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
 </form>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
    	
-   		<input type="submit" name="reset" value="reset"> 
+   		<input type="submit" name="reset" value="Reset"> 
 </form>
 <?php 
 	}
+?> 
+</div>
+</section> 
+<?php 
+require 'rodape.php';   
 ?>
 </body>
-</html>
+</html>   

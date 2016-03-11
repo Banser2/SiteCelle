@@ -8,15 +8,16 @@ celle@igarassu.ifpe.edu.br
 </footer>
 		<script>
 		$( window ).load(function() {
-		  $('#conteudo').load('html/sobre.html');
+		  $('#conteudo').load('php/sobre.php');
 		});
 			
         $('.botaoMenu').click(function(event) {
 			var pagina = event.target.id;
-            $('#conteudo').load('html/' +pagina);
+            $('#conteudo').load('php/' +pagina);
         });
 		
 
       </script>
+      
     </body>
     </html>

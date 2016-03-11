@@ -3,15 +3,15 @@
 	<head>
 		<title>Sobre</title>
 		<meta charset="utf-8">
-		<link rel="shortcut icon" href="Imagens/logoIFPE.png"/>
-		<link rel="stylesheet" type="text/css" href="css/estilo.css" media="all">
+		<link rel="shortcut icon" href="../Imagens/logoIFPE.png"/>
+		<link rel="stylesheet" type="text/css" href="../css/estilo.css" media="all">
 	</head>
 	<body>
        <header>
         <div id="logo">
                 <div class="banner">
                     <div id="logo-reitoria">
-                        <img src="Imagens/Logo.png" widht="300px" height="90px">
+                        <img src="../Imagens/Logo.png" widht="300px" height="90px">
                         <a class="acesso-reitoria"></a>
                     </div>
                 </div>
@@ -27,37 +27,10 @@
                 <li><a href="audios.php" class="botaoMenu" >Áudios</a></li>
             </ul>
         </li>
-        <li><a href="sites_relacionados.php" class="botaoMenu">Sites Relacionados</a></li>
+        <li><a href="sites_relacionados.php" class="botaoMenu" >Sites Relacionados</a></li>
         <li><a href="contatos.php" class="botaoMenu" >Contato</a></li>
-        <li><a href="exercicio.php" class="botaoMenu" >exercicio</a><li>
+        <li><a href="exercicio.php" class="botaoMenu">exercicio</a><li>
             </ul>
 <br><br><br>
  </nav>
 </header>
-<section>
-    <div id="conteudo">
-		
-    </div>
-</section>
-<footer>
-<br>
-Avenida Alfredo Bandeira de Melo, BR 101 norte - km 44
-Centro, Igarassu - PE, Cep: 53610-000<br>
-Fale com o CELLE:
-celle@igarassu.ifpe.edu.br
- (81) 3334 - 3507    
-</footer>
-		<script>
-		$( window ).load(function() {
-		  $('#conteudo').load('php/sobre.php');
-		});
-			
-        $('.botaoMenu').click(function(event) {
-			var pagina = event.target.id;
-            $('#conteudo').load('php/' +pagina);
-        });
-		
-
-      </script>
-    </body>
-    </html>
