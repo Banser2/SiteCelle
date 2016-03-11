@@ -14,7 +14,7 @@
             border-collapse: collapse;
             padding: 8px 10px;
         }
-        table tr: first-child{
+        table tr:first-child{
             background-color: #353535;
             color: #FFF
         }
@@ -24,13 +24,18 @@
         th{
             text-align: left;
         }
+         #conteudo{
+        padding-left: 10px;
+        padding-right: 10px;
+        }
 
     </style>
         <body>
             <section>
-                <div>  
-                    <center><table></center>
-                        <h3>EXPRESSÕES E TERMOS DA LÍNGUA INGLESA DE USO FREQUENTE</h3>
+                <div id="conteudo">  
+                    <table>
+                        <h2>EXPRESSÕES E TERMOS DA LÍNGUA INGLESA DE USO FREQUENTE</h2>
+                        <hr id="hr-top"></hr>
                             <tr>
                                 <th>all right</th>
                                 <td>tudo certo, tudo bem</td>    

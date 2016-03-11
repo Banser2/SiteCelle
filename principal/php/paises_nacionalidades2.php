@@ -14,7 +14,7 @@
         border-collapse: collapse;
         padding: 8px 10px;
     }
-    table tr: first-child{
+    table tr:first-child{
         background-color: #353535;
         color: #FFF
     }
@@ -24,13 +24,18 @@
     th{
         text-align: left;
     }
+    #conteudo{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 
 </style>
 <body>
     <section>
-        <div class="conteudo">
-            <center><table></center>
-                <h2>Paises e Nacionalidades</h2>    
+        <div id="conteudo">
+            <table>
+                <h2>Paises e Nacionalidades</h2>
+                <hr id="hr-top"></hr>
                     <tr>
                         <td>Portugal</td>
                         <td>Portugal</td>
@@ -121,9 +126,9 @@
                         <td>Vietnam</td>
                         <td>Vietnamese</td>
                     </tr>
-</table>
-<a href="paises_nacionalidades.php">Inicio</a>
-<a href="paises_nacionalidades1.php">Anterior</a>
+            </table>
+                <a href="paises_nacionalidades.php">Inicio</a>
+            <a href="paises_nacionalidades1.php">Anterior</a>
         </div>
     </section>
 </body>

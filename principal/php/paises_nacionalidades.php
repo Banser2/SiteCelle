@@ -14,20 +14,21 @@
         border-collapse: collapse;
         padding: 8px 10px;
     }
-    table tr: first-child{
+    table tr:first-child{
         background-color: #353535;
         color: #FFF
     }
     table tr:nth-child(even){
         background-color: #DFDFDF;
     }
-    th{
+    table th{
         text-align: left;
     }
     #conteudo{
         padding-left: 10px;
         padding-right: 10px;
     }
+    
     
 
 </style>
