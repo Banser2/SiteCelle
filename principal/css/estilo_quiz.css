@@ -78,3 +78,13 @@ button{
 .submit {
 	cursor: pointer;
 }
+.resultado {
+	border: 6px solid #3CB371;
+	border-radius: 20px;
+	box-shadow: -10px 10px 10px rgba(60, 179, 113, 0.45);
+}
+
+.msg {
+    font-size: 15px;
+
+}

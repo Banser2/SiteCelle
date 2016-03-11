@@ -26,22 +26,24 @@
 
 			if($aproveitamento >= 70){
 				?>
-				<div id="70+"><h3><?= "Parabéns, você foi muito bem!!";?></h3></div>
+				<br/>
+				<div class="msg"><h3><?= "Parabéns, você foi muito bem!!";?></h3></div>
 				<?php
 			}
 			elseif ($aproveitamento >= 50) {
 				?>
-				<div id="50+"><h3><?= "Você foi bem, mas pode melhorar!!";?></h3></div>
+				<br/>
+				<div class="msg"><h3><?= "Você foi bem, mas pode melhorar!!";?></h3></div>
 				<?php
 			}
 
 			?>
-			<form method="POST">
-				<br/>
-				<br/>
-				<input type="submit" name="submit" value="Voltar">
-			</form>
 		</div>
+		<br/>
+		<br/>
+		<form method="POST">
+			<input class="submit" type="submit" name="submit" value="Voltar ao Quiz">
+		</form>
 	</div>
 </section>
 <?php 
