@@ -35,8 +35,8 @@ p{
 }
 #conteudo{
 	width: 70%;
-	margin-left:20%;
-	margin-right: 20%;
+	margin-left:15%;
+	margin-right: 15%;
 	height: auto;
 	text-align: justify;
 	margin-bottom: 50px;
@@ -46,8 +46,7 @@ p{
 	margin-bottom: 60px;
 	text-align: justify;
 	
-	line-height: 25px;
-	text-indent: 35px;
+
 }
 footer{
 	background: #33A95B;
@@ -67,7 +66,6 @@ footer{
 
 #menu ul li  {
 	background-color:#FFFAFA;
-	border-bottom: 3px solid #228B22;
 	color:#000000;
 	font-size: 1.0cm;			
 }
