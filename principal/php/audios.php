@@ -1,18 +1,20 @@
+<?php 
+    include_once 'cabecalho.php';
+?>
+<section>
+    <div id="conteudo">
+        <h1 class="t1">Áudios</h1> 
 
-
-
-<h1 class="t1">Áudios</h1> 
-
-    <hr id="hr-top"></hr>
-    <h2>Playlist</h2>
-    <table>
-        <tr>
-            <td>Unidade 01</td>
-            <td><input type="image" title="Ouvir" src="Imagens/play_button.png" onclick="window.open('../player-playlist/index.html', 'pagina', 'width=960, height=20');">
-        </tr>
-    </table>
-    <h2>Unidade 01</h2>
-    <table>
+        <hr id="hr-top"></hr>
+        <h2>Playlist</h2>
+        <table>
+            <tr>
+                <td>Unidade 01</td>
+                <td><input type="image" title="Ouvir" src="Imagens/play_button.png" onclick="window.open('../player-playlist/index.html', 'pagina', 'width=960, height=20');">
+            </tr>
+        </table>
+        <h2>Unidade 01</h2>
+        <table>
             <tr>
                 <td class="exerc">Exercício 01</td>
                 <td><input type="image" title="Ouvir" src="Imagens/play_button.png" onclick="window.open('../audios/Unidade_01/Unit01_Pg002_Ex01_Conversation_PtA.mp3', 'pagina', 'width=305, height=70');">
@@ -190,11 +192,11 @@
                 <td><input type="image" title="Ouvir" src="Imagens/play_button.png" onclick="window.open('https://dl.dropboxusercontent.com/content_link/GPavkY3MnGkqur8gTgFLv0Me2caLZlgo9Khf9kpPGmxrpagLfEIvvB8JuuJ6Mc31/file', 'pagina', 'width=305, height=70');">
                 <input type="image" title="Baixar" src="Imagens/download_button.png" onclick="location.href='http://www.cambridge.org/interchange/audioprogram/level0/Interchange4thEd_ClassAudio0_Unit01-02_PC_Pg015_Ex03_Listening.mp3' "></td>
             </tr>
-
-            </table>
-
+        </table>
         </table>
         <br>
-  
-       
-
+    </div>
+</section>
+<?php 
+    include_once 'rodape.php';
+?>

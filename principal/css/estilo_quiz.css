@@ -14,11 +14,11 @@
 	height: 175px;
 	float: left;
 }
-ul {
+.itens {
 	width: 460px;
 	display: block;
 }
-ul li {
+ul .itens {
 	float: left;
 	list-style-type: none;
 	width: 200px;
@@ -26,14 +26,14 @@ ul li {
 	display: block;
 	padding: 0;
 }
-ul li:nth-child(2), ul li:nth-child(4) {
+ul .itens:nth-child(2), ul .itens:nth-child(4) {
 	padding-left: 30px;
 	padding-top: 5px;
 	padding-bottom: 5px;
 }	
 h2, span, input, form, .audio, option, body, #contexto, button {
-	margin-left: 10%;
-	margin-right: 10%;
+	/*margin-left: 10%;
+	margin-right: 10%;*/
 }
 select {
 	margin-left: 0;
@@ -64,6 +64,7 @@ label > input:checked + .img{ /* Estilo da imagen quando selecionada */
 	height: auto; /* 180px */
 	width: auto; /* 190px */
 	/*max-width: 100%;*/
+	border-radius: 20px;
 }
 button{
 	background-image:url("../imagens/play_button_quiz.png");
@@ -73,4 +74,17 @@ button{
 	 border:solid white;
     cursor: pointer;
     background-repeat: no-repeat;
+}
+.submit {
+	cursor: pointer;
+}
+.resultado {
+	border: 6px solid #3CB371;
+	border-radius: 20px;
+	box-shadow: -10px 10px 10px rgba(60, 179, 113, 0.45);
+}
+
+.msg {
+    font-size: 15px;
+
 }
