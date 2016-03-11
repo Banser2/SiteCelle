@@ -38,7 +38,7 @@
         <li><a href="#" class="botaoMenu" id="#">Conteúdo</a>
             <ul>
                 <li><a href="paises_nacionalidades.php" class="botaoMenu" id="paises_nacionalidades.php">Paises e nacionalidades</a></li>
-                <li><a href="expressoes_termos.php" class="botaoMenu" id="expressoes_termos.php"</li>
+                <li><a href="expressoes_termos.php" class="botaoMenu" id="expressoes_termos.php">Expressoes e termos</a></li>
             </ul>    
         </li>
         <li><a href="sites_relacionados.php" class="botaoMenu" id="sites_relacionados.php">Sites Relacionados</a></li>        
