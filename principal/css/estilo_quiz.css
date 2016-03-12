@@ -68,10 +68,10 @@ label > input:checked + .img{ /* Estilo da imagen quando selecionada */
 }
 button{
 	background-image:url("../imagens/play_button_quiz.png");
-	 height:45px;
-	 width:45px;
-	 border-radius:30px; 
-	 border:solid white;
+	height:45px;
+	width:45px;
+	border-radius:50%; 
+	border:solid white;
     cursor: pointer;
     background-repeat: no-repeat;
 }

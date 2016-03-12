@@ -239,8 +239,8 @@ include_once 'cabecalho.php';
 				</td>
 				<td>
 					<div id="botao_audio">
-						<audio id="#" autoplay src="../audios/<?= $perguntas[$indice][0]; ?>"/></audio>
-						<button onclick="document.getElementById('#').play()"></button>
+						<audio id="audio" autoplay src="../audios/<?= $perguntas[$indice][0]; ?>"/></audio>
+						<button onclick="document.getElementById('audio').play()"></button>
 					</div>
 				</td>
 			</tr>
