@@ -10,6 +10,9 @@
 	    As aulas serão realizadas nas quartas e quintas, das 12h50 às 14h20, no próprio campus, que funciona na Faculdade de Ciências Humanas e Sociais de Igarassu (FACIG), até que a sede própria seja construída. Antes da primeira aula, o coordenador do CELLE, Ivo Felix, acompanhado das alunas Ellaine Dayane e Vanessa Clarissa, realizou a entrega dos donativos arrecadados para o Orfanato Santo Antônio.</p>
 	    <p> O Orfanato Santo Antônio funciona na Rua Dantas Barreto, s/n, Centro Histórico de Igarassu. Irmã Ivone, responsável por sua administração, informou que o trabalho é, para crianças com idades entre 4 e 11 anos, assemelhado ao de uma creche e, para adolescentes entre 12 e 18 anos, um apoio educacional. Todos aproveitam as instalações do orfanato no período em que não estão na escola e seguem para suas residências ao final da tarde. Ao agradecer os donativos, a Irmã Ivone destacou que, quando todos contribuem com um pouco, é possível realizar trabalhos como o do orfanato, que tem mais necessidade de materiais de higiene pessoal.</p>
 	    <p> Quem desejar ajudar ou mais informações pode ligar para 3543-0258.</p>
+	    <br/>
+	    <a href="noticias.php"><strong>Voltar</strong></a>
+	    <br/>
 	</div>
 </section>
 <?php 

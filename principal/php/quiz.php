@@ -7,7 +7,6 @@ include_once 'cabecalho.php';
 	<div id="conteudo">
 		<h1 class="t1"> Quiz </h1> 
 		<hr id="hr-top"></hr>
-		<br>
 		<label id="contexto">Escolha o Contexto:</label><br/><br/>
 		<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
 			<select name="contexto" onchange="this.form.submit()">
@@ -229,12 +228,24 @@ include_once 'cabecalho.php';
 	if($contexto !== "default"){
 		?>
 		<h2>Selecione a imagem correspondente ao áudio</h2>
-		<p><span><b>Pergunta: <?= $indice+1; ?></b></span></p>
-		<h2><?= $perguntas[$indice][6]; ?></h2>
-		<!-- <div> -->
-		<audio id="#" autoplay src="../audios/<?= $perguntas[$indice][0]; ?>"/></audio>
-			<button onclick="document.getElementById('#').play()"></button>
-		<!-- </div> -->
+		
+		<p style="text-indent: 0;"><span><b>Pergunta: <?= $indice+1; ?></b></span></p>
+		<br>
+		<br>
+		<table>
+			<tr>
+				<td>
+					<h2><?= $perguntas[$indice][6]; ?></h2>
+				</td>
+				<td>
+					<div id="botao_audio">
+						<audio id="#" autoplay src="../audios/<?= $perguntas[$indice][0]; ?>"/></audio>
+						<button onclick="document.getElementById('#').play()"></button>
+					</div>
+				</td>
+			</tr>
+		</table>
+
 		<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
 			<div class="content">
 				<ul class="itens">

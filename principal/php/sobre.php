@@ -7,7 +7,7 @@
         <hr id="hr-top"></hr>
         <p style="text-align: justify;">O CELLE é um espaço destinado à promoção de oportunidade de aquisição de conhecimentos em outras línguas e participação em atividades culturais inerentes à internacionalização para os discentes, servidores, pesquisadores e comunidade do IFPE.</p><br>
         <p style="text-align: justify;">O CELLE tem por Objetivo Geral oferecer aos servidores, aos discentes e à comunidade externa o ensino de uma ou mais línguas adicionais, visando à mobilidade acadêmica e à cooperação internacional (transferência de tecnologia, pesquisa, produção acadêmica, mobilidade acadêmica, redação e tradução de documentos internos, entre outros).</p><br> 
-        <p style="text-align: justify;">O CELLE tem por Objetivos Específicos: <br><br>
+        <p style="text-align: justify; text-indent: 0;">O CELLE tem por Objetivos Específicos: <br><br>
         I - Ofertar cursos de Língua Inglesa, Língua Espanhola e Língua Francesa .
         <br>
         II - Ofertar curso de Língua Portuguesa e Cultura Brasileira para Estrangeiros, na modalidade presencial.
@@ -41,14 +41,16 @@
         <br>
         - Os Vice-coordenadores Gerais Setoriais (em condição de suplência, representantes por campus);
         <br>
+        <br>
         II Uma Comissão Setorial do CELLE Local:
         <br>
         - Coordenador Geral Setorial; <br>
         - Vice-Coordenador Geral Setorial; <br>
         - Técnico-administrativo; <br>
         - Docentes atuantes no CELLE; <br>
-        - Representação estudantil</p><br>
+        - Representação estudantil</p>
     </div>
+    <br/>
 </section>
 <?php 
     include_once 'rodape.php';

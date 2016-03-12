@@ -51,7 +51,7 @@ p{
 	text-align: justify;
 	padding-bottom: 0px;
 	line-height: 20px;
-	text-indent: 0;
+	text-indent: 25px;
 }
 footer{
 	background: #33A95B;
@@ -88,6 +88,12 @@ footer{
 
 body{
 	font-size: 12px;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	color: #00F;
 }
 .menu{
 	list-style:none; 
@@ -176,9 +182,7 @@ h2 {
 .section-videos {
 	height: 100%;
 }
-#p-contato {
-	text-indent: 0;
-}
+
 
 /* Estilos das expressões e países */
 
@@ -220,5 +224,5 @@ span {
 }
 .td_1 {
     font-weight: bold;
-    width: 130px;
+    width: 140px;
 }

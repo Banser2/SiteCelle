@@ -5,7 +5,7 @@
 	<div id="conteudo">
 		<h1 class="t1">Contato</h1>
 		<hr id="hr-top"></hr>
-		<p id="p-contato">
+		<p style="text-indent: 0;">
 		    Coordenador do CELLE - IFPE (Campus Igarassu):
 		    <br>Professor Ivo Felix Gualberto de Sá
 		   	<br>celle@igarassu.ifpe.edu.br

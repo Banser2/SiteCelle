@@ -14,7 +14,7 @@ include_once 'cabecalho.php';
             <div class="expressoes">
                 <table>
                     <tr>
-                        <th>Expressão</th>
+                        <th>Expressão / Termo</th>
                         <th>Significado</th>    
                     </tr>
                     <tr>
