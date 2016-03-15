@@ -254,16 +254,12 @@ include_once 'cabecalho.php';
 						?>
 						<div class="item">
 							<li class="itens">
-								<label>
-									<input type="radio" name="escolha" value="<?= $i; ?>" />
-									<img class="img" id="img_<?= $i;?>" src="../imagens/imagens_quiz/<?= $pasta; ?>/<?= $perguntas[$indice][$i]; ?>">
-								</label>
+									<input class="img" id="img_<?= $i;?>" type="image" src="../imagens/imagens_quiz/<?= $pasta; ?>/<?= $perguntas[$indice][$i]; ?>" name="escolha" value="<?= $i; ?>"/>
 							</li>
 						</div>
 						<?php } ?>
 					</ul>
 				</div>
-				<input class="submit" type="submit" name="submit" value="Responder"> 
 			</form>
 			<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
 				<br/>
