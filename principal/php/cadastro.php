@@ -2,7 +2,7 @@
     <head>
         <meta charset="utf-8">
         <title>Cadastro Celle</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="../css/style_cadastro.css">
     </head>
     <body>
         <div id="area">
@@ -107,8 +107,8 @@
                                 </select>
                             </div>
                             </div>
-                            <div>
-                                <div style="min-width: 210px; widht:30%;">
+                                <div class="my-form-inline">
+                                <div style="min-width: 180px; widht:15%;">
                                     <div class="input text">
                                         <label for="telefone">Telefone</label>
                                         <input type="text" name="telefone" class="control" maxlength="11" id="telefone">
@@ -117,7 +117,7 @@
                             </div>
                         </div>
                         <div class="my-form-inline">
-                            <div style="min-width: 180px; width: 35%">
+                            <div style="min-width: 350px; width: 35%">
                             <div class="input email required">
                                 <label for="email">Email</label>
                                 <input type="email" name="email" class="control" id="email" required="required" maxlength="50"
