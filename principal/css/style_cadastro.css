@@ -130,3 +130,6 @@ body{
 html, body{
     font-size: 100%;
 }
+.submit {
+    cursor: pointer;
+}
