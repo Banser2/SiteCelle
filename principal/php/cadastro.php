@@ -14,7 +14,7 @@
             <fieldset>
                 <legend>Dados Pessoais</legend>
                 <div class="input text required">
-                    <label for="nome">Nome</label>
+                    <label for="nome">Nome *</label>
                     <input type="text" name="nome" class="control" required maxlength="50" id="nome">
                 </div>
                 <div class="my-form-inline">
@@ -129,16 +129,16 @@
                 <div class="my-form-inline">
                     <div style="min-width: 350px; width: 35%">
                         <div class="input email required">
-                            <label for="email">Email</label>
+                            <label for="email">Email *</label>
                             <input type="email" name="email" class="control" id="email" required maxlength="50"
                         </div>
                         <div class="input password required">
-                          <label for="passowrd">Senha</label>
+                          <label for="passowrd">Senha *</label>
                           <input type="password" name="password" class="control" required id="password">
                       </div>
                   </div>
                   <div class="input password required">
-                    <label for="confirm-password">Confirmar Senha</label>
+                    <label for="confirm-password">Confirmar Senha *</label>
                     <input type="password" name="confirm_password" class="control" required id="confirm-password">
                 </div>
             </div>
@@ -148,25 +148,26 @@
             <div class="my-form-inline">
                 <div style="min-width: 140px; width: 21%;">
                     <div class="imput matricula required">
-                        <label for="matricula">Matricula</label>
+                        <label for="matricula">Matricula *</label>
                         <input type="text" name="matricula" class="control" required id="matricula" maxlength="14"> 
                     </div>
                 </div>
                 <div style="min-width: 180px; width: 25%">
                     <div class="input text required">
-                        <label for="periodo">Periodo</label>
+                        <label for="periodo">Periodo *</label>
                         <input type="text" name="periodo" class="control" required id="periodo" maxlength="1">
                     </div>
                 </div>
                 <div style="min-width: 180px; width: 25%">
                     <div class="input text required">
-                        <label for="curso">curso</label>
+                        <label for="curso">Curso *</label>
                         <input type="text" name="curso" class="control" required id="curso">
                     </div>
                 </div>
             </div>
         </fieldset>
         <input class="submit" type="submit" name="submit" value="Enviar">
+        <input class="reset" type="reset" name="reset" value="Limpar">
     </form>
 </div>
 </body>
