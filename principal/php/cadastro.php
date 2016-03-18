@@ -1,11 +1,11 @@
 <?php 
-	include_once 'cabecalho.php';
+include_once 'cabecalho.php';
 ?>
 <section>
 	<div id="conteudo">
-	<h1 class="t1"> Notícias   </h1>
-	<hr id="hr-top"></hr>
-    <div id="area">
+       <h1 class="t1">Cadastro</h1>
+       <hr id="hr-top"></hr>
+       <div id="area">
         <span>Atenção, os campos marcados com o * asterisco são obrigatórios</span>
         <form method="POST" accept-charset="utf-8" class="form-group" action="validado.php" id="formulario">
             <div style="display:none">
@@ -70,19 +70,19 @@
                                     </td>
                                     <td>
                                         <select name="nascimento[month]">
-                                    <option value="01">Janeiro</option>
-                                    <option value="02">Fevereiro</option>
-                                    <option value="03" selected="selected">Março</option>
-                                    <option value="04">Abril</option>
-                                    <option value="05">Maio</option>
-                                    <option value="06">Junho</option>
-                                    <option value="07">Julho</option>
-                                    <option value="08">Agosto</option>
-                                    <option value="09">Setembro</option>
-                                    <option value="10">Outubro</option>
-                                    <option value="11">Novembro</option>
-                                    <option value="12">Dezembro</option>
-                                </select>
+                                            <option value="01">Janeiro</option>
+                                            <option value="02">Fevereiro</option>
+                                            <option value="03" selected="selected">Março</option>
+                                            <option value="04">Abril</option>
+                                            <option value="05">Maio</option>
+                                            <option value="06">Junho</option>
+                                            <option value="07">Julho</option>
+                                            <option value="08">Agosto</option>
+                                            <option value="09">Setembro</option>
+                                            <option value="10">Outubro</option>
+                                            <option value="11">Novembro</option>
+                                            <option value="12">Dezembro</option>
+                                        </select>
                                     </td>
                                     <td>
                                         <select name="nasc_ano">
@@ -173,5 +173,5 @@
 </div>
 </section>
 <?php 
-	include_once 'rodape.php';
+include_once 'rodape.php';
 ?>

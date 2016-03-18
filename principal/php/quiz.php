@@ -135,6 +135,9 @@ include_once 'cabecalho.php';
 
 		if ( $_SERVER["REQUEST_METHOD"] == "POST" && (isset($_POST['contexto']) && $_POST['contexto'] !== "default")) {
 			$_SESSION['contexto'] = $_POST['contexto'];
+			$_SESSION['indice'] = 0;
+			$_SESSION['acertos'] = 0;
+			$_SESSION['erros'] = 0;
 		}
 
 		$contexto = $_SESSION['contexto'];
