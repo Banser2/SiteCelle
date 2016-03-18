@@ -69,10 +69,15 @@
                                         </select>
                                     </td>
                                     <td>
+<<<<<<< HEAD
                                         <select name="nasc_mes">
                                             <option value="01">Janeiro</option>
+=======
+                                        <select name="nascimento[month]">
+                                            <option value="01" selected>Janeiro</option>
+>>>>>>> b15a246b2785b755183010112dea9c203013381b
                                             <option value="02">Fevereiro</option>
-                                            <option value="03" selected>Março</option>
+                                            <option value="03">Março</option>
                                             <option value="04">Abril</option>
                                             <option value="05">Maio</option>
                                             <option value="06">Junho</option>
@@ -130,7 +135,7 @@
                     <div style="min-width: 350px; width: 35%">
                         <div class="input email required">
                             <label for="email">Email *</label>
-                            <input type="email" name="email" class="control" id="email" required maxlength="50"
+                            <input type="email" name="email" class="control" id="email" required maxlength="50">
                         </div>
                         <div class="input password required">
                           <label for="passowrd">Senha *</label>
