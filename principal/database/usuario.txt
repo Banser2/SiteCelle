@@ -1,0 +1,21 @@
+===Database site_celle
+
+== Table structure for table usuario
+
+|------
+|Column|Type|Null|Default
+|------
+|//**matricula**//|int(10)|No|
+|nome|varchar(100)|No|
+|sexo|varchar(20)|No|
+|datanasc|varchar(30)|No|
+|telefone|varchar(15)|No|
+|email|varchar(50)|No|
+|senha|varchar(11)|No|
+|confirma_senha|varchar(11)|No|
+|periodo|varchar(10)|No|
+|curso|varchar(15)|No|
+== Dumping data for table usuario
+
+|1|dulci|femenino|24/07/1992|999999|b@gmail.com|112345|112345|1|ipi
+|2|sergio|Masculino|01/03/2006|99999999|b@gmail.com|112345|12345|1|ipi
