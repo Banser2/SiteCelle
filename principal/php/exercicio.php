@@ -10,6 +10,7 @@ require 'cabecalho.php';
 		</style>
 	</head>
 	<body> 
+            <hr id="hr-top"></hr>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
  <select name="contexto" onchange="this.form.submit()">
 	<option value="default">Selecione</option>
