@@ -29,7 +29,13 @@
         </li>
         <li><a href="sites_relacionados.php" class="botaoMenu" >Sites Relacionados</a></li>
         <li><a href="contatos.php" class="botaoMenu" >Contato</a></li>
-        <li><a href="exercicio.php" class="botaoMenu">exercicio</a><li>
+        <li><a href="exercicio.php" class="botaoMenu">Exercicio</a><li>
+        <li><a href="#" class="botaoMenu">Contéudo</a>
+            <ul>
+                <li><a href="tabela1.php" class="botaoMenu" >Números</a></li>
+                <li><a href="tabela2.php" class="botaoMenu" >Medidas</a></li>
+            </ul>
+            <li>
             </ul>
 <br><br><br>
  </nav>
