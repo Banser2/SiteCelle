@@ -128,7 +128,7 @@ body{
 .menu li ul li{
 	border:1px static #c0c0c0; 
 	display:block; 
-	width:55px;
+	width:71.5px;
 }
 .video {
 	width: 360px;
@@ -191,3 +191,6 @@ h2 {
 #p-contato {
 	text-indent: 0;
 }
+.right {
+	color: #00CC00;
+	font-size: 14px;
