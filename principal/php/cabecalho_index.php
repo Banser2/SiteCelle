@@ -41,6 +41,7 @@
                 <li><a href="php/expressoes_termos.php" class="botaoMenu" id="expressoes_termos.php">Expressões e Termos</a></li>
             </ul>    
         </li>
+        <li><a href="php/cadastro.php" class="botaoMenu" id="cadastro.php">Cadastro</a></li>
         <li><a href="php/sites_relacionados.php" class="botaoMenu" id="sites_relacionados.php">Sites Relacionados</a></li>
         <li><a href="php/contatos.php" class="botaoMenu" id="CONTATOS.php">Contato</a></li>
 </ul>
