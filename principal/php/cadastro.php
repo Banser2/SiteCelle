@@ -7,7 +7,7 @@
 <body>
     <div id="area">
         <span>Atenção, os campos marcados com o * asterisco são obrigatórios</span>
-        <form method="post" accept-charset="utf-8" class="form-group" action="/user/add" id="formulario">
+        <form method="POST" accept-charset="utf-8" class="form-group" action="validado.php" id="formulario">
             <div style="display:none">
                 <input type="hidden" name="_method" value="POST">
             </div>
@@ -21,7 +21,7 @@
                     <div style="min-widht: 210px; width: 30%;">
                         <div class="input select required">
                             <label for="sexo">Sexo</label>
-                            <select name="Sexo" required id="sexo">
+                            <select name="sexo" required id="sexo">
                                 <option value="empty">Selecione</option>
                                 <option value="Feminino">Feminino</option>
                                 <option value="Masculino">Masculino</option>
@@ -34,7 +34,7 @@
                                 <tr>
                                     <td><label>Data de Nascimento:</label></td>
                                     <td>
-                                        <select name="Nascimento[day]">
+                                        <select name="nasc_dia">
                                             <option value="01" selected>1</option>
                                             <option value="02">2</option>
                                             <option value="03">3</option>
@@ -69,7 +69,7 @@
                                         </select>
                                     </td>
                                     <td>
-                                        <select name="nascimento[month]">
+                                        <select name="nasc_mes">
                                             <option value="01">Janeiro</option>
                                             <option value="02">Fevereiro</option>
                                             <option value="03" selected>Março</option>
@@ -85,7 +85,7 @@
                                         </select>
                                     </td>
                                     <td>
-                                        <select name="nascimento[year]">
+                                        <select name="nasc_ano">
                                             <option value="2006" selected>2006</option>
                                             <option value="2005">2005</option>
                                             <option value="2004">2004</option>
