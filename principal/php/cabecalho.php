@@ -35,6 +35,7 @@
                 <li><a href="tabela1.php" class="botaoMenu" >Números</a></li>
                 <li><a href="tabela2.php" class="botaoMenu" >Medidas</a></li>
             </ul>
+            <li><a href="form.php" class="botaoMenu">Envio</a><li>
             <li>
             </ul>
 <br><br><br>
