@@ -5,7 +5,7 @@ require 'cabecalho.php';
 <div id="conteudo">
 <table border="1">
 <caption> Cardinais / Ordinais </caption>
-<tr><td>0  </td> <td> zero, nought, nothing, oh </td> > </tr>
+<tr><td>0  </td> <td> zero, nought, nothing, oh </td> </tr>
 <tr><td>1  </td> <td> one </td> <td> 1th </td> <td> first </td> </tr> 
 <tr><td>2  </td> <td> two </td> <td> 2th </td> <td> second </td></tr>	
 <tr><td>3  </td> <td> three </td> <td> 3th </td><td> third </td> </tr>
