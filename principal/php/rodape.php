@@ -6,18 +6,7 @@ Fale com o CELLE:
 celle@igarassu.ifpe.edu.br
  (81) 3334 - 3507    
 </footer>
-		<script>
-		$( window ).load(function() {
-		  $('#conteudo').load('php/sobre.php');
-		});
-			
-        $('.botaoMenu').click(function(event) {
-			var pagina = event.target.id;
-            $('#conteudo').load('php/' +pagina);
-        });
 		
-
-      </script>
       
     </body>
     </html>
