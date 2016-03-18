@@ -193,9 +193,8 @@ if (!isset($_SESSION['contexto'])) {
 if (isset($_POST["escolha"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
    $escolha = $_POST["escolha"];
 	if($escolha === $perguntas[$indice][5]){
-		echo "ACERTOU";
-		$indice++;
-			?>
+		$indice++; 
+			?><span class="right">YOU'RE RIGHT.</span><br/>
 			<audio class="audio" autoplay>
 		<source src="../../audiocertoerrado/correto.mp3">
 		</audio><br/>
