@@ -171,6 +171,7 @@
     </form>
 </div>
 </div>
+</section>
 <?php 
 	include_once 'rodape.php';
 ?>
