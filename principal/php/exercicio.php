@@ -187,8 +187,8 @@ if (!isset($_SESSION['contexto'])) {
 
 
 ?>
-<h2>Exercicio de Revisão</h2>
-		<p><span><b>o que você vê ? <b><?php echo $indice;?></span></p>
+<h2>Review Exercise</h2>
+		<p><span><b>What do you see? <b><?php echo $indice;?></span></p>
 <?php
 if (isset($_POST["escolha"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
    $escolha = $_POST["escolha"];
@@ -207,13 +207,13 @@ if (isset($_POST["escolha"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
 			$_SESSION['indice'] = $indice;
 		}
 		}else{
-		echo "ERROU";
+		echo "Wrong";
 		?>
 		<audio class="audio" autoplay>
 		<source src="../../audiocertoerrado/error.mp3">
 		</audio><br/>
 <?php
-?><p><span class="error">* Tente Novamente.</span></p>
+?><p><span class="error">* Try again.</span></p>
 	<?php	
 		}
 	}
