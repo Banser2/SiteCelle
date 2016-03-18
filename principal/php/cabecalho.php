@@ -7,6 +7,8 @@
 		<link rel="shortcut icon" href="../imagens/logoIFPE.png"/>
         <link rel="stylesheet" type="text/css" href="../css/estilo.css" media="all">
 		<link rel="stylesheet" type="text/css" href="../css/estilo_quiz.css" media="all">
+        <link rel="stylesheet" type="text/css" href="../css/style_cadastro.css" media="all">
+        
 		<script src="../javaScript/javaScript.js"></script>
 	</head>
 	<body>
@@ -41,6 +43,7 @@
                 <li><a href="expressoes_termos.php" class="botaoMenu" id="expressoes_termos.php">Expressões e Termos</a></li>
             </ul>    
         </li>
+        <li><a href="cadastro.php" class="botaoMenu" id="cadastro.php">Cadastro</a></li>
         <li><a href="sites_relacionados.php" class="botaoMenu" id="sites_relacionados.php">Sites Relacionados</a></li>        
         <li><a href="contatos.php" class="botaoMenu" id="CONTATOS.php">Contato</a></li>
 </ul>

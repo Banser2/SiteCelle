@@ -1,10 +1,10 @@
-<html lang="pt-br">
-<head>
-    <meta charset="utf-8">
-    <title>Cadastro Celle</title>
-    <link rel="stylesheet" type="text/css" href="../css/style_cadastro.css">
-</head>
-<body>
+<?php 
+	include_once 'cabecalho.php';
+?>
+<section>
+	<div id="conteudo">
+	<h1 class="t1"> Notícias   </h1>
+	<hr id="hr-top"></hr>
     <div id="area">
         <span>Atenção, os campos marcados com o * asterisco são obrigatórios</span>
         <form method="POST" accept-charset="utf-8" class="form-group" action="validado.php" id="formulario">
@@ -69,25 +69,20 @@
                                         </select>
                                     </td>
                                     <td>
-<<<<<<< HEAD
-                                        <select name="nasc_mes">
-                                            <option value="01">Janeiro</option>
-=======
                                         <select name="nascimento[month]">
-                                            <option value="01" selected>Janeiro</option>
->>>>>>> b15a246b2785b755183010112dea9c203013381b
-                                            <option value="02">Fevereiro</option>
-                                            <option value="03">Março</option>
-                                            <option value="04">Abril</option>
-                                            <option value="05">Maio</option>
-                                            <option value="06">Junho</option>
-                                            <option value="07">Julho</option>
-                                            <option value="08">Agosto</option>
-                                            <option value="09">Setembro</option>
-                                            <option value="10">Outubro</option>
-                                            <option value="11">Novembro</option>
-                                            <option value="12">Dezembro</option>
-                                        </select>
+                                    <option value="01">Janeiro</option>
+                                    <option value="02">Fevereiro</option>
+                                    <option value="03" selected="selected">Março</option>
+                                    <option value="04">Abril</option>
+                                    <option value="05">Maio</option>
+                                    <option value="06">Junho</option>
+                                    <option value="07">Julho</option>
+                                    <option value="08">Agosto</option>
+                                    <option value="09">Setembro</option>
+                                    <option value="10">Outubro</option>
+                                    <option value="11">Novembro</option>
+                                    <option value="12">Dezembro</option>
+                                </select>
                                     </td>
                                     <td>
                                         <select name="nasc_ano">
@@ -175,5 +170,7 @@
         <input class="reset" type="reset" name="reset" value="Limpar">
     </form>
 </div>
-</body>
-</html>
+</div>
+<?php 
+	include_once 'rodape.php';
+?>
