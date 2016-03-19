@@ -36,7 +36,12 @@ include_once 'cabecalho.php';
 				<div class="msg"><h3><?= "Você foi bem, mas pode melhorar!!";?></h3></div>
 				<?php
 			}
-
+			elseif ($aproveitamento >= 10) {
+				?>
+				<br/>
+				<div class="msg"><h3><?= "Você não foi bem dessa vez. Estude um pouco mais!!";?></h3></div>
+				<?php
+			}
 			?>
 		</div>
 		<br/>

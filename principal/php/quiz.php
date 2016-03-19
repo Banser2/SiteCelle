@@ -2,6 +2,12 @@
 // Inicia a Sessão
 session_start();
 include_once 'cabecalho.php';
+
+if (!isset($_SESSION['contexto'])) {
+	$_SESSION['contexto'] = 'default';
+	$contexto = $_SESSION['contexto'];
+}
+
 ?>
 <section>
 	<div id="conteudo">
@@ -22,7 +28,7 @@ include_once 'cabecalho.php';
 
 
 		<?php
-
+		
 // define variables and set to empty values
 
 		$cozinha = [
@@ -31,7 +37,7 @@ include_once 'cabecalho.php';
 		/*Índice 2, pergunta 3 */	['shell.mp3','cup.jpg','shell.jpg','spatula.jpg','pan.jpg','2', 'Shell'],
 		/*Índice 3, pergunta 4 */	['plates.mp3','cuscuzeira.jpg','jar.jpg','cake_pan.jpg','plates.jpg','4', 'Plates'],
 		/*Índice 4, pergunta 5 */	['kettle.mp3','coffee_filter.jpg','fork.jpg','spatula.jpg','kettle.jpg','4', 'Kettle'],
-		/*Índice 5, pergunta 6 */	['glass.mp3','glass.jpg','drainer.jpg','pressure_cooker.jpg','frying_pan.jpg','1', 'Cup'],
+		/*Índice 5, pergunta 6 */	['glass.mp3','glass.jpg','drainer.jpg','pressure_cooker.jpg','frying_pan.jpg','1', 'Glass'],
 		/*Índice 6, pergunta 7 */	['fork.mp3','shell.jpg','kettle.jpg','fork.jpg','serving_platter.jpg','3', 'Fork'],
 		/*Índice 7, pergunta 8 */	['drainer.mp3','cake_pan.jpg','drainer.jpg','wooden_spoon.jpg','thermal_bottle.jpg','2', 'Drainer'],
 		/*Índice 8, pergunta 9 */	['jar.mp3','jar.jpg','spoon.jpg','serving_platter.jpg','spatula.jpg','1', 'Jar'],
@@ -169,17 +175,12 @@ include_once 'cabecalho.php';
 
 		if ( $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["reset"])) {
 			$contexto = 'default';
-			$_SESSION['indice'] = 0;
 			$_POST['contexto'] = 'default';
+			$_SESSION['indice'] = 0;
+			$_SESSION['acertos'] = 0;
+			$_SESSION['erros'] = 0;
 			$indice = 0;
 		}
-
-
-		if (!isset($_SESSION['contexto'])) {
-			$_SESSION['contexto'] = 'default';
-			$contexto = 'default';
-		}
-
 
 		if (!isset($_SESSION['indice'])) {
 			$_SESSION['indice'] = 0;
@@ -227,7 +228,7 @@ include_once 'cabecalho.php';
 		$_SESSION['acertos'] = $acertos;
 		$_SESSION['erros'] = $erros;
 	}
-
+	
 	if($contexto !== "default"){
 		?>
 		<h2>Selecione a imagem correspondente ao áudio</h2>
@@ -273,6 +274,6 @@ include_once 'cabecalho.php';
 		?>
 	</div>
 </section>
-<?php 
+<?php
 include_once 'rodape.php';
 ?>
