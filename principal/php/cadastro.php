@@ -69,10 +69,10 @@ include_once 'cabecalho.php';
                                         </select>
                                     </td>
                                     <td>
-                                        <select name="nascimento[month]">
-                                            <option value="01">Janeiro</option>
+                                        <select name="nasc_mes">
+                                            <option value="01" selected>Janeiro</option>
                                             <option value="02">Fevereiro</option>
-                                            <option value="03" selected="selected">Março</option>
+                                            <option value="03">Março</option>
                                             <option value="04">Abril</option>
                                             <option value="05">Maio</option>
                                             <option value="06">Junho</option>

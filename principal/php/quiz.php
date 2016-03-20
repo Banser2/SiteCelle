@@ -125,7 +125,7 @@ if (!isset($_SESSION['contexto'])) {
 		/*Índice 0, pergunta 1 */	['microwave.mp3','microwave.jpg','blender.jpg','fan.jpg','sandwich_maker.jpg','1', 'Microwave'],
 		/*Índice 1, pergunta 2 */	['tv.mp3','radio.jpg','washing_machine.jpg','freezer.jpg','tv.jpg','4', 'TV'],
 		/*Índice 2, pergunta 3 */	['sandwich_maker.mp3','refrigerator.jpg','food_mixer.jpg','sandwich_maker.jpg','cooker.jpg','3', 'Sandwich Maker'],
-		/*Índice 3, pergunta 4 */	['blender.mp3','coffee_machine.jpg','blender.jpg','aspirator.jpg','clothes_iron.jpg','2', 'blender'],
+		/*Índice 3, pergunta 4 */	['blender.mp3','coffee_machine.jpg','blender.jpg','aspirator.jpg','clothes_iron.jpg','2', 'Blender'],
 		/*Índice 4, pergunta 5 */	['air_conditioning.mp3','microwave.jpg','radio.jpg','food_mixer.jpg','air_conditioning.jpg','4', 'Air Conditioning'],
 		/*Índice 5, pergunta 6 */	['radio.mp3','radio.jpg','washing_machine.jpg','refrigerator.jpg','aspirator.jpg','1', 'Radio'],
 		/*Índice 6, pergunta 7 */	['coffee_machine.mp3','blender.jpg','tv.jpg','cooker.jpg','coffee_machine.jpg','4', 'Coffee Machine'],

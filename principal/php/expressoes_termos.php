@@ -115,7 +115,7 @@ include_once 'cabecalho.php';
                     </tr>
                     <tr>
                         <td class="td_1">partner</td>
-                        <td>socio, companheiro</td>    
+                        <td>sócio, companheiro</td>    
                     </tr>
                     <tr>
                         <td class="td_1">point</td>
@@ -159,7 +159,7 @@ include_once 'cabecalho.php';
                     </tr>
                     <tr>
                         <td class="td_1">show-room</td>
-                        <td>monstruário, sala para expor produtos</td>    
+                        <td>mostruário, sala para expor produtos</td>    
                     </tr>
                     <tr>
                         <td class="td_1">surf</td>
