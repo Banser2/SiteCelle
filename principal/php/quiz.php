@@ -144,8 +144,6 @@ if (!isset($_SESSION['contexto'])) {
 			$_SESSION['indice'] = 0;
 			$_SESSION['acertos'] = 0;
 			$_SESSION['erros'] = 0;
-			$aleat = shuffle($cozinha);
-			$_SESSION['aleatorio'] = $aleat;
 		}
 
 		$contexto = $_SESSION['contexto'];
