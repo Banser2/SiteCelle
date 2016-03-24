@@ -143,6 +143,9 @@ a:hover {
 	height: 370px;
 	float: left;
 }
+.video:last-child {
+	margin-bottom: 70px;
+}
 iframe {
 	width: 320px;
 	height: 285px;
@@ -182,6 +185,7 @@ h2 {
 }
 .section-videos {
 	height: 100%;
+	margin-bottom: 70px;
 }
 
 
