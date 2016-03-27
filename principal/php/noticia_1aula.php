@@ -1,6 +1,7 @@
 <?php 
 	include_once 'cabecalho.php';
 ?>
+<title>1ª Aula</title>
 <section>
 	<div id="conteudo">
 		<h1 class="t1">Alunos participam da 1ª aula do CELLE Igarassu</h1>

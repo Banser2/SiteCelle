@@ -1,6 +1,7 @@
 <?php 
 include_once 'cabecalho.php';
 ?>
+<title>Cadastro</title>
 <section>
 	<div id="conteudo">
        <h1 class="t1">Cadastro</h1>

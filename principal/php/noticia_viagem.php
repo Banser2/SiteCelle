@@ -1,6 +1,7 @@
 <?php 
 	include_once 'cabecalho.php';
 ?>
+<title>Capacitação</title>
 <section>
 	<div id="conteudo">
 		<h1 class="t1">Docentes do IFPE selecionados para capacitação nos Estados Unidos</h1>

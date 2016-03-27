@@ -7,8 +7,8 @@ if (!isset($_SESSION['contexto'])) {
 	$_SESSION['contexto'] = 'default';
 	$contexto = $_SESSION['contexto'];
 }
-
 ?>
+<title>Quiz</title>
 <section>
 	<div id="conteudo">
 		<h1 class="t1"> Quiz </h1> 
@@ -139,6 +139,16 @@ if (!isset($_SESSION['contexto'])) {
 		/*Índice 14, pergunta 15 */	['aspirator.mp3','coffee_machine.jpg','aspirator.jpg','microwave.jpg','sandwich_maker.jpg','2', 'Aspirator']
 		];
 
+		$array = [
+			"cozinha" => [$cozinha, "utensilios_cozinha"],
+			"vestuario" => [$vestuario, "vestuario"],
+			"jardim" => [$jardim, "jardim"],
+			"mobilias" => [$mobilias, "mobilias"],
+			"eletrodomesticos" => [$eletrodomesticos, "eletrodomesticos"],
+			"profissoes" => [$profissoes, "profissoes"],
+			"default" => ["default", "default"]
+		];
+
 		if ( $_SERVER["REQUEST_METHOD"] == "POST" && (isset($_POST['contexto']) && $_POST['contexto'] !== "default")) {
 			$_SESSION['contexto'] = $_POST['contexto'];
 			$_SESSION['indice'] = 0;
@@ -148,30 +158,8 @@ if (!isset($_SESSION['contexto'])) {
 
 		$contexto = $_SESSION['contexto'];
 
-		if ($contexto === 'cozinha'){
-			$perguntas = $cozinha;
-			$pasta = "utensilios_cozinha";
-		}
-		else if ($contexto === 'vestuario'){
-			$perguntas = $vestuario;
-			$pasta = "vestuario";
-		}
-		else if ($contexto === 'jardim'){
-			$perguntas = $jardim;
-			$pasta = "jardim";
-		}
-		else if ($contexto === 'mobilias'){
-			$perguntas = $mobilias;
-			$pasta = "mobilias";
-		}
-		else if ($contexto === 'profissoes'){
-			$perguntas = $profissoes;
-			$pasta = "profissoes";
-		}
-		else if ($contexto === 'eletrodomesticos'){
-			$perguntas = $eletrodomesticos;
-			$pasta = "eletrodomesticos";
-		}
+		$perguntas = $array[$contexto][0];
+		$pasta = $array[$contexto][1];
 
 		if ( $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["reset"])) {
 			$contexto = 'default';

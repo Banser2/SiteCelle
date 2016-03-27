@@ -1,6 +1,7 @@
 <?php 
 	include_once 'cabecalho.php';
 ?>
+<title>Home</title>
 <section>
 	<div id="conteudo">
 		<h1 class="t1"> CELLE </h1> 
