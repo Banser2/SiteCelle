@@ -1,7 +1,7 @@
 #area{
     position: relative;
-    left: 10%;
-    top: 10%;
+    //*left: 10%;
+    top: 10%;*//
     width: 900px;
     height: 450px;
     padding-bottom: 440px;
@@ -9,6 +9,8 @@
 #area #formulario{
     position: absolute;
     display: block;
+    width: 100%;
+    height: 70%
     
 }
 .mi-form-inline div{
