@@ -7,7 +7,7 @@ include_once 'cabecalho.php';
        <h1 class="t1">Cadastro</h1>
        <hr id="hr-top"></hr>
        <div id="area">
-        <span>Atenção, os campos marcados com o * asterisco são obrigatórios</span>
+        <span>Atenção, os campos marcados com o (*) são obrigatórios</span>
         <form method="POST" accept-charset="utf-8" class="form-group" action="validado.php" id="formulario">
             <div style="display:none">
                 <input type="hidden" name="_method" value="POST">
@@ -31,10 +31,7 @@ include_once 'cabecalho.php';
                     </div>
                     <div style="min-widht: 280px; width: 40%;">
                         <div class="input date required">
-                            <table style="padding: 9px 0;">
-                                <tr>
-                                    <td><label>Data de Nascimento:</label></td>
-                                    <td>
+                                   <label>Data de Nascimento:</label>
                                         <select name="nasc_dia">
                                             <option value="01" selected>1</option>
                                             <option value="02">2</option>
@@ -68,8 +65,8 @@ include_once 'cabecalho.php';
                                             <option value="30">30</option>
                                             <option value="31">31</option>
                                         </select>
-                                    </td>
-                                    <td>
+                                    
+                                   
                                         <select name="nasc_mes">
                                             <option value="01" selected>Janeiro</option>
                                             <option value="02">Fevereiro</option>
@@ -84,8 +81,8 @@ include_once 'cabecalho.php';
                                             <option value="11">Novembro</option>
                                             <option value="12">Dezembro</option>
                                         </select>
-                                    </td>
-                                    <td>
+                                    
+                                   
                                         <select name="nasc_ano">
                                             <option value="2006" selected>2006</option>
                                             <option value="2005">2005</option>
@@ -113,13 +110,10 @@ include_once 'cabecalho.php';
                                             <option value="1982">1982</option>
                                             <option value="1981">1981</option>
                                         </select>
-                                    </td>
-                                </tr>
-                            </table>
                         </div>
                     </div>
                     <div class="my-form-inline">
-                        <div style="min-width: 180px; widht:15%;">
+                        <div style="min-width: 100px; width: 15%;">
                             <div class="input text">
                                 <label for="telefone">Telefone</label>
                                 <input type="text" name="telefone" class="control" maxlength="11" id="telefone">
@@ -133,12 +127,12 @@ include_once 'cabecalho.php';
                             <label for="email">Email *</label>
                             <input type="email" name="email" class="control" id="email" required maxlength="50">
                         </div>
-                        <div class="input password required">
+                        <div style="min-width: 120px; width: 45%" class="input password required">
                           <label for="passowrd">Senha *</label>
                           <input type="password" name="password" class="control" required id="password">
                       </div>
                   </div>
-                  <div class="input password required">
+                  <div style="min-width: 120px; width: 15%" class="input password required">
                     <label for="confirm-password">Confirmar Senha *</label>
                     <input type="password" name="confirm_password" class="control" required id="confirm-password">
                 </div>
@@ -147,19 +141,19 @@ include_once 'cabecalho.php';
         <fieldset>
             <legend>Curso</legend>
             <div class="my-form-inline">
-                <div style="min-width: 140px; width: 21%;">
+                <div style="min-width: 100px; width: 21%;">
                     <div class="imput matricula required">
                         <label for="matricula">Matricula *</label>
                         <input type="text" name="matricula" class="control" required id="matricula" maxlength="14"> 
                     </div>
                 </div>
-                <div style="min-width: 180px; width: 25%">
+                <div style="min-width: 95px; width: 25%">
                     <div class="input text required">
                         <label for="periodo">Periodo *</label>
                         <input type="text" name="periodo" class="control" required id="periodo" maxlength="1">
                     </div>
                 </div>
-                <div style="min-width: 180px; width: 25%">
+                <div style="min-width: 90px; width: 25%">
                     <div class="input text required">
                         <label for="curso">Curso *</label>
                         <input type="text" name="curso" class="control" required id="curso">
@@ -167,7 +161,8 @@ include_once 'cabecalho.php';
                 </div>
             </div>
         </fieldset>
-        <input class="submit" type="submit" name="submit" value="Enviar">
+        <div id="enviar"><button class="enviar" type="submit" name="submit">Enviar</button></div>
+        
         <input class="reset" type="reset" name="reset" value="Limpar">
     </form>
 </div>
