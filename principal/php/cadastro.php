@@ -160,8 +160,7 @@ include_once 'cabecalho.php';
                 </div>
             </div>
         </fieldset>
-        <div id="enviar"><button class="enviar" type="submit" name="submit">Enviar</button></div>
-        
+        <input class="submit" type="submit" name="submit" value="enviar">
         <input class="reset" type="reset" name="reset" value="Limpar">
     </form>
 </div>
