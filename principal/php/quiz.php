@@ -17,13 +17,13 @@ if (!isset($_SESSION['contexto'])) {
 		<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
 			<select name="contexto" onchange="this.form.submit()">
 				<option value="default">Selecione</option>
+				<option value="todos">Todos</option>
 				<option value="cozinha">Utensílios de Cozinha</option>
 				<option value="vestuario">Vestuario</option>
 				<option value="jardim">Jardim</option>
 				<option value="mobilias">Mobílias</option>
 				<option value="profissoes">Profissões</option>
 				<option value="eletrodomesticos">Eletrodomésticos</option>
-				<option value="todos">Todos</option>
 			</select> 
 		</form>
 
@@ -138,17 +138,18 @@ if (!isset($_SESSION['contexto'])) {
 		/*Índice 12, pergunta 13 */	['food_mixer.mp3','food_mixer.jpg','microwave.jpg','aspirator.jpg','blender.jpg','1', 'Food Mixer'],
 		/*Índice 13, pergunta 14 */	['refrigerator.mp3','cooker.jpg','fan.jpg','refrigerator.jpg','tv.jpg','3', 'Refrigerator'],
 		/*Índice 14, pergunta 15 */	['aspirator.mp3','coffee_machine.jpg','aspirator.jpg','microwave.jpg','sandwich_maker.jpg','2', 'Aspirator']
-		
         ];
-
+		$todos = array_merge($profissoes, $vestuario, $cozinha, $jardim, $eletrodomesticos, $mobilias);
+		
 		$array = [
-			"cozinha" => [$cozinha, "utensilios_cozinha"],
-			"vestuario" => [$vestuario, "vestuario"],
-			"jardim" => [$jardim, "jardim"],
-			"mobilias" => [$mobilias, "mobilias"],
-			"eletrodomesticos" => [$eletrodomesticos, "eletrodomesticos"],
-			"profissoes" => [$profissoes, "profissoes"],
-			"default" => ["default", "default"]
+			"cozinha" => [$cozinha],
+			"vestuario" => [$vestuario],
+			"jardim" => [$jardim],
+			"mobilias" => [$mobilias],
+			"eletrodomesticos" => [$eletrodomesticos],
+			"profissoes" => [$profissoes],
+			"todos" => [$todos],
+			"default" => ["default"]
 		];
 
 		if ( $_SERVER["REQUEST_METHOD"] == "POST" && (isset($_POST['contexto']) && $_POST['contexto'] !== "default")) {
@@ -160,44 +161,15 @@ if (!isset($_SESSION['contexto'])) {
 
 		$contexto = $_SESSION['contexto'];
 
-<<<<<<< HEAD
 		$perguntas = $array[$contexto][0];
-		$pasta = $array[$contexto][1];
+		// $pasta = $array[$contexto][1];
 
-		if ( $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["reset"])) {
-=======
-		if ($contexto === 'cozinha'){
-			$perguntas = $cozinha;
-			$pasta = "utensilios_cozinha";
-		}
-		else if ($contexto === 'vestuario'){
-			$perguntas = $vestuario;
-			$pasta = "vestuario";
-		}
-		else if ($contexto === 'jardim'){
-			$perguntas = $jardim;
-			$pasta = "jardim";
-		}
-		else if ($contexto === 'mobilias'){
-			$perguntas = $mobilias;
-			$pasta = "mobilias";
-		}
-		else if ($contexto === 'profissoes'){
-			$perguntas = $profissoes;
-			$pasta = "profissoes";
-		}
-		else if ($contexto === 'eletrodomesticos'){
-			$perguntas = $eletrodomesticos;
-			$pasta = "eletrodomesticos";
-		}
-		
        if ( $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["reset"])) {
->>>>>>> 4d401c919cec112b25c9f4e4de5615357c880f08
-			$contexto = 'default';
 			$_POST['contexto'] = 'default';
 			$_SESSION['indice'] = 0;
 			$_SESSION['acertos'] = 0;
 			$_SESSION['erros'] = 0;
+			$_SESSION['contexto'] = "default";
 			$indice = 0;
 		}
 
@@ -277,7 +249,7 @@ if (!isset($_SESSION['contexto'])) {
 						?>
 						<div class="item">
 							<li class="itens">
-									<input class="img" id="img_<?= $i;?>" type="image" src="../imagens/imagens_quiz/<?= $pasta; ?>/<?= $perguntas[$indice][$i]; ?>" name="escolha" value="<?= $i; ?>"/>
+									<input class="img" id="img_<?= $i;?>" type="image" src="../imagens/imagens_quiz/<?= $perguntas[$indice][$i]; ?>" name="escolha" value="<?= $i; ?>"/>
 							</li>
 						</div>
 						<?php } ?>
