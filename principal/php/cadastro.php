@@ -160,6 +160,15 @@ include_once 'cabecalho.php';
 </div>
 </div>
 </section>
+<Script type = "text / javascript">
+    $ ( "Forma"). Ligado ( "enviar", function () {
+    if ($ (this) .find ( 'input [name = "password"] "). val ()! = $ (this) .find (' input [name =" confirm-password "]"). val ()) {
+    alert ( "Senhas digitadas NÃO conferem !!");
+    $ ( "# Senha") centrar-se (.);
+    return false;
+    }
+    });
+</Script>
 <?php 
 include_once 'rodape.php';
 ?>
