@@ -138,24 +138,8 @@ if (!isset($_SESSION['contexto'])) {
 		/*Índice 12, pergunta 13 */	['food_mixer.mp3','food_mixer.jpg','microwave.jpg','aspirator.jpg','blender.jpg','1', 'Food Mixer'],
 		/*Índice 13, pergunta 14 */	['refrigerator.mp3','cooker.jpg','fan.jpg','refrigerator.jpg','tv.jpg','3', 'Refrigerator'],
 		/*Índice 14, pergunta 15 */	['aspirator.mp3','coffee_machine.jpg','aspirator.jpg','microwave.jpg','sandwich_maker.jpg','2', 'Aspirator']
-		/*Índice 0, pergunta 1 */	['watering.mp3','flowerpot.jpg','watering.jpg','loan.jpg','esculpture.jpg','2', 'Watering'],
-		/*Índice 1, pergunta 2 */	['planter.mp3','fork.jpg','stool.jpg','planter.jpg','flower.jpg','3', 'Planter'],
-		/*Índice 2, pergunta 3 */	['flower.mp3','flower.jpg','fountain.jpg','tree.jpg','grass.jpg','1', 'Flower'],
-		/*Índice 3, pergunta 4 */	['decking.mp3','decking.jpg','tree.jpg','bird.jpg','pergola.jpg','1', 'Decking'],
-		/*Índice 4, pergunta 5 */	['composto.mp3','watering.jpg','stool.jpg','flower.jpg','composto.jpg','4', 'Composto'],
-		/*Índice 5, pergunta 6 */	['grass.mp3','bird.jpg','esculpture.jpg','grass.jpg','planter.jpg','3', 'Grass'],
-		/*Índice 6, pergunta 7 */	['pergola.mp3','fork.jpg','decking.jpg','pergola.jpg','stool.jpg','3', 'Pergola'],
-		/*Índice 7, pergunta 8 */	['bird.mp3','tree.jpg','bird.jpg','fountain.jpg','flowerpot.jpg','2', 'Bird'],
-		/*Índice 8, pergunta 9 */	['tree.mp3','loan.jpg','composto.jpg','grass.jpg','tree.jpg','4', 'Tree'],
-		/*Índice 9, pergunta 10 */	['fountain.mp3','fountain.jpg','planter.jpg','watering.jpg','flower.jpg','1', 'Fountain'],
-		/*Índice 10, pergunta 11 */	['stool.mp3','bird.jpg','planter.jpg','pergola.jpg','stool.jpg','4', 'Stool'],
-		/*Índice 11, pergunta 12 */	['fork.mp3','decking.jpg','tree.jpg','fork.jpg','esculpture.jpg','3', 'Fork'],
-		/*Índice 12, pergunta 13 */	['loan.mp3','loan.jpg','flower.jpg','fountain.jpg','flowerpot.jpg','1', 'Loan'],
-		/*Índice 13, pergunta 14 */	['esculpture.mp3','composto.jpg','esculpture.jpg','grass.jpg','watering.jpg','2', 'Esculpture'],
-		/*Índice 14, pergunta 15 */	['flowerpot.mp3','pergola.jpg','flowerpot.jpg','fork.jpg','bird.jpg','2', 'Flowerpot']
-
-
-		];
+		
+        ];
 
 		if ( $_SERVER["REQUEST_METHOD"] == "POST" && (isset($_POST['contexto']) && $_POST['contexto'] !== "default")) {
 			$_SESSION['contexto'] = $_POST['contexto'];
