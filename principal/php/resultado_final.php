@@ -2,6 +2,7 @@
 session_start();
 include_once 'cabecalho.php';
 ?>
+<title>Resultado Quiz</title>
 <section>
 	<div id="conteudo">
 		<h1 class="t1"> Resultado </h1> 
@@ -36,7 +37,7 @@ include_once 'cabecalho.php';
 				<div class="msg"><h3><?= "Você foi bem, mas pode melhorar!!";?></h3></div>
 				<?php
 			}
-			elseif ($aproveitamento >= 10) {
+			elseif ($aproveitamento < 50) {
 				?>
 				<br/>
 				<div class="msg"><h3><?= "Você não foi bem dessa vez. Estude um pouco mais!!";?></h3></div>
@@ -102,7 +103,7 @@ include_once 'cabecalho.php';
 		<div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
 		<br/>
 		<br/>
-		<form method="POST">
+		<form action="validar.php" method="POST">
 			<input class="submit" type="submit" name="submit" value="Voltar ao Quiz">
 		</form>
 	</div>

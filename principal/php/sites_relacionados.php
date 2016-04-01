@@ -1,6 +1,7 @@
 <?php 
 	include_once 'cabecalho.php';
 ?>
+<title>Sites Relacionados</title>
 <section>
 	<div id="conteudo">
 		<h1 class="t1">Sites Relacionados</h1>

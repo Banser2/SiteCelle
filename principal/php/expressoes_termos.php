@@ -4,7 +4,7 @@ include_once 'cabecalho.php';
 <html lang="pt-br">
 <head>
     <meta charset="utf-8">
-    <title>Tabela</title>
+    <title>Expressões e Termos</title>
 </head>
 <body>
     <section>

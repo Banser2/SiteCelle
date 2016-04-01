@@ -1,6 +1,7 @@
 <?php 
     include_once 'cabecalho.php';
 ?>
+<title>Sobre</title>
 <section>
     <div id="conteudo">
         <h1 class="t1">Sobre</h1>
@@ -37,7 +38,7 @@
         <br>
         - Vice-coordenador Geral do CELLE;
         <br>
-        – Os Coordenadores Gerais Setoriais (representantes por campus);
+        - Os Coordenadores Gerais Setoriais (representantes por campus);
         <br>
         - Os Vice-coordenadores Gerais Setoriais (em condição de suplência, representantes por campus);
         <br>

@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="pt-br">
 	<head>
-		<title>Sobre</title>
+		<!-- <title>Sobre</title> -->
 		<meta charset="utf-8">
 		<script src="../javaScript/jquery-1.12.0.min.js"></script>
 		<link rel="shortcut icon" href="../imagens/logoIFPE.png"/>
