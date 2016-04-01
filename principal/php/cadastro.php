@@ -18,7 +18,7 @@ include_once 'cabecalho.php';
                     <input type="text" name="nome" class="control" required maxlength="50" id="nome">
                 </div>
                 <div class="my-form-inline">
-                        <div class="input select required" style="min-widht: 210px; width: 30%;">
+                        <div class="input select required" style="min-widht: 210px; width: 30%;" float="left">
                             <label for="sexo">Sexo</label>
                             <select name="sexo" required id="sexo">
                                 <option value="empty">Selecione</option>
@@ -26,7 +26,7 @@ include_once 'cabecalho.php';
                                 <option value="Masculino">Masculino</option>
                             </select>
                         </div>    
-                        <div class="input date required" style="min-widht: 280px; width: 40%;">
+                        <div class="input date required" style="min-widht: 280px; width: 40%;" float="left">
                                    <label>Data de Nascimento:</label>
                                         <select name="nasc_dia">
                                             <option value="01" selected>1</option>
@@ -108,7 +108,7 @@ include_once 'cabecalho.php';
                                         </select>
                         </div>
                     <div class="my-form-inline">
-                            <div class="input text" style="min-width: 100px; width: 15%;">
+                            <div class="input text" style="min-width: 100px; width: 15%;" float="left">
                                 <label for="telefone">Telefone</label>
                                 <input type="text" name="telefone" class="control" maxlength="11" id="telefone">
                             </div>
@@ -138,15 +138,23 @@ include_once 'cabecalho.php';
                     </div>
                     <div class="input text required" style="min-width: 90px; width: 15%">
                         <label for="periodo">Periodo *</label>
-                        <input type="text" name="periodo" class="control" required id="periodo" maxlength="1">
+                        <select name="periodo" required id="Periodo">
+                            <option value="1">1° Periodo</option>
+                            <option value="2">2° Periodo</option>
+                            <option value="3">3° Periodo</option>
+                            <option value="4">4° Periodo</option>
+                        </select>
                     </div>
-                    <div class="input text required" style="min-width: 90px; width: 15%">
+                    <div class="input text required" style="min-width: 100px; width: 15%">
                         <label for="curso">Curso *</label>
-                        <input type="text" name="curso" class="control" required id="curso">
+                        <select name="Curso" required id="Curso">
+                            <option value="IPI">Informatica Para Internet</option>
+                            <option value="Logistica">Logistica</option>               
+                        </select>
                     </div>
             </div>
         </fieldset>
-        <input class="submit" type="submit" name="submit" value="enviar">
+        <input class="submit" type="submit" name="submit" value="Enviar">
         <input class="reset" type="reset" name="reset" value="Limpar">
     </form>
 </div>
