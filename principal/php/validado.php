@@ -24,15 +24,14 @@ if (!$conn) {
 	$nasc_ano = $_POST ['nasc_ano'];
 	$telefone = $_POST ['telefone'];
 	$email  = $_POST ['email'];
-	$password  = $_POST ['password'];
-	$confirm_password = $_POST ['confirm_password'];
+	$password  = md5($_POST ['password']);
     $periodo = $_POST ['periodo'];
 	$curso = $_POST ['curso'];
 
 	$datanasc = $nasc_dia."/".$nasc_mes."/".$nasc_ano;
 
 
-	$sql = "INSERT INTO `usuario`(`matricula`, `nome`, `sexo`, `datanasc`, `telefone`, `email`, `senha`, `confirma_senha`, `periodo`, `curso`) VALUES ('$matricula','$nome','$sexo','$datanasc','$telefone','$email','$password','$confirm_password','$periodo','$curso')";
+	$sql = "INSERT INTO `usuarios`(`matricula`, `nome`, `sexo`, `datanasc`, `telefone`, `email`, `senha`, `periodo`, `curso`) VALUES ('$matricula','$nome','$sexo','$datanasc','$telefone','$email','$password','$periodo','$curso')";
 
 
 
