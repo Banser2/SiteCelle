@@ -190,12 +190,8 @@ if (!isset($_SESSION['contexto'])) {
 			$perguntas = $eletrodomesticos;
 			$pasta = "eletrodomesticos";
 		}
-		else if ($contexto === 'todos'){
-			$perguntas = $todos;
-			$pasta = "todos";
-		}
-
-		if ( $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["reset"])) {
+		
+       if ( $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["reset"])) {
 			$contexto = 'default';
 			$_POST['contexto'] = 'default';
 			$_SESSION['indice'] = 0;
