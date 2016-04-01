@@ -14,13 +14,12 @@ include_once 'cabecalho.php';
             </div>
             <fieldset>
                 <legend>Dados Pessoais</legend>
-                <div class="input text required">
+                <div class="input text required" style="min-width: 350px; width: 35%">
                     <label for="nome">Nome *</label>
                     <input type="text" name="nome" class="control" required maxlength="50" id="nome">
                 </div>
                 <div class="my-form-inline">
-                    <div style="min-widht: 210px; width: 30%;">
-                        <div class="input select required">
+                        <div class="input select required" style="min-widht: 210px; width: 30%;" float="left">
                             <label for="sexo">Sexo</label>
                             <select name="sexo" required id="sexo">
                                 <option value="empty">Selecione</option>
@@ -28,9 +27,7 @@ include_once 'cabecalho.php';
                                 <option value="Masculino">Masculino</option>
                             </select>
                         </div>    
-                    </div>
-                    <div style="min-widht: 280px; width: 40%;">
-                        <div class="input date required">
+                        <div class="input date required" style="min-widht: 280px; width: 40%;" float="left">
                                    <label>Data de Nascimento:</label>
                                         <select name="nasc_dia">
                                             <option value="01" selected>1</option>
@@ -111,27 +108,22 @@ include_once 'cabecalho.php';
                                             <option value="1981">1981</option>
                                         </select>
                         </div>
-                    </div>
                     <div class="my-form-inline">
-                        <div style="min-width: 100px; width: 15%;">
-                            <div class="input text">
+                            <div class="input text" style="min-width: 100px; width: 15%;" float="left">
                                 <label for="telefone">Telefone</label>
                                 <input type="text" name="telefone" class="control" maxlength="11" id="telefone">
                             </div>
-                        </div>
                     </div>
                 </div>
                 <div class="my-form-inline">
-                    <div style="min-width: 350px; width: 35%">
-                        <div class="input email required">
+                        <div class="input email required" style="min-width: 350px; width: 35%">
                             <label for="email">Email *</label>
                             <input type="email" name="email" class="control" id="email" required maxlength="50">
                         </div>
-                        <div style="min-width: 120px; width: 45%" class="input password required">
+                        <div style="min-width: 120px; width: 15%" class="input password required">
                           <label for="passowrd">Senha *</label>
                           <input type="password" name="password" class="control" required id="password">
                       </div>
-                  </div>
                   <div style="min-width: 120px; width: 15%" class="input password required">
                     <label for="confirm-password">Confirmar Senha *</label>
                     <input type="password" name="confirm_password" class="control" required id="confirm-password">
@@ -141,33 +133,43 @@ include_once 'cabecalho.php';
         <fieldset>
             <legend>Curso</legend>
             <div class="my-form-inline">
-                <div style="min-width: 100px; width: 21%;">
-                    <div class="imput matricula required">
+                    <div class="imput matricula required" style="min-width: 100px; width: 20%;">
                         <label for="matricula">Matricula *</label>
                         <input type="text" name="matricula" class="control" required id="matricula" maxlength="14"> 
                     </div>
-                </div>
-                <div style="min-width: 95px; width: 25%">
-                    <div class="input text required">
+                    <div class="input text required" style="min-width: 90px; width: 15%">
                         <label for="periodo">Periodo *</label>
-                        <input type="text" name="periodo" class="control" required id="periodo" maxlength="1">
+                        <select name="periodo" required id="Periodo">
+                            <option value="1">1° Periodo</option>
+                            <option value="2">2° Periodo</option>
+                            <option value="3">3° Periodo</option>
+                            <option value="4">4° Periodo</option>
+                        </select>
                     </div>
-                </div>
-                <div style="min-width: 90px; width: 25%">
-                    <div class="input text required">
+                    <div class="input text required" style="min-width: 100px; width: 15%">
                         <label for="curso">Curso *</label>
-                        <input type="text" name="curso" class="control" required id="curso">
+                        <select name="Curso" required id="Curso">
+                            <option value="IPI">Informatica Para Internet</option>
+                            <option value="Logistica">Logistica</option>               
+                        </select>
                     </div>
-                </div>
             </div>
         </fieldset>
-        <div id="enviar"><button class="enviar" type="submit" name="submit">Enviar</button></div>
-        
+        <input class="submit" type="submit" name="submit" value="Enviar">
         <input class="reset" type="reset" name="reset" value="Limpar">
     </form>
 </div>
 </div>
 </section>
+<Script type = "text / javascript">
+    $ ( "Forma"). Ligado ( "enviar", function () {
+    if ($ (this) .find ( 'input [name = "password"] "). val ()! = $ (this) .find (' input [name =" confirm-password "]"). val ()) {
+    alert ( "Senhas digitadas NÃO conferem !!");
+    $ ( "# Senha") centrar-se (.);
+    return false;
+    }
+    });
+</Script>
 <?php 
 include_once 'rodape.php';
 ?>

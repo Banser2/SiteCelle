@@ -23,6 +23,7 @@ if (!isset($_SESSION['contexto'])) {
 				<option value="mobilias">Mobílias</option>
 				<option value="profissoes">Profissões</option>
 				<option value="eletrodomesticos">Eletrodomésticos</option>
+				<option value="todos">Todos</option>
 			</select> 
 		</form>
 
@@ -54,7 +55,7 @@ if (!isset($_SESSION['contexto'])) {
 		/*Índice 19, pergunta 20 */	['coffee_filter.mp3','coffee_filter.jpg','pressure_cooker.jpg','drainer.jpg','spoon.jpg','1', 'Coffee Filter']
 		];
 
-		$vestuario = [
+		$vestuario= [
 		/*Índice 0, pergunta 1 */	['blazer.mp3','shirt.jpg','tie.jpg','vest.jpg','blazer.jpg','4', 'Blazer'],
 		/*Índice 1, pergunta 2 */	['blouse.mp3','blouse.jpg','hat.jpg','jumpsuit.jpg','skirt.jpg','1', 'Blouse'],
 		/*Índice 2, pergunta 3 */	['coat.mp3','swimwear.jpg','coat.jpg','pants.jpg','pijamas.jpg','2', 'Coat'],
@@ -137,7 +138,8 @@ if (!isset($_SESSION['contexto'])) {
 		/*Índice 12, pergunta 13 */	['food_mixer.mp3','food_mixer.jpg','microwave.jpg','aspirator.jpg','blender.jpg','1', 'Food Mixer'],
 		/*Índice 13, pergunta 14 */	['refrigerator.mp3','cooker.jpg','fan.jpg','refrigerator.jpg','tv.jpg','3', 'Refrigerator'],
 		/*Índice 14, pergunta 15 */	['aspirator.mp3','coffee_machine.jpg','aspirator.jpg','microwave.jpg','sandwich_maker.jpg','2', 'Aspirator']
-		];
+		
+        ];
 
 		$array = [
 			"cozinha" => [$cozinha, "utensilios_cozinha"],
@@ -158,10 +160,39 @@ if (!isset($_SESSION['contexto'])) {
 
 		$contexto = $_SESSION['contexto'];
 
+<<<<<<< HEAD
 		$perguntas = $array[$contexto][0];
 		$pasta = $array[$contexto][1];
 
 		if ( $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["reset"])) {
+=======
+		if ($contexto === 'cozinha'){
+			$perguntas = $cozinha;
+			$pasta = "utensilios_cozinha";
+		}
+		else if ($contexto === 'vestuario'){
+			$perguntas = $vestuario;
+			$pasta = "vestuario";
+		}
+		else if ($contexto === 'jardim'){
+			$perguntas = $jardim;
+			$pasta = "jardim";
+		}
+		else if ($contexto === 'mobilias'){
+			$perguntas = $mobilias;
+			$pasta = "mobilias";
+		}
+		else if ($contexto === 'profissoes'){
+			$perguntas = $profissoes;
+			$pasta = "profissoes";
+		}
+		else if ($contexto === 'eletrodomesticos'){
+			$perguntas = $eletrodomesticos;
+			$pasta = "eletrodomesticos";
+		}
+		
+       if ( $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["reset"])) {
+>>>>>>> 4d401c919cec112b25c9f4e4de5615357c880f08
 			$contexto = 'default';
 			$_POST['contexto'] = 'default';
 			$_SESSION['indice'] = 0;
