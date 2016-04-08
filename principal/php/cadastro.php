@@ -30,7 +30,8 @@ include_once 'cabecalho.php';
                         <div class="input date required" style="min-widht: 280px; width: 40%;" float="left">
                                    <label>Data de Nascimento:</label>
                                         <select name="nasc_dia">
-                                            <option value="01" selected>1</option>
+                                            <option value="dia">Dia</option>
+                                            <option value="01">1</option>
                                             <option value="02">2</option>
                                             <option value="03">3</option>
                                             <option value="04">4</option>
@@ -82,7 +83,7 @@ include_once 'cabecalho.php';
                                     
                                    
                                         <select name="nasc_ano">
-                                            <option value="ano"  selected></option>
+                                            <option value="ano"  selected>Ano</option>
                                             <option value="2006">2006</option>
                                             <option value="2005">2005</option>
                                             <option value="2004">2004</option>
@@ -148,10 +149,7 @@ include_once 'cabecalho.php';
                     </div>
                     <div class="input text required" style="min-width: 100px; width: 15%">
                         <label for="curso">Curso *</label>
-                        <select name="curso" required id="curso">
-                            <option value="IPI">Informatica Para Internet</option>
-                            <option value="Logistica">Logistica</option>               
-                        </select>
+                        <input type="text" name="curso" id="curso" maxlength="30">
                     </div>
             </div>
         </fieldset>
