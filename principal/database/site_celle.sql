@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 01, 2016 at 04:54 PM
+-- Generation Time: Apr 08, 2016 at 02:29 PM
 -- Server version: 10.0.17-MariaDB
 -- PHP Version: 5.6.14
 
@@ -55,6 +55,13 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_unicode_ci;
 
 --
+-- Dumping data for table `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `nome`, `sexo`, `datanasc`, `telefone`, `email`, `senha`, `periodo`, `curso`, `matricula`) VALUES
+(5, 'Luiz Henrique Jose Ferreira da Silva', 'Masculino', '01/01/2006', '99999999', 'b@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', '1', 'ipi', '121492641664/');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -85,7 +92,7 @@ ALTER TABLE `resultados`
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- Constraints for dumped tables
 --
