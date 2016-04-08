@@ -103,9 +103,16 @@ include_once 'cabecalho.php';
 		<div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
 		<br/>
 		<br/>
-		<form action="validar.php" method="POST">
+		<form action="#" method="POST">
 			<input class="submit" type="submit" name="submit" value="Voltar ao Quiz">
 		</form>
+
+        <form action="desempenho.php" method="POST">
+        <label for="matricula">Matricula:</label>
+        <input type="text" name="matricula"  maxlength="14" style="min-width: 100px; width: 20%;"/> 
+        <input type="submit" value="Salvar"/>
+        </form>
+    </form>
 	</div>
 	<br/>
 </section>
