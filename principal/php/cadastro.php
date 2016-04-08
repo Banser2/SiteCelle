@@ -18,7 +18,7 @@ include_once 'cabecalho.php';
                     <label for="nome">Nome *</label>
                     <input type="text" name="nome" class="control" required maxlength="50" id="nome">
                 </div>
-                <div class="my-form-inline">
+                <div class="mi-form-inline">
                         <div class="input select required" style="min-widht: 210px; width: 30%;" float="left">
                             <label for="sexo">Sexo</label>
                             <select name="sexo" required id="sexo">
@@ -65,7 +65,8 @@ include_once 'cabecalho.php';
                                     
                                    
                                         <select name="nasc_mes">
-                                            <option value="01" selected>Janeiro</option>
+                                            <option value="mes" selected>Mes</option>
+                                            <option value="01" >Janeiro</option>
                                             <option value="02">Fevereiro</option>
                                             <option value="03">Março</option>
                                             <option value="04">Abril</option>
@@ -81,7 +82,8 @@ include_once 'cabecalho.php';
                                     
                                    
                                         <select name="nasc_ano">
-                                            <option value="2006" selected>2006</option>
+                                            <option value="ano"  selected></option>
+                                            <option value="2006">2006</option>
                                             <option value="2005">2005</option>
                                             <option value="2004">2004</option>
                                             <option value="2003">2003</option>
@@ -108,12 +110,10 @@ include_once 'cabecalho.php';
                                             <option value="1981">1981</option>
                                         </select>
                         </div>
-                    <div class="my-form-inline">
-                            <div class="input text" style="min-width: 100px; width: 15%;" float="left">
+                            <div class="mi-form-inline" style="min-width: 100px; width: 15%;" float="left">
                                 <label for="telefone">Telefone</label>
                                 <input type="text" name="telefone" class="control" maxlength="11" id="telefone">
-                            </div>
-                    </div>
+                        </div>
                 </div>
                 <div class="my-form-inline">
                         <div class="input email required" style="min-width: 350px; width: 35%">
@@ -148,7 +148,7 @@ include_once 'cabecalho.php';
                     </div>
                     <div class="input text required" style="min-width: 100px; width: 15%">
                         <label for="curso">Curso *</label>
-                        <select name="Curso" required id="Curso">
+                        <select name="curso" required id="curso">
                             <option value="IPI">Informatica Para Internet</option>
                             <option value="Logistica">Logistica</option>               
                         </select>
