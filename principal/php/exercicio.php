@@ -142,52 +142,86 @@ $partedocorpo = [
 ['tooth.jpg','Mouth','Tooth','Lips','Tongue','2'],
 ['wrist.jpg','Wrist','Vein','Thumb','Forearm','1']];
 
+$todos = array_merge($partedocorpo, $escola,$comida,$transporte, $esportes, $animais);
+		
+		$array = [
+			"comidas" => [$comida],
+			"escolar" => [$escola],
+			"transporte" => [$transporte],
+			"animais" => [ $animais],
+			"esportes" => [$esportes],
+			"partedocorpo" => [$partedocorpo],
+			"todos" => [$todos],
+			"default" => ["default"]
+		];
 if ( $_SERVER["REQUEST_METHOD"] == "POST" && (isset($_POST['contexto']) && $_POST['contexto'] !== "default")) {
-	$contexto = $_POST['contexto'];
-	$_SESSION['contexto'] = $contexto;
+			$_SESSION['contexto'] = $_POST['contexto'];
+			$_SESSION['indice'] = 0;
+			$_SESSION['acertos'] = 0;
+			$_SESSION['erros'] = 0;
+		}
+
+		$contexto = $_SESSION['contexto'];
+
+		$perguntas = $array[$contexto][0];
+		// $pasta = $array[$contexto][1];
+
+       if ( $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["reset"])) {
+			$_POST['contexto'] = 'default';
+			$_SESSION['indice'] = 0;
+			$_SESSION['acertos'] = 0;
+			$_SESSION['erros'] = 0;
+			$_SESSION['contexto'] = "default";
+			$indice = 0;
+		}
+
+		if (!isset($_SESSION['indice'])) {
+			$_SESSION['indice'] = 0;
+			$indice = 0;
+		} else {
+			$indice = $_SESSION['indice'];
+		}
+
+		if (!isset($_SESSION['acertos'])) {
+			$_SESSION['acertos'] = 0;
+			$acertos = 0;
+		} else {
+			$acertos = $_SESSION['acertos'];
+		}
+
+		if (!isset($_SESSION['erros'])) {
+			$_SESSION['erros'] = 0;
+			$erros = 0;
+		} else {
+			$erros = $_SESSION['erros'];
+		}
+
+		if (isset($_POST["escolha"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
+			$escolha = $_POST["escolha"];
+			if($escolha === $perguntas[$indice][5]){
+				$indice++;
+				$acertos++;
+				if($indice === sizeof($perguntas)){
+					$indice = 0;
+
+					header("location:resultado_final.php");
+				}
+							}
+			}else{
+				$erros++;
+				echo '<style type="text/css"> 
+				
+			</style> 
+			<audio autoplay>
+			<source src="../audios/erro.mp3"/>
+			</audio>';
+		}
+		$_SESSION['indice'] = $indice;
+		$_SESSION['acertos'] = $acertos;
+		$_SESSION['erros'] = $erros;
 	
-}
+				?>
 
-if ($_SESSION['contexto'] === 'comidas'){
-		$perguntas = $comida;
-	} else if ($_SESSION['contexto'] === 'escolar'){
-		$perguntas = $escola;
-	} else if ($_SESSION['contexto'] === 'transportes'){
-		$perguntas = $transporte;
-	} else if ($_SESSION['contexto'] === 'animais'){
-		$perguntas = $animais;
-	}else if ($_SESSION['contexto'] === 'esportes'){
-		$perguntas = $esportes;
-    }else if ($_SESSION['contexto'] === 'partedocorpo'){
-		$perguntas = $partedocorpo;
-	}
-if ( $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["reset"])) {
-	$_SESSION['contexto'] = 'default';
-	$_SESSION['indice'] = 0;
-	$_POST['contexto'] = 'default';
-	$contexto = 'default';
-	$indice = 0;
-}
-
-
-if (!isset($_SESSION['contexto'])) {
-    $_SESSION['contexto'] = 'default';
-	$contexto = 'default';
-	}
-
-// some code here
-
-
-	if (!isset($_SESSION['indice'])) {
-    $_SESSION['indice'] = 0;
-	$indice = 0;
-	} else {
-    $indice = $_SESSION['indice'];
-	}
-
-
-
-?>
 <h2>Review Exercise</h2>
 		<p><span><b>What do you see? <b><?php echo $indice;?></span></p>
 <?php
