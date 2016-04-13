@@ -31,13 +31,13 @@ if (!$conn) {
 	$datanasc = $nasc_dia."/".$nasc_mes."/".$nasc_ano;
 
 
-	$sql = "INSERT INTO `usuarios`(`matricula`, `nome`, `sexo`, `datanasc`, `telefone`, `email`, `senha`, `periodo`, `curso`) VALUES ('$matricula','$nome','$sexo','$datanasc','$telefone','$email','$password','$periodo','$curso')";
+	$sql = "INSERT INTO `usuarios`(`nome`, `sexo`, `datanasc`, `telefone`, `email`, `senha`, `periodo`, `curso`, `matricula`) VALUES ('$nome','$sexo','$datanasc','$telefone','$email','$password','$periodo','$curso', '$matricula')";
 
 
 
 
 if (mysqli_query($conn, $sql)) {
-    echo "New record created successfully";
+    header("location: sobre.php");
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }

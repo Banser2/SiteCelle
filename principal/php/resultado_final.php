@@ -8,9 +8,20 @@ include_once 'cabecalho.php';
 		<h1 class="t1"> Resultado </h1> 
 		<hr id="hr-top"></hr>
 		<br>
+		<div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+		<br/>
+		<br/>
 		<div class="resultado">
 			<?php
-			if(isset($_POST['submit'])){
+			if(!isset($_SESSION['aproveitamento'])){
+				$_SESSION['aproveitamento'] = 0;
+				$aproveitamento = 0;
+			}
+			else {
+				$aproveitamento = $_SESSION['aproveitamento'];
+			}
+
+			if(isset($_POST['voltar'])){
 				$_SESSION['acertos'] = 0;
 				$_SESSION['erros'] = 0;
 				$_SESSION['contexto'] = "default";
@@ -43,6 +54,7 @@ include_once 'cabecalho.php';
 				<div class="msg"><h3><?= "Você não foi bem dessa vez. Estude um pouco mais!!";?></h3></div>
 				<?php
 			}
+			$_SESSION['aproveitamento'] = $aproveitamento;
 			?>
 		</div>
 		<br/>
@@ -100,21 +112,19 @@ include_once 'cabecalho.php';
 		<script src="../javaScript/highcharts.js"></script>
 		<script src="../javaScript/exporting.js"></script>
 
-		<div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
-		<br/>
-		<br/>
+		
 		<form action="#" method="POST">
-			<input class="submit" type="submit" name="submit" value="Voltar ao Quiz">
+			<input class="submit" type="submit" name="voltar" value="Voltar ao Quiz">
 		</form>
 
-        <form action="desempenho.php" method="POST">
-        <label for="matricula">Matricula:</label>
-        <input type="text" name="matricula"  maxlength="14" style="min-width: 100px; width: 20%;"/> 
-        <input type="submit" value="Salvar"/>
-        </form>
-    </form>
-	</div>
-	<br/>
+		<form action="desempenho.php" method="POST">
+			<label for="matricula">Matricula:</label>
+			<input type="text" name="matricula"  maxlength="14" style="min-width: 100px; width: 20%;"/> 
+			<input class="submit" type="submit" name="salvar" value="Salvar"/>
+		</form>
+	</form>
+</div>
+<br/>
 </section>
 <?php 
 include_once 'rodape.php';
