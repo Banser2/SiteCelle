@@ -1,5 +1,4 @@
 <?php
-include_once("cabecalho.php");
 session_start();
 ?>
 <style type="text/css">
@@ -10,34 +9,8 @@ a:hover {
 	text-decoration: underline;
 }
 </style>
-<html>
-<head>
-	<title>Login</title>
-</head>
-<body>
-	<div>
-		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
-			<table>
-				<tr>
-					<td>Usuário</td>
-					<td><input type="text" name="usuario"></td>
-				</tr>
-				<tr>
-					<td>Senha</td>
-					<td><input type="password" name="senha"></td>
-				</tr>
-			</table>
-			<input type="submit" name="submit" value="Login">
-		</form>
-		<a href="cadastro.php"><small>Não é cadastrado? Registre-se aqui</small></a>
-	</div>
-</body>
-</html>
+
 <?php
-if(isset($_POST['submit'])){
-	// echo md5($_POST['senha']) . "<br>"	;
-
-
 	$user = $_POST['usuario'];
 	$pass = md5($_POST['senha']);
 	
@@ -48,26 +21,23 @@ if(isset($_POST['submit'])){
 
 	
 	$link = mysqli_connect ($server, $username, $password, $dbname);
-	$query = "SELECT senha FROM usuarios WHERE usuarios='$user'";
+	$query = "SELECT senha, usuario FROM usuarios WHERE usuario='$user' AND senha='$pass'";
 	$result = mysqli_query($link, $query);
-	$result = mysqli_fetch_array($result);
-	/*echo $result['SENHA'];
-	echo "<br>" . $pass;*/
- // var_dump($result);
+	$arr = mysqli_fetch_array($result);
+	
 	if($result){
-		$row = count($result);
+		$row = mysqli_num_rows($result);
 		// echo "entrou";
-		if($row != 0 && $result['senha'] === $pass) {
-			// header("location: home.php");
-			echo "senha correta!!";
+		if($row != 0) {
+			
+			$_SESSION['usuario'] = $user;
+			header("location: sobre.php");
 		}
 		else {
-			echo "Usuário ou senha inválidos!!";
+			header("location: sobre.php");
+			echo "<span style='color: white;'>Usuário ou senha inválidos!!</span>";
 		}
 	}
-	// echo "nao entrou";
-}
 
 mysqli_close($link);
-include_once("rodape.php");
 ?>

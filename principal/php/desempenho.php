@@ -11,16 +11,15 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
+$matricula = $_POST['matricula'];
 $erros = $_SESSION['erros'];
 $acertos = $_SESSION['acertos'];
 $percentual = $_SESSION['aproveitamento'];
-$matricula = $_POST['matricula'];
-$data = "20/04/2016";
+$data = "08/04/2016";
 
 $sql = "INSERT INTO `resultados`(`erros`,`acertos`,`percentual`, `matricula`, `data`) VALUES ('$erros', '$acertos', '$percentual', '$matricula', '$data')";
-$result = mysqli_query($conn, $sql);
 
-if ($result) {
+if (mysqli_query($conn, $sql)) {
 	$_SESSION['erros'] = 0;
 	$_SESSION['acertos'] = 0;
 	$_SESSION['contexto'] = "default";
@@ -30,5 +29,4 @@ if ($result) {
 }
 
 mysqli_close($conn);
-
 ?>
