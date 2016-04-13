@@ -231,3 +231,27 @@ span {
     font-weight: bold;
     width: 140px;
 }
+.login {
+	float: right;
+	margin-top: 0;
+	padding-top: 0;
+	margin-right: 15%;
+}
+#login tr, #login td, #login {
+	border-collapse: collapse;
+}
+.log {
+	color: white;
+}
+.logout {
+	margin-top: 3px;
+	float: right;
+	margin-right: 15%;
+	margin-left: 18px;
+}
+.boas_vindas {
+	float:right;
+	margin-top: 12px;
+	font-size: 16px;
+	color: white;
+}

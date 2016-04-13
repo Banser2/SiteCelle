@@ -119,12 +119,16 @@ include_once 'cabecalho.php';
                     <label for="email">Email *</label>
                     <input type="email" name="email" class="control" id="email" required maxlength="50">
                 </div>
+                <div class="input usuario required" style="min-width: 350px; width: 35%">
+                    <label for="usuario">Usuário *</label>
+                    <input type="usuario" name="usuario" class="control" id="usuario" required maxlength="30">
+                </div>
                 <div style="min-width: 120px; width: 15%" class="input password required">
-                  <label for="passowrd">Senha *</label>
+                  <label for="password">Senha *</label>
                   <input type="password" name="password" class="control" required id="password">
               </div>
               <div style="min-width: 120px; width: 15%" class="input password required">
-                <label for="confirm-password">Confirmar Senha *</label>
+                <label for="confirm_password">Confirmar Senha *</label>
                 <input type="password" name="confirm_password" class="control" required id="confirm-password">
             </div>
         </div>

@@ -64,7 +64,7 @@ element.style{
     min-width: 280px;
     width: 40%;
 }
-input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
+/*input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
     -webkit-appearance: none;
     -webkit-border-radius: 0px;
     background-color: #fff;
@@ -82,7 +82,7 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     transition: box-shadow 0.45s,border-color 0.45s ease-in-out;
-}
+}*/
 label{
   display: inline block;
   max-width: 100%;

@@ -1,5 +1,4 @@
 <?php
-session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -20,6 +19,7 @@ $nasc_mes = $_POST ['nasc_mes'];
 $nasc_ano = $_POST ['nasc_ano'];
 $telefone = $_POST ['telefone'];
 $email  = $_POST ['email'];
+$usuario = $_POST['usuario'];
 $password  = md5($_POST ['password']);
 $periodo = $_POST ['periodo'];
 $curso = $_POST ['curso'];
@@ -27,7 +27,7 @@ $curso = $_POST ['curso'];
 $datanasc = $nasc_dia."/".$nasc_mes."/".$nasc_ano;
 
 
-$sql = "INSERT INTO `usuarios`(`nome`, `sexo`, `datanasc`, `telefone`, `email`, `senha`, `periodo`, `curso`, `matricula`) VALUES ('$nome','$sexo','$datanasc','$telefone','$email','$password','$periodo','$curso', '$matricula')";
+$sql = "INSERT INTO `usuarios`(`nome`, `sexo`, `datanasc`, `telefone`, `email`, `usuario`, `senha`, `periodo`, `curso`, `matricula`) VALUES ('$nome', '$sexo', '$datanasc', '$telefone', '$email', '$usuario', '$password', '$periodo', '$curso', '$matricula')";
 
 if (mysqli_query($conn, $sql)) {
 	header("location: sobre.php");
@@ -36,7 +36,6 @@ if (mysqli_query($conn, $sql)) {
 }
 
 mysqli_close($conn);
-
 ?>
 
 

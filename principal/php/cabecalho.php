@@ -1,52 +1,122 @@
+<?php
+session_start();
+?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
-	<head>
-		<!-- <title>Sobre</title> -->
-		<meta charset="utf-8">
-		<script src="../javaScript/jquery-1.12.0.min.js"></script>
-		<link rel="shortcut icon" href="../imagens/logoIFPE.png"/>
-        <link rel="stylesheet" type="text/css" href="../css/estilo.css" media="all">
-		<link rel="stylesheet" type="text/css" href="../css/estilo_quiz.css" media="all">
-        <link rel="stylesheet" type="text/css" href="../css/style_cadastro.css" media="all">
-        
-		<script src="../javaScript/javaScript.js"></script>
-	</head>
-	<body>
-       <header>
-        <div id="logo">
-                <div class="banner">
-                    <div id="logo-reitoria">
-                        <img src="../imagens/Logo.png" widht="300px" height="90px">
-                        <a class="acesso-reitoria"></a>
-                    </div>
-                </div>
-            </div>  
-          <nav id="menu">
+<head>
+    <!-- <title>Sobre</title> -->
+    <meta charset="utf-8">
+    <script src="../javaScript/jquery-1.12.0.min.js"></script>
+    <link rel="shortcut icon" href="../imagens/logoIFPE.png"/>
+    <link rel="stylesheet" type="text/css" href="../css/estilo.css" media="all">
+    <link rel="stylesheet" type="text/css" href="../css/estilo_quiz.css" media="all">
+    <link rel="stylesheet" type="text/css" href="../css/style_cadastro.css" media="all">
+    <script src="../javaScript/javaScript.js"></script>
+</head>
+<body>
+    <header>
+    <div id="logo">
+        <?php
+        if(!isset($_SESSION['usuario'])){
+            ?>
+            <div class="login">
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+                    <table id="login" cellspacing="5">
+                        <tr>
+                            <td><span class="log">Login</span></td>
+                            <td><input type="text" name="usuario"></td>
+                        </tr>
+                        <tr>
+                            <td><span class="log">Senha</span></td>
+                            <td><input type="password" name="senha"></td>
+                            <td><input class="submit" type="submit" name="enviar" Value="OK"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <?php
+        } else {            
+            ?>
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+                <input class="submit logout" type="submit" name="logout" value="Logout">
+            </form>
+            <?php
+            echo "<span class='boas_vindas'>Bem vindo(a), <b>" . $_SESSION['usuario'] . "</b>!! </span>";
+        }
+        if(isset($_POST['logout'])) {
+            unset($_SESSION['usuario']);
+            header("location: home.php");
+        }
+        ?>
+        <div class="banner">
+            <div id="logo-reitoria">
+                <img src="../imagens/Logo.png" widht="300px" height="90px">
+                <a class="acesso-reitoria"></a>
+            </div>
+        </div>
+    </div>  
+    <nav id="menu">
         <ul class="menu">        
-        <li><a href="home.php" class="botaoMenu" id="home.php">Home</a></li>
-        <li><a href="sobre.php" class="botaoMenu" id="sobre.php">Sobre</a></li>
-        <li><a href="noticias.php" class="botaoMenu" id="noticias.php">Notícias</a></li>
-        <li><a href="#" id="#">Mídia</a>
-            <ul>
-                <li><a href="videos.php" class="botaoMenu" id="videos.php">Vídeos</a></li>
-                <li><a href="audios.php" class="botaoMenu" id="audios.php">Áudios</a></li>
-            </ul>
-        </li>
-        <li><a href="#" id="#">Atividades</a>
-            <ul>
-                <li><a href="quiz.php" class="botaoMenu" id="quiz.php">Quiz</a></li>
-            </ul>
-        </li>
-        <li><a href="#" id="#">Conteúdos</a>
-            <ul>
-                <li><a href="paises_nacionalidades.php" class="botaoMenu" id="paises_nacionalidades.php">Países e Nacionalidades</a></li>
-                <li><a href="expressoes_termos.php" class="botaoMenu" id="expressoes_termos.php">Expressões e Termos</a></li>
-            </ul>    
-        </li>
-        <li><a href="cadastro.php" class="botaoMenu" id="cadastro.php">Cadastro</a></li>
-        <li><a href="sites_relacionados.php" class="botaoMenu" id="sites_relacionados.php">Sites Relacionados</a></li>        
-        <li><a href="contatos.php" class="botaoMenu" id="CONTATOS.php">Contato</a></li>
-</ul>
-<br><br>
- </nav>
-</header> 
+            <li><a href="home.php" class="botaoMenu" id="home.php">Home</a></li>
+            <li><a href="sobre.php" class="botaoMenu" id="sobre.php">Sobre</a></li>
+            <li><a href="noticias.php" class="botaoMenu" id="noticias.php">Notícias</a></li>
+            <li><a href="#" id="#">Mídia</a>
+                <ul>
+                    <li><a href="videos.php" class="botaoMenu" id="videos.php">Vídeos</a></li>
+                    <li><a href="audios.php" class="botaoMenu" id="audios.php">Áudios</a></li>
+                </ul>
+            </li>
+            <li><a href="#" id="#">Atividades</a>
+                <ul>
+                    <li><a href="quiz.php" class="botaoMenu" id="quiz.php">Quiz</a></li>
+                </ul>
+            </li>
+            <li><a href="#" id="#">Conteúdos</a>
+                <ul>
+                    <li><a href="paises_nacionalidades.php" class="botaoMenu" id="paises_nacionalidades.php">Países e Nacionalidades</a></li>
+                    <li><a href="expressoes_termos.php" class="botaoMenu" id="expressoes_termos.php">Expressões e Termos</a></li>
+                </ul>    
+            </li>
+            <li><a href="cadastro.php" class="botaoMenu" id="cadastro.php">Cadastro</a></li>
+            <li><a href="sites_relacionados.php" class="botaoMenu" id="sites_relacionados.php">Sites Relacionados</a></li>        
+            <li><a href="contatos.php" class="botaoMenu" id="CONTATOS.php">Contato</a></li>
+        </ul>
+        <br><br>
+    </nav>
+</header>
+<?php
+if(isset($_POST['enviar'])) {
+    $user = $_POST['usuario'];
+    $pass = md5($_POST['senha']);
+    
+    $server = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "site_celle";
+
+    
+    $link = mysqli_connect ($server, $username, $password, $dbname);
+    $query = "SELECT senha, usuario FROM usuarios WHERE usuario='$user' AND senha='$pass'";
+    $result = mysqli_query($link, $query);
+    $arr = mysqli_fetch_array($result);
+    
+    if($result){
+        $row = mysqli_num_rows($result);
+        // echo "entrou";
+        if($user == $arr['usuario']){
+            $_SESSION['usuario'] = $user;
+        }
+        if($row != 0) {
+            header("location: home.php");
+        }
+        else {
+            // header("location: sobre.php");
+            echo "<script>
+            alert('Usuário ou senha inválidos!!');
+            </script>";
+        }
+    }
+
+    mysqli_close($link);
+}
+?>

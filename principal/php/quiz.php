@@ -1,7 +1,7 @@
 <?php
-// Inicia a Sessão
-session_start();
 include_once 'cabecalho.php';
+// Inicia a Sessão
+// session_start();
 
 if (!isset($_SESSION['contexto'])) {
 	$_SESSION['contexto'] = 'default';
@@ -13,23 +13,28 @@ if (!isset($_SESSION['contexto'])) {
 	<div id="conteudo">
 		<h1 class="t1"> Quiz </h1> 
 		<hr id="hr-top"></hr>
-		<label id="contexto">Escolha o Contexto:</label><br/><br/>
-		<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
-			<select name="contexto" onchange="this.form.submit()">
-				<option value="default">Selecione</option>
-				<option value="todos">Todos</option>
-				<option value="cozinha">Utensílios de Cozinha</option>
-				<option value="vestuario">Vestuario</option>
-				<option value="jardim">Jardim</option>
-				<option value="mobilias">Mobílias</option>
-				<option value="profissoes">Profissões</option>
-				<option value="eletrodomesticos">Eletrodomésticos</option>
-			</select> 
-		</form>
-
-
 		<?php
-		
+		if(isset($_SESSION['usuario'])) {
+			?>
+			<label id="contexto">Escolha o Contexto:</label><br/><br/>
+			<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
+				<select name="contexto" onchange="this.form.submit()">
+					<option value="default">Selecione</option>
+					<option value="todos">Todos</option>
+					<option value="cozinha">Utensílios de Cozinha</option>
+					<option value="vestuario">Vestuario</option>
+					<option value="jardim">Jardim</option>
+					<option value="mobilias">Mobílias</option>
+					<option value="profissoes">Profissões</option>
+					<option value="eletrodomesticos">Eletrodomésticos</option>
+				</select> 
+			</form>
+
+			<?php
+		}
+		else {
+			echo "<span style='font-size: 18px; font-family: sans-serif;'>Faça o login para realizar o Quiz</span>";
+		}
 // define variables and set to empty values
 
 		$cozinha = [
@@ -138,18 +143,18 @@ if (!isset($_SESSION['contexto'])) {
 		/*Índice 12, pergunta 13 */	['food_mixer.mp3','food_mixer.jpg','microwave.jpg','aspirator.jpg','blender.jpg','1', 'Food Mixer'],
 		/*Índice 13, pergunta 14 */	['refrigerator.mp3','cooker.jpg','fan.jpg','refrigerator.jpg','tv.jpg','3', 'Refrigerator'],
 		/*Índice 14, pergunta 15 */	['aspirator.mp3','coffee_machine.jpg','aspirator.jpg','microwave.jpg','sandwich_maker.jpg','2', 'Aspirator']
-        ];
+		];
 		$todos = array_merge($profissoes, $vestuario, $cozinha, $jardim, $eletrodomesticos, $mobilias);
 		
 		$array = [
-			"cozinha" => [$cozinha],
-			"vestuario" => [$vestuario],
-			"jardim" => [$jardim],
-			"mobilias" => [$mobilias],
-			"eletrodomesticos" => [$eletrodomesticos],
-			"profissoes" => [$profissoes],
-			"todos" => [$todos],
-			"default" => ["default"]
+		"cozinha" => [$cozinha],
+		"vestuario" => [$vestuario],
+		"jardim" => [$jardim],
+		"mobilias" => [$mobilias],
+		"eletrodomesticos" => [$eletrodomesticos],
+		"profissoes" => [$profissoes],
+		"todos" => [$todos],
+		"default" => ["default"]
 		];
 
 		if ( $_SERVER["REQUEST_METHOD"] == "POST" && (isset($_POST['contexto']) && $_POST['contexto'] !== "default")) {
@@ -164,13 +169,14 @@ if (!isset($_SESSION['contexto'])) {
 		$perguntas = $array[$contexto][0];
 		// $pasta = $array[$contexto][1];
 
-       if ( $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["reset"])) {
+		if ( $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["reset"])) {
 			$_POST['contexto'] = 'default';
 			$_SESSION['indice'] = 0;
 			$_SESSION['acertos'] = 0;
 			$_SESSION['erros'] = 0;
 			$_SESSION['contexto'] = "default";
 			$indice = 0;
+			header("location: quiz.php");
 		}
 
 		if (!isset($_SESSION['indice'])) {
@@ -249,7 +255,7 @@ if (!isset($_SESSION['contexto'])) {
 						?>
 						<div class="item">
 							<li class="itens">
-									<input class="img" id="img_<?= $i;?>" type="image" src="../imagens/imagens_quiz/<?= $perguntas[$indice][$i]; ?>" name="escolha" value="<?= $i; ?>"/>
+								<input class="img" id="img_<?= $i;?>" type="image" src="../imagens/imagens_quiz/<?= $perguntas[$indice][$i]; ?>" name="escolha" value="<?= $i; ?>"/>
 							</li>
 						</div>
 						<?php } ?>
