@@ -12,13 +12,6 @@ include_once 'cabecalho.php';
 		<br/>
 		<div class="resultado">
 			<?php
-			if(!isset($_SESSION['aproveitamento'])){
-				$_SESSION['aproveitamento'] = 0;
-				$aproveitamento = 0;
-			}
-			else {
-				$aproveitamento = $_SESSION['aproveitamento'];
-			}
 			if(isset($_POST['voltar'])){
 				$_SESSION['acertos'] = 0;
 				$_SESSION['erros'] = 0;
@@ -33,6 +26,8 @@ include_once 'cabecalho.php';
 			echo "<h3>Total de Acertos: " . $_SESSION['acertos'] . "</h3>";
 			echo "<h3>Total de Erros: " . $_SESSION['erros'] . "</h3>";
 			echo "<h3>Aproveitamento: " . $aproveitamento . " %</h3>";
+
+			$_SESSION['aproveitamento'] = $aproveitamento;
 
 			if($aproveitamento >= 70){
 				?>
@@ -107,62 +102,19 @@ include_once 'cabecalho.php';
 		</script>    
 		<script src="../javaScript/highcharts.js"></script>
 		<script src="../javaScript/exporting.js"></script>
-		<?php
-		if(!isset($_SESSION['aproveitamento'])){
-			$_SESSION['aproveitamento'] = $aproveitamento;
-		}
-		?>
-		<div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
-		<br/>
-		<br/>
 		<form action="#" method="POST">
-			<input class="submit" type="submit" name="submit" value="Voltar ao Quiz">
+			<input class="submit" type="submit" name="voltar" value="Voltar ao Quiz">
 		</form>
 		<br>
 		<br>
-		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+		<form action="desempenho.php" method="POST">
 			<label for="matricula">Matricula:</label>
 			<input type="text" name="matricula"  maxlength="14" style="min-width: 100px; width: 20%;"/> 
-			<input class="submit" type="submit" value="Salvar"/>
+			<input class="submit" name="submeter" type="submit" value="Salvar Resultado"/>
 		</form>
-		<?php       if (mysqli_query($conn, $sql)) {
-			echo "New record created successfully";
-		} else {
-			echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-		}
-		?>
 	</div>
 	<br/>
 </section>
 <?php
-session_start();
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "site_celle";
-
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-
-if (!$conn) {
-	die("Connection failed: " . mysqli_connect_error());
-}
-
-
-$matricula = $_POST['matricula'];
-$erros = $_SESSION['erros'];
-$acertos = $_SESSION['acertos'];
-$desempenho = $_SESSION['aproveitamento'];
-$data = "08/04/2016";
-
-$sql = "INSERT INTO `resultados`(`erros`,`acertos`,`percentual`, `matricula`, `data`) VALUES ('$erros', '$acertos', '$desempenho', '$matricula', '$data')";
-
-/*if (mysqli_query($conn, $sql)) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-}*/
-
-mysqli_close($conn);
-
 include_once 'rodape.php';
 ?>

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.0.2
+-- version 4.5.1
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 08, 2016 at 02:29 PM
--- Server version: 10.0.17-MariaDB
--- PHP Version: 5.6.14
+-- Generation Time: Apr 14, 2016 at 01:48 AM
+-- Server version: 10.1.10-MariaDB
+-- PHP Version: 7.0.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -28,12 +28,19 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `resultados` (
   `id` int(11) NOT NULL,
-  `erros` double NOT NULL,
-  `acertos` double NOT NULL,
+  `erros` int(10) NOT NULL,
+  `acertos` int(10) NOT NULL,
   `percentual` double NOT NULL,
   `matricula` varchar(30) COLLATE utf16_unicode_ci NOT NULL,
   `data` varchar(15) COLLATE utf16_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_unicode_ci;
+
+--
+-- Dumping data for table `resultados`
+--
+
+INSERT INTO `resultados` (`id`, `erros`, `acertos`, `percentual`, `matricula`, `data`) VALUES
+(3, 0, 10, 100, '8819', '08/04/2016');
 
 -- --------------------------------------------------------
 
@@ -48,6 +55,7 @@ CREATE TABLE `usuarios` (
   `datanasc` varchar(10) COLLATE utf16_unicode_ci NOT NULL,
   `telefone` varchar(15) COLLATE utf16_unicode_ci NOT NULL,
   `email` varchar(50) COLLATE utf16_unicode_ci NOT NULL,
+  `usuario` varchar(20) COLLATE utf16_unicode_ci NOT NULL,
   `senha` varchar(256) COLLATE utf16_unicode_ci NOT NULL,
   `periodo` varchar(30) COLLATE utf16_unicode_ci NOT NULL,
   `curso` varchar(50) COLLATE utf16_unicode_ci NOT NULL,
@@ -58,8 +66,8 @@ CREATE TABLE `usuarios` (
 -- Dumping data for table `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `nome`, `sexo`, `datanasc`, `telefone`, `email`, `senha`, `periodo`, `curso`, `matricula`) VALUES
-(5, 'Luiz Henrique Jose Ferreira da Silva', 'Masculino', '01/01/2006', '99999999', 'b@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', '1', 'ipi', '121492641664/');
+INSERT INTO `usuarios` (`id`, `nome`, `sexo`, `datanasc`, `telefone`, `email`, `usuario`, `senha`, `periodo`, `curso`, `matricula`) VALUES
+(12, 'Bertonni Thiago', 'Masculino', '08/11/1986', '81987330562', 'ibragamesonly@gmail.com', 'bertonnipaz', '202cb962ac59075b964b07152d234b70', '2', 'IPI', '8819');
 
 --
 -- Indexes for dumped tables
@@ -69,8 +77,7 @@ INSERT INTO `usuarios` (`id`, `nome`, `sexo`, `datanasc`, `telefone`, `email`, `
 -- Indexes for table `resultados`
 --
 ALTER TABLE `resultados`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `matricula` (`matricula`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `usuarios`
@@ -87,22 +94,12 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `resultados`
 --
 ALTER TABLE `resultados`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `resultados`
---
-ALTER TABLE `resultados`
-  ADD CONSTRAINT `resultados_ibfk_1` FOREIGN KEY (`matricula`) REFERENCES `usuarios` (`matricula`);
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
