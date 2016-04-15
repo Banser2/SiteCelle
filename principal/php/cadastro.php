@@ -151,7 +151,7 @@ include_once 'cabecalho.php';
             </div>
             <div class="input text required" style="min-width: 100px; width: 15%">
                 <label for="curso">Curso *</label>
-                <input type="text" name="curso" id="curso" maxlength="30">
+                <input type="text" name="curso" class="control" id="curso" maxlength="30">
             </div>
         </div>
     </fieldset>
