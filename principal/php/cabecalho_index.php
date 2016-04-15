@@ -7,7 +7,7 @@ session_start();
     <title>Sobre</title>
     <meta charset="utf-8">
     <script src="javaScript/jquery-1.12.0.min.js"></script>
-    <link rel="shortcut icon" href=",,/imagens/logoIFPE.png"/>
+    <link rel="shortcut icon" href="imagens/logoIFPE.png"/>
     <link rel="stylesheet" type="text/css" href="css/estilo.css" media="all">
     <link rel="stylesheet" type="text/css" href="css/estilo_quiz.css" media="all">
     <link rel="stylesheet" type="text/css" href="css/style_cadastro.css" media="all">
@@ -85,7 +85,7 @@ session_start();
         </nav>
     </header>
     <?php
-    if(isset($_POST['enviar'])){
+    if(isset($_POST['enviar'])) {
         $user = $_POST['usuario'];
         $pass = md5($_POST['senha']);
 
@@ -103,14 +103,17 @@ session_start();
         if($result){
             $row = mysqli_num_rows($result);
         // echo "entrou";
-            if($row != 0) {
-
+            if($user == $arr['usuario']){
                 $_SESSION['usuario'] = $user;
-                header("location: home.php");
+            }
+            if($row != 0) {
+                header("location: php/home.php");
             }
             else {
-                header("location: home.php");
-                echo "<span style='color: white; margin-right: 15%; float:right;'>Usuário ou senha inválidos!!</span>";
+            // header("location: sobre.php");
+                echo "<script>
+                alert('Usuário ou senha inválidos!!');
+                </script>";
             }
         }
 

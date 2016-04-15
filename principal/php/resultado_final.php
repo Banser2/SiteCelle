@@ -109,7 +109,7 @@ include_once 'cabecalho.php';
 		<br>
 		<form action="desempenho.php" method="POST">
 			<label for="matricula">Matricula:</label>
-			<input type="text" name="matricula"  maxlength="14" style="min-width: 100px; width: 20%;"/> 
+			<input type="text" name="matricula"  maxlength="14" style="min-width: 100px; width: 10%;"/> 
 			<input class="submit" name="submeter" type="submit" value="Salvar Resultado"/>
 		</form>
 	</div>
