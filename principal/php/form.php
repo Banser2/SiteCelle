@@ -43,8 +43,8 @@ $uploaddir = '/var/www/uploads/';
     <hr id="hr-top"></hr>
     <form method="post" id="envio_de_arquivo" onsubmit="validaForm(); return false;" class="form">
 		<p class="name">
-            <label for="name">Nome</label>
-            <input type="text" name="nome" id="nome" placeholder="Seu Nome" />
+            <label for="name">Nome da Atividade</label>
+            <input type="text" name="nome" id="nome" placeholder="Nome da Atividade" />
 		</p>
 		<p class="matricula">
             <label for="matricula">Nº da Matricula </label>

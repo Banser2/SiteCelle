@@ -25,6 +25,8 @@ include_once 'cabecalho.php';
 			echo "<h3>Total de Erros: " . $_SESSION['erros'] . "</h3>";
 			echo "<h3>Aproveitamento: " . $aproveitamento . " %</h3>";
 
+			$_SESSION['aproveitamento']=$aproveitamento;
+
 			if($aproveitamento >= 70){
 				?>
 				<br/>
@@ -103,7 +105,7 @@ include_once 'cabecalho.php';
 		<div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
 		<br/>
 		<br/>
-		<form action="#" method="POST">
+		<form action="desempenho.php" method="POST">
 			<input class="submit" type="submit" name="submit" value="Voltar ao Quiz">
 		</form>
 
