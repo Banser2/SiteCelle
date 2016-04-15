@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="pt-br">
 	<head>
-		<title>Sobre</title>
+		<title>Celle</title>
 		<meta charset="utf-8">
 		<link rel="shortcut icon" href="../Imagens/logoIFPE.png"/>
 		<link rel="stylesheet" type="text/css" href="../css/estilo.css" media="all">

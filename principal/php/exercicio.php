@@ -213,7 +213,7 @@ if ( $_SERVER["REQUEST_METHOD"] == "POST" && (isset($_POST['contexto']) && $_POS
 				
 			</style> 
 			<audio autoplay>
-			<source src="../audios/erro.mp3"/>
+			<source src="../audios/error.mp3"/>
 			</audio>';
 		}
 		$_SESSION['indice'] = $indice;
@@ -229,7 +229,8 @@ if (isset($_POST["escolha"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
    $escolha = $_POST["escolha"];
 	if($escolha === $perguntas[$indice][5]){
 		$indice++; 
-			?><span class="right">YOU'RE RIGHT.</span><br/>
+			?>
+			<span class="right">YOU'RE RIGHT.</span><br/>
 			<audio class="audio" autoplay>
 		<source src="../../audiocertoerrado/correto.mp3">
 		</audio><br/>
@@ -246,8 +247,8 @@ if (isset($_POST["escolha"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
 		<audio class="audio" autoplay>
 		<source src="../../audiocertoerrado/error.mp3">
 		</audio><br/>
-<?php
-?><p><span class="error">* Try again.</span></p>
+		<p><span class="error">* Try again.</span></p>
+		<span class= "erros"><?php "indice"?></span>
 	<?php	
 		}
 	}
