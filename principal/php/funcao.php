@@ -1,29 +1,28 @@
 <?php
-function sendMail($de,$para,$mensagem,$assunto)
-{
-    require_once('phpmailer/class.phpmailer.php');
-    $mail = new PHPMailer(true);
+session_start();
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "site_celle";
 
-    $mail->IsSMTP();
-    try {
-      $mail->SMTPAuth   = true;                 
-      $mail->Host       = 'smtp.gmail.com';     
-      $mail->SMTPSecure = "tls";                #remova se nao usar gmail
-	  $mail->Port       = 587;                  #remova se nao usar gmail
-      $mail->Username   = 'email@gmail.com'; 
-      $mail->Password   = 'senha';
-      $mail->AddAddress($para);
-	  $mail->AddReplyTo($de);
-      $mail->SetFrom($de);
-      $mail->Subject = $assunto;
-      $mail->MsgHTML($mensagem);
-      $mail->Send();     
-      $envio = true;
-    } catch (phpmailerException $e) {
-      $envio = false;
-    } catch (Exception $e) {
-      $envio = false;
-    }
-    return $envio;
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
 }
+ $matricula = $_POST['matricula']
+ $nomeatividade = $_POST['nomeatividade']
+ $arquivo = $_POST["arquivo"]
+
+    $sql = "INSERT INTO `stc_envio`(`ENV_MATRICULA`,`ENV_MATRICULA`,`ENV_ARQUIVO`) VALUES
+   ('$matricula','$nomeatividade','$arquivo')";
+
+if (mysqli_query($conn, $sql)) {
+  echo "new record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+mysqli_close($conn) ;
+
 ?>
