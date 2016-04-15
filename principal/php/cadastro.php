@@ -8,7 +8,7 @@ include_once 'cabecalho.php';
      <hr id="hr-top"></hr>
      <div id="area">
         <span>Atenção, os campos marcados com o (*) são obrigatórios</span>
-        <form method="POST" accept-charset="utf-8" class="form-group" action="validado.php" id="formulario">
+        <form method="POST" accept-charset="utf-8" class="form-group" action="validador.php" id="formulario">
             <div style="display:none">
                 <input type="hidden" name="_method" value="POST">
             </div>
@@ -151,7 +151,7 @@ include_once 'cabecalho.php';
             </div>
             <div class="input text required" style="min-width: 100px; width: 15%">
                 <label for="curso">Curso *</label>
-                <input type="text" name="curso" id="curso" maxlength="30">
+                <input type="text" name="curso" class="control" id="curso" maxlength="30">
             </div>
         </div>
     </fieldset>
