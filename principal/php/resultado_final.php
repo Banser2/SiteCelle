@@ -105,7 +105,7 @@ include_once 'cabecalho.php';
 		<div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
 		<br/>
 		<br/>
-		<form action="desempenho.php" method="POST">
+		<form action="exercicio.php" method="POST">
 			<input class="submit" type="submit" name="submit" value="Voltar ao Quiz">
 		</form>
 

@@ -3,6 +3,7 @@
 	<head>
 		<title>Celle</title>
 		<meta charset="utf-8">
+        <script src="../javaScript/jquery-1.12.0.min.js"></script>
 		<link rel="shortcut icon" href="../Imagens/logoIFPE.png"/>
 		<link rel="stylesheet" type="text/css" href="../css/estilo.css" media="all">
 	</head>

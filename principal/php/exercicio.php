@@ -211,10 +211,7 @@ if ( $_SERVER["REQUEST_METHOD"] == "POST" && (isset($_POST['contexto']) && $_POS
 				$erros++;
 				echo '<style type="text/css"> 
 				
-			</style> 
-			<audio autoplay>
-			<source src="../audios/error.mp3"/>
-			</audio>';
+			</style> ';
 		}
 		$_SESSION['indice'] = $indice;
 		$_SESSION['acertos'] = $acertos;
