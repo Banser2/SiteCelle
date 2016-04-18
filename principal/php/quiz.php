@@ -35,28 +35,27 @@ if (!isset($_SESSION['contexto'])) {
 		else {
 			echo "<span style='font-size: 18px; font-family: sans-serif;'>Faça o login para realizar o Quiz</span>";
 		}
-// define variables and set to empty values
 
 		$cozinha = [
 		/*Índice 0, pergunta 1 */	['spoon.mp3','spoon.jpg','knife.jpg','glass.jpg','cup.jpg','1', 'Spoon'],
-		/*Índice 1, pergunta 2 */	['knife.mp3','fork.jpg','coffee_filter.jpg','knife.jpg','drainer.jpg','3', 'Knife'],
+		/*Índice 1, pergunta 2 */	['knife.mp3','fork_coz.jpg','coffee_filter.jpg','knife.jpg','drainer.jpg','3', 'Knife'],
 		/*Índice 2, pergunta 3 */	['shell.mp3','cup.jpg','shell.jpg','spatula.jpg','pan.jpg','2', 'Shell'],
 		/*Índice 3, pergunta 4 */	['plates.mp3','cuscuzeira.jpg','jar.jpg','cake_pan.jpg','plates.jpg','4', 'Plates'],
-		/*Índice 4, pergunta 5 */	['kettle.mp3','coffee_filter.jpg','fork.jpg','spatula.jpg','kettle.jpg','4', 'Kettle'],
+		/*Índice 4, pergunta 5 */	['kettle.mp3','coffee_filter.jpg','fork_coz.jpg','spatula.jpg','kettle.jpg','4', 'Kettle'],
 		/*Índice 5, pergunta 6 */	['glass.mp3','glass.jpg','drainer.jpg','pressure_cooker.jpg','frying_pan.jpg','1', 'Glass'],
-		/*Índice 6, pergunta 7 */	['fork.mp3','shell.jpg','kettle.jpg','fork.jpg','serving_platter.jpg','3', 'Fork'],
+		/*Índice 6, pergunta 7 */	['fork.mp3','shell.jpg','kettle.jpg','fork_coz.jpg','serving_platter.jpg','3', 'Fork'],
 		/*Índice 7, pergunta 8 */	['drainer.mp3','cake_pan.jpg','drainer.jpg','wooden_spoon.jpg','thermal_bottle.jpg','2', 'Drainer'],
 		/*Índice 8, pergunta 9 */	['jar.mp3','jar.jpg','spoon.jpg','serving_platter.jpg','spatula.jpg','1', 'Jar'],
-		/*Índice 9, pergunta 10 */	['frying_pan.mp3','pan.jpg','thermal_bottle.jpg','fork.jpg','frying_pan.jpg','4', 'Frying Pan'],
+		/*Índice 9, pergunta 10 */	['frying_pan.mp3','pan.jpg','thermal_bottle.jpg','fork_coz.jpg','frying_pan.jpg','4', 'Frying Pan'],
 		/*Índice 10, pergunta 11 */	['thermal_bottle.mp3','drainer.jpg','glass.jpg','thermal_bottle.jpg','cup.jpg','3', 'Thermal Bottle'],
 		/*Índice 11, pergunta 12 */	['cup.mp3','pan.jpg','cup.jpg','kettle.jpg','jar.jpg','2', 'Cup'],
 		/*Índice 12, pergunta 13 */	['spatula.mp3','spatula.jpg','cake_pan.jpg','cuscuzeira.jpg','coffee_filter.jpg','1', 'Spatula'],
 		/*Índice 13, pergunta 14 */	['pressure_cooker.mp3','jar.jpg','spatula.jpg','plates.jpg','pressure_cooker.jpg','4', 'Pressure Cooker'],
 		/*Índice 14, pergunta 15 */	['cake_pan.mp3','shell.jpg','drainer.jpg','cake_pan.jpg','thermal_bottle.jpg','3', 'Cake Pan'],
-		/*Índice 15, pergunta 16 */	['serving_platter.mp3','plates.jpg','fork.jpg','pan.jpg','serving_platter.jpg','4', 'Serving Platter'],
+		/*Índice 15, pergunta 16 */	['serving_platter.mp3','plates.jpg','fork_coz.jpg','pan.jpg','serving_platter.jpg','4', 'Serving Platter'],
 		/*Índice 16, pergunta 17 */	['cuscuzeira.mp3','shell.jpg','cuscuzeira.jpg','coffee_filter.jpg','knife.jpg','2', 'Cuscuzeira'],
 		/*Índice 17, pergunta 18 */	['wooden_spoon.mp3','wooden_spoon.jpg','spatula.jpg','serving_platter.jpg','frying_pan.jpg','1', 'Wooden Spoon'],
-		/*Índice 18, pergunta 19 */	['pan.mp3','plates.jpg','pan.jpg','fork.jpg','drainer.jpg','2', 'Pan'],
+		/*Índice 18, pergunta 19 */	['pan.mp3','plates.jpg','pan.jpg','fork_coz.jpg','drainer.jpg','2', 'Pan'],
 		/*Índice 19, pergunta 20 */	['coffee_filter.mp3','coffee_filter.jpg','pressure_cooker.jpg','drainer.jpg','spoon.jpg','1', 'Coffee Filter']
 		];
 
@@ -146,15 +145,16 @@ if (!isset($_SESSION['contexto'])) {
 		];
 		$todos = array_merge($profissoes, $vestuario, $cozinha, $jardim, $eletrodomesticos, $mobilias);
 		
+		
 		$array = [
-		"cozinha" => [$cozinha],
-		"vestuario" => [$vestuario],
-		"jardim" => [$jardim],
-		"mobilias" => [$mobilias],
-		"eletrodomesticos" => [$eletrodomesticos],
-		"profissoes" => [$profissoes],
-		"todos" => [$todos],
-		"default" => ["default"]
+		"cozinha" => $cozinha,
+		"vestuario" => $vestuario,
+		"jardim" => $jardim,
+		"mobilias" => $mobilias,
+		"eletrodomesticos" => $eletrodomesticos,
+		"profissoes" => $profissoes,
+		"todos" => $todos,
+		"default" => "default"
 		];
 
 		if ( $_SERVER["REQUEST_METHOD"] == "POST" && (isset($_POST['contexto']) && $_POST['contexto'] !== "default")) {
@@ -166,8 +166,8 @@ if (!isset($_SESSION['contexto'])) {
 
 		$contexto = $_SESSION['contexto'];
 
-		$perguntas = $array[$contexto][0];
-		// $pasta = $array[$contexto][1];
+		$perguntas = $array[$contexto];
+
 
 		if ( $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["reset"])) {
 			$_POST['contexto'] = 'default';
@@ -215,12 +215,12 @@ if (!isset($_SESSION['contexto'])) {
 				echo '<style type="text/css"> 
 				#img_' . $escolha .' {
 				border-color: red;
+				}
+				</style> 
+				<audio autoplay>
+					<source src="../audios/erro.mp3"/>
+				</audio>';
 			}
-			</style> 
-			<audio autoplay>
-			<source src="../audios/erro.mp3"/>
-			</audio>';
-		}
 		$_SESSION['indice'] = $indice;
 		$_SESSION['acertos'] = $acertos;
 		$_SESSION['erros'] = $erros;

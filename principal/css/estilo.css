@@ -10,6 +10,9 @@ p, a {
 	color: #333333;
 	font-size: 14px;
 }
+p:hover {
+	cursor: text;
+}
 .banner{
 	width: 85%;
 	padding-left: 15%;

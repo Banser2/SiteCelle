@@ -23,7 +23,7 @@ session_start();
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
                         <table id="login" cellspacing="5">
                             <tr>
-                                <td><span class="log">Login</span></td>
+                                <td><span class="log">Usuário</span></td>
                                 <td><input type="text" name="usuario"></td>
                             </tr>
                             <tr>
@@ -112,7 +112,7 @@ session_start();
             else {
             // header("location: sobre.php");
                 echo "<script>
-                alert('Usuário ou senha inválidos!!');
+                alert('Usuário ou senha incorretos!!');
                 </script>";
             }
         }

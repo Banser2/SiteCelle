@@ -65,7 +65,7 @@ include_once 'cabecalho.php';
                     </select>
 
                     <select name="nasc_mes">
-                        <option value="mes" selected>Mes</option>
+                        <option value="mes" selected>Mês</option>
                         <option value="01" >Janeiro</option>
                         <option value="02">Fevereiro</option>
                         <option value="03">Março</option>
