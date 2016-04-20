@@ -29,9 +29,10 @@ session_start();
                             <tr>
                                 <td><span class="log">Senha</span></td>
                                 <td><input type="password" name="senha"></td>
-                                <td><input class="submit" type="submit" name="enviar" Value="ok"></td>
+                                <td><input class="submit" type="submit" name="enviar" Value="OK"></td>
                             </tr>
                         </table>
+                        <a href="php/cadastro.php"><small>Não é cadastrado? Cadastre-se aqui</small>
                     </form>
                 </div>
                 <?php

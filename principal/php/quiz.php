@@ -145,7 +145,7 @@ if (!isset($_SESSION['contexto'])) {
 		];
 		$todos = array_merge($profissoes, $vestuario, $cozinha, $jardim, $eletrodomesticos, $mobilias);
 		
-		
+
 		$array = [
 		"cozinha" => $cozinha,
 		"vestuario" => $vestuario,

@@ -32,6 +32,7 @@ session_start();
                                 <td><input class="submit" type="submit" name="enviar" Value="OK"></td>
                             </tr>
                         </table>
+                        <a href="cadastro.php"><small>Não é cadastrado? Cadastre-se aqui</small>
                     </form>
                 </div>
                 <?php
