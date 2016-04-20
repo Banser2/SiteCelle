@@ -157,7 +157,7 @@ if (!isset($_SESSION['contexto'])) {
 		"default" => "default"
 		];
 
-		if ( $_SERVER["REQUEST_METHOD"] == "POST" && (isset($_POST['contexto']) && $_POST['contexto'] !== "default")) {
+		if ($_SERVER["REQUEST_METHOD"] == "POST" && (isset($_POST['contexto']) && $_POST['contexto'] !== "default")) {
 			$_SESSION['contexto'] = $_POST['contexto'];
 			$_SESSION['indice'] = 0;
 			$_SESSION['acertos'] = 0;
@@ -168,14 +168,38 @@ if (!isset($_SESSION['contexto'])) {
 
 		$perguntas = $array[$contexto];
 
+		if(!isset($_SESSION['id'])) {
+			$_SESSION['id'] = 0;
+			$id = 0;
+		} else {
+			$id = $_SESSION['id'];
+		}
 
-		if ( $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["reset"])) {
+		if(!isset($_SESSION['questoes'])) {
+			$_SESSION['questoes'] = $perguntas;
+			$questoes = $perguntas;
+		} else {
+			$questoes = $_SESSION['questoes'];
+		}
+
+		if(isset($id) && $id == 0 && $contexto != "default") {
+			shuffle($perguntas);
+			$questoes = $perguntas;
+			$id = 1;
+		}
+		// fazer uma página para query e incluir aqui;
+
+		// (isset($_GET['id']) && $_GET['id'] == 1)
+
+		if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["reset"])) {
 			$_POST['contexto'] = 'default';
 			$_SESSION['indice'] = 0;
 			$_SESSION['acertos'] = 0;
 			$_SESSION['erros'] = 0;
 			$_SESSION['contexto'] = "default";
 			$indice = 0;
+			$_SESSION['id'] = 0;
+			$id = 0;
 			header("location: quiz.php");
 		}
 
@@ -202,10 +226,10 @@ if (!isset($_SESSION['contexto'])) {
 
 		if (isset($_POST["escolha"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
 			$escolha = $_POST["escolha"];
-			if($escolha === $perguntas[$indice][5]){
+			if($escolha === $questoes[$indice][5]){
 				$indice++;
 				$acertos++;
-				if($indice === sizeof($perguntas)){
+				if($indice === sizeof($questoes)){
 					$indice = 0;
 
 					header("location:resultado_final.php");
@@ -215,15 +239,17 @@ if (!isset($_SESSION['contexto'])) {
 				echo '<style type="text/css"> 
 				#img_' . $escolha .' {
 				border-color: red;
-				}
-				</style> 
-				<audio autoplay>
-					<source src="../audios/erro.mp3"/>
-				</audio>';
 			}
+			</style> 
+			<audio autoplay>
+			<source src="../audios/erro.mp3"/>
+			</audio>';
+		}
 		$_SESSION['indice'] = $indice;
 		$_SESSION['acertos'] = $acertos;
 		$_SESSION['erros'] = $erros;
+		$_SESSION['id'] = $id;
+		$_SESSION['questoes'] = $questoes;
 	}
 	
 	if($contexto !== "default"){
@@ -236,11 +262,11 @@ if (!isset($_SESSION['contexto'])) {
 		<table>
 			<tr>
 				<td>
-					<h2><?= $perguntas[$indice][6]; ?></h2>
+					<h2><?= $questoes[$indice][6]; ?></h2>
 				</td>
 				<td>
 					<div id="botao_audio">
-						<audio id="audio" autoplay src="../audios/<?= $perguntas[$indice][0]; ?>"/></audio>
+						<audio id="audio" autoplay src="../audios/<?= $questoes[$indice][0]; ?>"/></audio>
 						<button onclick="document.getElementById('audio').play()"></button>
 					</div>
 				</td>
@@ -255,7 +281,7 @@ if (!isset($_SESSION['contexto'])) {
 						?>
 						<div class="item">
 							<li class="itens">
-								<input class="img" id="img_<?= $i;?>" type="image" src="../imagens/imagens_quiz/<?= $perguntas[$indice][$i]; ?>" name="escolha" value="<?= $i; ?>"/>
+								<input class="img" id="img_<?= $i;?>" type="image" src="../imagens/imagens_quiz/<?= $questoes[$indice][$i]; ?>" name="escolha" value="<?= $i; ?>"/>
 							</li>
 						</div>
 						<?php } ?>

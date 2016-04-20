@@ -25,6 +25,7 @@ if (mysqli_query($conn, $sql)) {
 	$_SESSION['erros'] = 0;
 	$_SESSION['acertos'] = 0;
 	$_SESSION['contexto'] = "default";
+	$_SESSION['id'] = 0;
 
 	echo "<div id='conteudo'>
 			<h3 style='margin-top: 30px;'>Resultado salvo com sucesso!!</h3>

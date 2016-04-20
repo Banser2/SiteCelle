@@ -103,7 +103,7 @@ session_start();
 
         if($result){
             $row = mysqli_num_rows($result);
-        // echo "entrou";
+
             if($user == $arr['usuario']){
                 $_SESSION['usuario'] = $user;
             }

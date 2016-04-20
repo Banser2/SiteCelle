@@ -16,6 +16,7 @@ include_once 'cabecalho.php';
 				$_SESSION['acertos'] = 0;
 				$_SESSION['erros'] = 0;
 				$_SESSION['contexto'] = "default";
+				$_SESSION['id'] = 0;
 				header("location: quiz.php");
 
 			}
