@@ -87,8 +87,33 @@ button{
 	border-radius: 20px;
 	box-shadow: -10px 10px 10px rgba(60, 179, 113, 0.45);
 }
-
 .msg {
     font-size: 15px;
-
+}
+.results {
+	float: right;
+	width: 180px;
+	background: none;
+	background-image: none;
+}
+.results:hover {
+	font-weight: bold;
+	font-size: 15px;
+}
+.popup, .popup th, .popup tr, .popup td {
+	border-collapse: collapse;
+	padding: 10px;
+}
+.popup th {
+	background: #353535;
+	color: white;
+}
+.popup tr:nth-child(even) {
+	background: #DFDFDF;
+}
+.td, .popup th {
+	text-align: center;
+}
+.td:first-child {
+	text-align: left;
 }
