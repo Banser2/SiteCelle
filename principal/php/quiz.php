@@ -41,7 +41,7 @@ if (!isset($_SESSION['contexto'])) {
 		$cozinha = [
 			['spoon.mp3','spoon.jpg','knife.jpg','glass.jpg','cup.jpg','1', 'Spoon'],
 			['knife.mp3','fork_coz.jpg','coffee_filter.jpg','knife.jpg','drainer.jpg','3', 'Knife'],
-			['shell.mp3','cup.jpg','shell.jpg','spatula.jpg','pan.jpg','2', 'Shell'],
+			['shell.mp3','cup.jpg','shell.jpg','spatula.jpg','pan.jpg','2', 'Ladle'],
 			['plates.mp3','cuscuzeira.jpg','jar.jpg','cake_pan.jpg','plates.jpg','4', 'Plates'],
 			['kettle.mp3','coffee_filter.jpg','fork_coz.jpg','spatula.jpg','kettle.jpg','4', 'Kettle'],
 			['glass.mp3','glass.jpg','drainer.jpg','pressure_cooker.jpg','frying_pan.jpg','1', 'Glass'],
@@ -143,7 +143,7 @@ if (!isset($_SESSION['contexto'])) {
 			['clothes_iron.mp3','refrigerator.jpg','air_conditioning.jpg','sandwich_maker.jpg','clothes_iron.jpg','4', 'Clothes Iron'],
 			['food_mixer.mp3','food_mixer.jpg','microwave.jpg','aspirator.jpg','blender.jpg','1', 'Food Mixer'],
 			['refrigerator.mp3','cooker.jpg','fan.jpg','refrigerator.jpg','tv.jpg','3', 'Refrigerator'],
-			['aspirator.mp3','coffee_machine.jpg','aspirator.jpg','microwave.jpg','sandwich_maker.jpg','2', 'Aspirator']
+			['aspirator.mp3','coffee_machine.jpg','aspirator.jpg','microwave.jpg','sandwich_maker.jpg','2', 'Vacuum']
 		];
 		$todos = array_merge($profissoes, $vestuario, $cozinha, $jardim, $eletrodomesticos, $mobilias);
 
@@ -198,9 +198,10 @@ if (!isset($_SESSION['contexto'])) {
 			$_SESSION['acertos'] = 0;
 			$_SESSION['erros'] = 0;
 			$_SESSION['contexto'] = "default";
-			$indice = 0;
 			$_SESSION['id'] = 0;
+			$indice = 0;
 			$id = 0;
+			unset($_SESSION['questoes']);
 			header("location: quiz.php");
 		}
 
@@ -232,7 +233,8 @@ if (!isset($_SESSION['contexto'])) {
 				$acertos++;
 				if($indice === sizeof($questoes)){
 					$indice = 0;
-
+					$id = 0;
+					unset($_SESSION['questoes']);
 					header("location:resultado_final.php");
 				}
 			}else{
