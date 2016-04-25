@@ -158,11 +158,18 @@ if (!isset($_SESSION['contexto'])) {
 		"default" => "default"
 		];
 
-		if ($_SERVER["REQUEST_METHOD"] == "POST" && (isset($_POST['contexto']) && $_POST['contexto'] !== "default")) {
-			$_SESSION['contexto'] = $_POST['contexto'];
+		function resetContext() {
 			$_SESSION['indice'] = 0;
 			$_SESSION['acertos'] = 0;
 			$_SESSION['erros'] = 0;
+			$_SESSION['contexto'] = "default";
+			$_SESSION['id'] = 0;
+			unset($_SESSION['questoes']);
+		}
+
+		if ($_SERVER["REQUEST_METHOD"] == "POST" && (isset($_POST['contexto']) && $_POST['contexto'] !== "default")) {
+			resetContext();
+			$_SESSION['contexto'] = $_POST['contexto'];
 		}
 
 		$contexto = $_SESSION['contexto'];
@@ -194,14 +201,9 @@ if (!isset($_SESSION['contexto'])) {
 
 		if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["reset"])) {
 			$_POST['contexto'] = 'default';
-			$_SESSION['indice'] = 0;
-			$_SESSION['acertos'] = 0;
-			$_SESSION['erros'] = 0;
-			$_SESSION['contexto'] = "default";
-			$_SESSION['id'] = 0;
+			resetContext();
 			$indice = 0;
 			$id = 0;
-			unset($_SESSION['questoes']);
 			header("location: quiz.php");
 		}
 
@@ -228,6 +230,7 @@ if (!isset($_SESSION['contexto'])) {
 
 		if (isset($_POST["escolha"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
 			$escolha = $_POST["escolha"];
+			// echo '<pre>';var_dump($questoes, $_SERVER, $_POST);echo '</pre>';
 			if($escolha === $questoes[$indice][5]){
 				$indice++;
 				$acertos++;
@@ -240,20 +243,20 @@ if (!isset($_SESSION['contexto'])) {
 			}else{
 				$erros++;
 				echo '<style type="text/css"> 
-				#img_' . $escolha .' {
-				border-color: red;
+					#img_' . $escolha .' {
+					border-color: red;
+				}
+				</style> 
+				<audio autoplay>
+				<source src="../audios/erro.mp3"/>
+				</audio>';
 			}
-			</style> 
-			<audio autoplay>
-			<source src="../audios/erro.mp3"/>
-			</audio>';
 		}
 		$_SESSION['indice'] = $indice;
 		$_SESSION['acertos'] = $acertos;
 		$_SESSION['erros'] = $erros;
 		$_SESSION['id'] = $id;
 		$_SESSION['questoes'] = $questoes;
-	}
 	
 	if($contexto !== "default"){
 		?>
