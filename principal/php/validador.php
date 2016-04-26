@@ -1,4 +1,5 @@
 <?php
+include_once 'cabecalho.php';
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -30,12 +31,19 @@ $datanasc = $nasc_dia."/".$nasc_mes."/".$nasc_ano;
 $sql = "INSERT INTO `usuarios`(`nome`, `sexo`, `datanasc`, `telefone`, `email`, `usuario`, `senha`, `periodo`, `curso`, `matricula`) VALUES ('$nome', '$sexo', '$datanasc', '$telefone', '$email', '$usuario', '$password', '$periodo', '$curso', '$matricula')";
 
 if (mysqli_query($conn, $sql)) {
-	header("location: sobre.php");
+	echo "<div id='conteudo'>
+			<h3 style='margin-top: 30px;'>Usuário cadastrado com sucesso!!</h3>
+			<br/><br/>
+			<a href='home.php'>Clique aqui para voltar</a>
+		  </div>
+	";
+	// header("location: sobre.php");
 } else {
 	echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 
 mysqli_close($conn);
+include_once 'rodape.php';
 ?>
 
 
