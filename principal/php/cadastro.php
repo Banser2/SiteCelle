@@ -135,7 +135,7 @@ include_once 'cabecalho.php';
                         <td>
                 <div class="input usuario required" style="min-width: 350px; width: 35%">
                     <label for="usuario">Usuário *</label>
-                    <input type="usuario" name="usuario" class="control" id="usuario" required maxlength="30">
+                    <input type="usuario" name="usuario" class="control" id="usuario" required maxlength="20">
                 </div>
                         </td>
                         <td>
@@ -165,7 +165,7 @@ include_once 'cabecalho.php';
                 </td>
                 <td>
             <div class="input text required" style="min-width: 90px; width: 15%">
-                <label for="periodo">Periodo *</label>
+                <label for="periodo">Periodo*</label>
                 <select name="periodo" required id="Periodo">
                     <option value="1">1° Periodo</option>
                     <option value="2">2° Periodo</option>

@@ -98,7 +98,7 @@ label > input:checked + .img{ /* Estilo da imagen quando selecionada */
 	background-image: none;
 }
 .results:hover {
-	font-weight: bold;
+	/*font-weight: bold;*/
 	font-size: 15px;
 }
 .popup, .popup th, .popup tr, .popup td {

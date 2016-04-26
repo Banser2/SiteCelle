@@ -30,7 +30,7 @@ session_start();
                             <tr>
                                 <td><span class="log">Senha</span></td>
                                 <td><input type="password" name="senha"></td>
-                                <td><input class="large" type="submit" name="enviar" Value="OK"></td>
+                                <td><input class="large" type="submit" name="enviar" Value="Login"></td>
                             </tr>
                         </table>
                         <a href="cadastro.php"><small>Não é cadastrado? Cadastre-se aqui</small>
@@ -40,7 +40,7 @@ session_start();
             } else {            
                 ?>
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
-                    <input class="submit logout" type="submit" name="logout" value="Logout">
+                    <input class="submit logout" style="margin-right: 15%; margin-top: 52px;" type="submit" name="logout" value="Logout">
                 </form>
                 <?php
                 echo "<span class='boas_vindas'>Bem vindo(a), <b>" . $_SESSION['usuario'] . "</b>!! </span>";

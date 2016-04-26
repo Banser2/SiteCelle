@@ -262,7 +262,8 @@ span {
 }
 .boas_vindas {
 	float:right;
-	margin-top: 12px;
+	margin-top: 62px;
 	font-size: 16px;
 	color: white;
+	margin-right: 10px;
 }
