@@ -66,7 +66,7 @@ label > input:checked + .img{ /* Estilo da imagen quando selecionada */
 	/*max-width: 100%;*/
 	border-radius: 20px;
 }
-.b-audio{
+.b_audio {
 	background-image:url("../imagens/play_button_quiz.png");
 	height:45px;
 	width:45px;
@@ -74,6 +74,13 @@ label > input:checked + .img{ /* Estilo da imagen quando selecionada */
 	border:solid white;
     cursor: pointer;
     background-repeat: no-repeat;
+}
+.b_audio:hover {
+	background-image:url("../imagens/play_button_quiz.png");
+	height:41px;
+	width:41px;
+	background-color: none;
+	background-repeat: no-repeat;
 }
 .submit, .reset {
 	cursor: pointer;

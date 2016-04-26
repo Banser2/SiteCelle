@@ -25,11 +25,11 @@ session_start();
                         <table id="login" cellspacing="5">
                             <tr>
                                 <td><span class="log">Usuário</span></td>
-                                <td><input type="text" name="usuario"></td>
+                                <td><input type="text" name="usuario" required></td>
                             </tr>
                             <tr>
                                 <td><span class="log">Senha</span></td>
-                                <td><input type="password" name="senha"></td>
+                                <td><input type="password" name="senha" required></td>
                                 <td><input class="large" type="submit" name="enviar" Value="Login"></td>
                             </tr>
                         </table>

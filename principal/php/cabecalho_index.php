@@ -25,11 +25,11 @@ session_start();
                         <table id="login" cellspacing="5">
                             <tr>
                                 <td><span class="log">Usuário</span></td>
-                                <td><input type="text" name="usuario"></td>
+                                <td><input type="text" name="usuario" required></td>
                             </tr>
                             <tr>
                                 <td><span class="log">Senha</span></td>
-                                <td><input type="password" name="senha"></td>
+                                <td><input type="password" name="senha" required></td>
                                 <td><input class="large" type="submit" name="enviar" Value="Login"></td>
                             </tr>
                         </table>
@@ -100,12 +100,12 @@ session_start();
         $link = mysqli_connect ($server, $username, $password, $dbname);
         $query = "SELECT senha, usuario FROM usuarios WHERE usuario='$user' AND senha='$pass'";
         $result = mysqli_query($link, $query);
-        $arr = mysqli_fetch_array($result);
+        $arr = mysqli_fetch_assoc($result);
 
         if($result){
             $row = mysqli_num_rows($result);
 
-            if($user == $arr['usuario']){
+            if($user == $arr['usuario'] && $pass == $arr['senha']){
                 $_SESSION['usuario'] = $user;
             }
             if($row != 0) {

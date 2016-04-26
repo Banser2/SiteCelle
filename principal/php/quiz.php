@@ -273,7 +273,7 @@ if (!isset($_SESSION['contexto'])) {
 				<td>
 					<div id="botao_audio">
 						<audio id="audio" autoplay src="../audios/<?= $questoes[$indice][0]; ?>"/></audio>
-						<button class="b-audio" onclick="document.getElementById('audio').play()"></button>
+						<button class="b_audio" onclick="document.getElementById('audio').play()"></button>
 					</div>
 				</td>
 			</tr>
