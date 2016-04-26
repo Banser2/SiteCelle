@@ -66,7 +66,7 @@ label > input:checked + .img{ /* Estilo da imagen quando selecionada */
 	/*max-width: 100%;*/
 	border-radius: 20px;
 }
-button{
+.b-audio{
 	background-image:url("../imagens/play_button_quiz.png");
 	height:45px;
 	width:45px;
@@ -78,6 +78,7 @@ button{
 .submit, .reset {
 	cursor: pointer;
 	padding: 4px 5px;
+    
 }
 .reset {
 	margin-left: 8px;

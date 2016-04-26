@@ -273,7 +273,7 @@ if (!isset($_SESSION['contexto'])) {
 				<td>
 					<div id="botao_audio">
 						<audio id="audio" autoplay src="../audios/<?= $questoes[$indice][0]; ?>"/></audio>
-						<button onclick="document.getElementById('audio').play()"></button>
+						<button class="b-audio" onclick="document.getElementById('audio').play()"></button>
 					</div>
 				</td>
 			</tr>
@@ -296,7 +296,7 @@ if (!isset($_SESSION['contexto'])) {
 			</form>
 			<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
 				<br/>
-				<input class="submit" type="submit" name="reset" value="Reset"> 
+				<input class="large" type="submit" name="reset" value="Reset"> 
 			</form>
 			<?php 
 		}

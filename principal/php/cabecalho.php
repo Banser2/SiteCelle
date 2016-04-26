@@ -11,6 +11,7 @@ session_start();
     <link rel="stylesheet" type="text/css" href="../css/estilo.css" media="all">
     <link rel="stylesheet" type="text/css" href="../css/estilo_quiz.css" media="all">
     <link rel="stylesheet" type="text/css" href="../css/style_cadastro.css" media="all">
+    <link rel="stylesheet" type="text/css" href="../css/kickstart-buttons.css" media="all">
     <script src="../javaScript/javaScript.js"></script>
 </head>
 <body>
@@ -29,7 +30,7 @@ session_start();
                             <tr>
                                 <td><span class="log">Senha</span></td>
                                 <td><input type="password" name="senha"></td>
-                                <td><input class="submit" type="submit" name="enviar" Value="OK"></td>
+                                <td><input class="large" type="submit" name="enviar" Value="OK"></td>
                             </tr>
                         </table>
                         <a href="cadastro.php"><small>Não é cadastrado? Cadastre-se aqui</small>
