@@ -6,34 +6,29 @@ include_once 'cabecalho.php';
 	<div id="conteudo">
      <h1 class="t1">Cadastro</h1>
      <hr id="hr-top"></hr>
-     <div id="area">
+     <!-- <div id="area"> -->
         <span>Atenção, os campos marcados com o (*) são obrigatórios</span>
         <form method="POST" accept-charset="utf-8" class="form-group" action="validador.php" id="formulario">
             <div style="display:none">
                 <input type="hidden" name="_method" value="POST">
             </div>
-            <fieldset>
+            <fieldset style="margin-top: 45px;">
                 <legend>Dados Pessoais</legend>
                 <table>
                     <tr>
                         <td>
-                <div class="input text required" style="min-width: 350px; width: 35%">
                     <label for="nome">Nome *</label>
                     <input type="text" name="nome" class="control" required maxlength="50" id="nome">
-                </div>
                         </td>
                         <td>
-                    <div class="input select required" style="min-widht: 210px; width: 30%;" float="left">
                         <label for="sexo">Sexo</label>
                         <select name="sexo" required id="sexo">
                             <option value="empty">Selecione</option>
                             <option value="Feminino">Feminino</option>
                             <option value="Masculino">Masculino</option>
                         </select>
-                    </div>    
                         </td>
                         <td>
-                    <div class="" style="min-widht: 280px; width: 380px;" float="left">
                      <label for="nasc_dia">Data de Nascimento:</label>
                      <select name="nasc_dia">
                         <option value="dia">Dia</option>
@@ -114,41 +109,30 @@ include_once 'cabecalho.php';
                         <option value="1982">1982</option>
                         <option value="1981">1981</option>
                     </select>
-                </div>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                <div class="mi-form-inline" style="min-width: 100px; width: 15%;" float="left">
                     <label for="telefone">Telefone</label>
                     <input type="text" name="telefone" class="control" maxlength="11" size="20" id="telefone">
-                </div>
                         </td>
                         <td>
-                <div class="input email required" style="min-width: 350px; width: 35%">
                     <label for="email">Email *</label>
                     <input type="email" name="email" class="control" id="email" required maxlength="50">
-                </div>
                         </td>
                         </tr>
                         <tr>
                         <td>
-                <div class="input usuario required" style="min-width: 350px; width: 35%">
                     <label for="usuario">Usuário *</label>
                     <input type="usuario" name="usuario" class="control" id="usuario" required maxlength="20">
-                </div>
                         </td>
                         <td>
-                <div style="min-width: 120px; width: 15%" class="input password required">
                   <label for="password">Senha *</label>
                   <input type="password" name="password" class="control" required id="password">
-              </div>
                         </td>
                         <td>
-              <div style="min-width: 120px; width: 15%" class="input password required">
                 <label for="confirm_password">Confirmar Senha *</label>
                 <input type="password" name="confirm_password" class="control" required id="confirm-password">
-            </div>
                         </td>
                     </tr>
         </table>
@@ -158,10 +142,8 @@ include_once 'cabecalho.php';
         <table>
             <tr>
                 <td>
-            <div class="imput matricula required" style="min-width: 100px; width: 20%;">
                 <label for="matricula">Matricula *</label>
                 <input type="text" name="matricula" class="control" required id="matricula" maxlength="14"> 
-            </div>
                 </td>
                 <td>
             <div class="input text required" style="min-width: 90px; width: 15%">
@@ -175,10 +157,8 @@ include_once 'cabecalho.php';
             </div>
                 </td>
                 <td>
-            <div class="input text required" style="min-width: 100px; width: 15%">
                 <label for="curso">Curso *</label>
                 <input type="text" name="curso" class="control" id="curso" maxlength="30">
-            </div>
                 </td>
             </tr>
         </table>
@@ -186,7 +166,7 @@ include_once 'cabecalho.php';
     <input class="submit" type="submit" name="submit" value="Enviar">
     <input class="reset" type="reset" name="reset" value="Limpar">
 </form>
-</div>
+<!-- </div> -->
 </div>
 </section>
 <script type="text/javascript">
