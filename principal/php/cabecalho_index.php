@@ -40,7 +40,7 @@ session_start();
             } else {
                 ?>
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
-                    <input class="submit logout" type="submit" name="logout" value="Logout">
+                    <input  style="margin-right:15% " class="submit logout" type="submit" name="logout" value="Logout">
                 </form>
                 <?php
                 echo "<span class='boas_vindas'>Bem vindo(a), <b>" . $_SESSION['usuario'] . "</b>!! </span>";
