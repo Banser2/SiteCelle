@@ -77,6 +77,9 @@ session_start();
                     <ul>
                         <li><a href="paises_nacionalidades.php" class="botaoMenu" id="paises_nacionalidades.php">Países e Nacionalidades</a></li>
                         <li><a href="expressoes_termos.php" class="botaoMenu" id="expressoes_termos.php">Expressões e Termos</a></li>
+                                <li><a href="../php/numero.php" class="botaoMenu" id="../php/numero.php">Numerais</a></li>
+                                        <li><a href="../php/medidas.php" class="botaoMenu" id="../php/medidas.php">Medidas</a></li>
+                        
                     </ul>    
                 </li>
                 <li><a href="cadastro.php" class="botaoMenu" id="cadastro.php">Cadastro</a></li>
