@@ -82,7 +82,7 @@ session_start();
 
                     </ul>    
                 </li>
-                <li><a href="php/cadastro.php" class="botaoMenu" id="cadastro.php">Cadastro</a></li>
+                <li><a href="" class="botaoMenu" id="">Envio</a></li>
                 <li><a href="php/sites_relacionados.php" class="botaoMenu" id="sites_relacionados.php">Sites Relacionados</a></li>
                 <li><a href="php/contatos.php" class="botaoMenu" id="CONTATOS.php">Contato</a></li>
             </ul>
