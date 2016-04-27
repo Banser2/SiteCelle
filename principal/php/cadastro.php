@@ -21,7 +21,7 @@ include_once 'cabecalho.php';
                         <input type="text" name="nome" class="control" required maxlength="50" id="nome">
                     </td>
                     <td>
-                        <label for="sexo">Sexo</label><br>
+                        <label for="sexo">Sexo *</label><br>
                         <select name="sexo" required id="sexo">
                             <option value="empty">Selecione</option>
                             <option value="Feminino">Feminino</option>
