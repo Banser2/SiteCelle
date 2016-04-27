@@ -7,11 +7,11 @@ require 'cabecalho.php';
         <h1 class="t1">Medidas</h1>
             <hr id="hr-top">
         <div class="paises">
-        <table border="1">
+        <table>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>Medias</td>
+                <td>de</td>
+                <td>cumprimento</td>
             </tr>
             <tr>
                 <td>1 Inch</td> 

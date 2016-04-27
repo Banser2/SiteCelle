@@ -5,7 +5,7 @@ require 'cabecalho.php';
     <h1 class="t1">Medidas</h1>
         <hr id="hr-top">
     <div class="paises">
-            <table border="1">
+            <table>
             <tr>
                 <td>1 square inch  </td> 
                 <td>  </td> 

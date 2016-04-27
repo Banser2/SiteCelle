@@ -6,7 +6,7 @@ require 'cabecalho.php';
     <h1 class="t1">Numerais</h1>
             <hr id="hr-top">
     <div class="paises">
-        <table border="1">
+        <table>
         <tr>
             <td>Cardinais</td>
             <td>Cardinais</td>
