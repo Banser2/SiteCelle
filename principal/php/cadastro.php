@@ -148,6 +148,7 @@ include_once 'cabecalho.php';
             <td>
                 <label for="curso">Curso *</label><br>
                 <select name="curso" required id="curso">
+                    <option value="Selecione">Selecione</option>
                     <option value="Informatica">Informática para Internet</option>
                     <option value="Logistica">Logística</option>
                 </select>
