@@ -27,7 +27,6 @@ $curso = $_POST ['curso'];
 
 $datanasc = $nasc_dia."/".$nasc_mes."/".$nasc_ano;
 
-
 $sql = "INSERT INTO `usuarios`(`nome`, `sexo`, `datanasc`, `telefone`, `email`, `usuario`, `senha`, `periodo`, `curso`, `matricula`) VALUES ('$nome', '$sexo', '$datanasc', '$telefone', '$email', '$usuario', '$password', '$periodo', '$curso', '$matricula')";
 
 if (mysqli_query($conn, $sql)) {
