@@ -53,8 +53,7 @@ $uploaddir = '/var/www/uploads/';
 	<form enctype="multipart/form-data" action="" method="POST" onsubmit="validaForm();">
     <input type="hidden" name="MAX_FILE_SIZE" class="control" value="30000" />
     <!-- O Nome do elemento input determina o nome da array $_FILES -->
-   <label >Arquivo </label> <input name="arquivo" type="file" />
-    <p class="submit">
+   <label >Arquivo </label> <input name="arquivo" type="file" class="control"/>
     <input type="submit" value="Enviar arquivo" /></p>
 </form>
     

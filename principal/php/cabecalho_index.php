@@ -78,11 +78,11 @@ session_start();
                         <li><a href="php/paises_nacionalidades.php" class="botaoMenu" id="paises_nacionalidades.php">Países e Nacionalidades</a></li>
                         <li><a href="php/expressoes_termos.php" class="botaoMenu" id="expressoes_termos.php">Expressões e Termos</a></li>
                        <li><a href="../php/numero.php" class="botaoMenu" id="../php/numero.php">Numerais</a></li>
-                                        <li><a href="../php/medidas.php" class="botaoMenu" id="../php/medidas.php">Medidas</a></li>
+                        <li><a href="../php/medidas.php" class="botaoMenu" id="../php/medidas.php">Medidas</a></li>
 
                     </ul>    
                 </li>
-                <li><a href="php/cadastro.php" class="botaoMenu" id="cadastro.php">Cadastro</a></li>
+                <li><a href="php/arquivos.php" class="botaoMenu" id="arquivos.php">Envio</a></li>
                 <li><a href="php/sites_relacionados.php" class="botaoMenu" id="sites_relacionados.php">Sites Relacionados</a></li>
                 <li><a href="php/contatos.php" class="botaoMenu" id="CONTATOS.php">Contato</a></li>
             </ul>
