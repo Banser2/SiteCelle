@@ -82,11 +82,8 @@ session_start();
                         
                     </ul>    
                 </li>
-<<<<<<< HEAD
-                <li><a href="" class="botaoMenu" id="">Envio</a></li>
-=======
+
                 <li><a href="arquivos.php" class="botaoMenu" id="arquivos.php">Envio</a></li>
->>>>>>> 7913261d0cc552f26061e298de5af2f5bc702e63
                 <li><a href="sites_relacionados.php" class="botaoMenu" id="sites_relacionados.php">Sites Relacionados</a></li>        
                 <li><a href="contatos.php" class="botaoMenu" id="CONTATOS.php">Contato</a></li>
             </ul>
