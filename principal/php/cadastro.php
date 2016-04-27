@@ -4,33 +4,33 @@ include_once 'cabecalho.php';
 <title>Cadastro</title>
 <section>
 	<div id="conteudo">
-     <h1 class="t1">Cadastro</h1>
-     <hr id="hr-top"></hr>
-     <!-- <div id="area"> -->
-        <span>Atenção, os campos marcados com o (*) são obrigatórios</span>
-        <form method="POST" accept-charset="utf-8" class="form-group" action="validador.php" id="formulario">
-            <div style="display:none">
-                <input type="hidden" name="_method" value="POST">
-            </div>
-            <fieldset style="margin-top: 45px;">
-                <legend>Dados Pessoais</legend>
-                <table>
-                    <tr>
-                        <td>
-                    <label for="nome">Nome *</label>
-                    <input type="text" name="nome" class="control" required maxlength="50" id="nome">
-                        </td>
-                        <td>
-                        <label for="sexo">Sexo</label>
+       <h1 class="t1">Cadastro</h1>
+       <hr id="hr-top"></hr>
+       <!-- <div id="area"> -->
+       <span>Atenção, os campos marcados com o (*) são obrigatórios</span>
+       <form method="POST" accept-charset="utf-8" class="form-group" action="validador.php" id="formulario">
+        <div style="display:none">
+            <input type="hidden" name="_method" value="POST">
+        </div>
+        <fieldset style="margin-top: 45px;">
+            <legend>Dados Pessoais</legend>
+            <table>
+                <tr>
+                    <td>
+                        <label for="nome">Nome *</label>
+                        <input type="text" name="nome" class="control" required maxlength="50" id="nome">
+                    </td>
+                    <td>
+                        <label for="sexo">Sexo *</label><br>
                         <select name="sexo" required id="sexo">
                             <option value="empty">Selecione</option>
                             <option value="Feminino">Feminino</option>
                             <option value="Masculino">Masculino</option>
                         </select>
-                        </td>
-                        <td>
-                     <label for="nasc_dia">Data de Nascimento:</label>
-                     <select name="nasc_dia">
+                    </td>
+                    <td>
+                       <label for="nasc_dia">Data de Nascimento:</label><br>
+                       <select name="nasc_dia">
                         <option value="dia">Dia</option>
                         <option value="01">1</option>
                         <option value="02">2</option>
@@ -82,7 +82,7 @@ include_once 'cabecalho.php';
                     </select>
 
                     <select name="nasc_ano">
-                        <option value="ano"  selected>Ano</option>
+                        <option value="ano" selected>Ano</option>
                         <option value="2006">2006</option>
                         <option value="2005">2005</option>
                         <option value="2004">2004</option>
@@ -109,62 +109,66 @@ include_once 'cabecalho.php';
                         <option value="1982">1982</option>
                         <option value="1981">1981</option>
                     </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                    <label for="telefone">Telefone</label>
-                    <input type="text" name="telefone" class="control" maxlength="11" size="20" id="telefone">
-                        </td>
-                        <td>
-                    <label for="email">Email *</label>
-                    <input type="email" name="email" class="control" id="email" required maxlength="50">
-                        </td>
-                        </tr>
-                        <tr>
-                        <td>
-                    <label for="usuario">Usuário *</label>
-                    <input type="usuario" name="usuario" class="control" id="usuario" required maxlength="20">
-                        </td>
-                        <td>
-                  <label for="password">Senha *</label>
-                  <input type="password" name="password" class="control" required id="password">
-                        </td>
-                        <td>
-                <label for="confirm_password">Confirmar Senha *</label>
-                <input type="password" name="confirm_password" class="control" required id="confirm-password">
-                        </td>
-                    </tr>
-        </table>
-    </fieldset>
-    <fieldset>
-        <legend>Curso</legend>
-        <table>
-            <tr>
-                <td>
-                <label for="matricula">Matricula *</label>
-                <input type="text" name="matricula" class="control" required id="matricula" maxlength="14"> 
-                </td>
-                <td>
-            <div class="input text required" style="min-width: 90px; width: 15%">
-                <label for="periodo">Periodo*</label>
-                <select name="periodo" required id="Periodo">
-                    <option value="1">1° Periodo</option>
-                    <option value="2">2° Periodo</option>
-                    <option value="3">3° Periodo</option>
-                    <option value="4">4° Periodo</option>
-                </select>
-            </div>
-                </td>
-                <td>
-                <label for="curso">Curso *</label>
-                <input type="text" name="curso" class="control" id="curso" maxlength="30">
                 </td>
             </tr>
-        </table>
-    </fieldset>
-    <input class="submit" type="submit" name="submit" value="Enviar">
-    <input class="reset" type="reset" name="reset" value="Limpar">
+            <tr>
+                <td>
+                    <label for="telefone">Telefone</label>
+                    <input type="text" name="telefone" class="control" maxlength="11" size="20" id="telefone">
+                </td>
+                <td>
+                    <label for="email">Email *</label>
+                    <input type="email" name="email" class="control" id="email" required maxlength="50">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="usuario">Usuário *</label>
+                    <input type="usuario" name="usuario" class="control" id="usuario" required maxlength="20">
+                </td>
+                <td>
+                  <label for="password">Senha *</label>
+                  <input type="password" name="password" class="control" required id="password">
+              </td>
+              <td>
+                <label for="confirm_password">Confirmar Senha *</label>
+                <input type="password" name="confirm_password" class="control" required id="confirm-password">
+            </td>
+        </tr>
+    </table>
+</fieldset>
+<fieldset>
+    <legend>Curso</legend>
+    <table>
+        <tr>
+            <td>
+                <label for="matricula">Matricula *</label>
+                <input type="text" name="matricula" class="control" required id="matricula" maxlength="14"> 
+            </td>
+            <td>
+                <label for="curso">Curso *</label><br>
+                <select name="curso" required id="curso">
+                    <option value="Selecione">Selecione</option>
+                    <option value="Informatica">Informática para Internet</option>
+                    <option value="Logistica">Logística</option>
+                </select>
+            </td>
+            <td>
+                <div class="input text required" style="min-width: 90px; width: 15%">
+                    <label for="periodo">Periodo*</label>
+                    <select name="periodo" required id="Periodo">
+                        <option value="1">1° Periodo</option>
+                        <option value="2">2° Periodo</option>
+                        <option value="3">3° Periodo</option>
+                        <option value="4">4° Periodo</option>
+                    </select>
+                </div>
+            </td>
+        </tr>
+    </table>
+</fieldset>
+<input class="submit" type="submit" name="submit" value="Enviar">
+<input class="reset" type="reset" name="reset" value="Limpar">
 </form>
 <!-- </div> -->
 </div>

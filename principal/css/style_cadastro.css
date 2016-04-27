@@ -90,7 +90,7 @@ label{
   font-weight: bolder;
 }
 select{
-    -webkit-appearance: none !important;
+    /*-webkit-appearance: none !important;*/
     background-color: #fafafa;
     background-position: 100% center;
     background-position-x: 100%;

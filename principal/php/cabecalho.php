@@ -33,7 +33,7 @@ session_start();
                                 <td><input class="large" type="submit" name="enviar" Value="Login"></td>
                             </tr>
                         </table>
-                        <a href="cadastro.php"><small>Não é cadastrado? Cadastre-se aqui</small>
+                        <a href="cadastro.php"><small>Não é cadastrado? Cadastre-se aqui</small></a>
                     </form>
                 </div>
                 <?php
@@ -103,9 +103,9 @@ session_start();
         $link = mysqli_connect ($server, $username, $password, $dbname);
         $query = "SELECT senha, usuario FROM usuarios WHERE usuario='$user' AND senha='$pass'";
         $result = mysqli_query($link, $query);
-        $arr = mysqli_fetch_array($result);
         
         if($result){
+            $arr = mysqli_fetch_assoc($result);
             $row = mysqli_num_rows($result);
         // echo "entrou";
             if($user == $arr['usuario']){
