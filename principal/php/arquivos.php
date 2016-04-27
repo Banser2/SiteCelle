@@ -42,16 +42,16 @@ $uploaddir = '/var/www/uploads/';
 	<h2>Envio de arquivos </h2>
     <hr id="hr-top"></hr>
     <form method="post" id="envio_de_arquivo" onsubmit="validaForm(); return false;" class="form">
-		<p class="name">
+		<div class="name">
             <label for="name">Nome da Atividade</label>
-            <input type="text" name="nome" id="nome" placeholder="Nome da Atividade" />
-		</p>
-		<p class="matricula">
+            <input type="text" name="nome" class="control" id="nome" placeholder="Nome da Atividade" />
+		</div>
+		<div class="name">
             <label for="matricula">Nº da Matricula </label>
-            <input type="text" name="matricula" id="matricula" placeholder="Sua Matricula" />
-		</p>			
+            <input type="text" name="matricula" class="control" id="matricula" placeholder="Sua Matricula" />
+		</div>			
 	<form enctype="multipart/form-data" action="" method="POST" onsubmit="validaForm();">
-    <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+    <input type="hidden" name="MAX_FILE_SIZE" class="control" value="30000" />
     <!-- O Nome do elemento input determina o nome da array $_FILES -->
    <label >Arquivo </label> <input name="arquivo" type="file" />
     <p class="submit">

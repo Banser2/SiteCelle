@@ -5,7 +5,7 @@ include_once 'cabecalho.php';
 <section>
 	<div id="conteudo">
        <h1 class="t1">Cadastro</h1>
-       <hr id="hr-top"></hr>
+       <hr id="hr-top">
        <!-- <div id="area"> -->
        <span>Atenção, os campos marcados com o (*) são obrigatórios</span>
        <form method="POST" accept-charset="utf-8" class="form-group" action="validador.php" id="formulario">
