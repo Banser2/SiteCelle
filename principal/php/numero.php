@@ -8,9 +8,9 @@ include_once 'cabecalho.php';
     <div class="paises">
         <table>
         <tr>
+            <td></td>
             <td>Cardinais</td>
-            <td>Cardinais</td>
-            <td>Ordinais</td>
+            <td></td>
             <td>Ordinais</td>
         </tr>
         <tr>
@@ -308,7 +308,7 @@ include_once 'cabecalho.php';
         </tr>
         <tr>
             <td>2.000.000</td>     
-            <td>Wo Milion</td>     
+            <td>Two Milion</td>     
             <td>1.000.000.000th</td>     
             <td>Billionth</td> 
         </tr>

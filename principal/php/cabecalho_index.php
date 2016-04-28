@@ -19,7 +19,7 @@ session_start();
         <div id="logo">
             <?php
             if(!isset($_SESSION['usuario'])){
-                ?>
+            ?>
                 <div class="login">
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
                         <table id="login" cellspacing="5">
@@ -78,7 +78,7 @@ session_start();
                         <li><a href="php/paises_nacionalidades.php" class="botaoMenu" id="paises_nacionalidades.php">Países e Nacionalidades</a></li>
                         <li><a href="php/expressoes_termos.php" class="botaoMenu" id="expressoes_termos.php">Expressões e Termos</a></li>
             <li><a href="php/numero.php" class="botaoMenu" id="numero.php">Numerais</a></li>
-                <li><a href="php/medidas.php" class="botaoMenu" id="medidas.php">Medidas</a></li>
+    <li><a href="php/medidas.php" class="botaoMenu" id="medidas.php">Medidas</a></li>
                     </ul>    
                 </li>
                 <li><a href="php/arquivos.php" class="botaoMenu" id="arquivos.php">Envio</a></li>

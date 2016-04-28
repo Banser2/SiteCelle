@@ -267,3 +267,34 @@ span {
 	color: white;
 	margin-right: 10px;
 }
+#slide { 
+	width: 1000px; 
+	overflow: hidden; 
+	height: 500px; 
+	margin: 50px auto; 
+	box-shadow: 0 0 8px #000; 
+	position: relative; 
+    border: solid 3px #33A95B;
+} 
+
+#slide img { 
+	position: absolute; 
+	z-index: 1; display: 
+	none; left: 0;
+    width: 1000px;
+    height: 500px;
+    
+} 
+
+#slide p { 
+	z-index:2; 
+	position: absolute; 
+	bottom: 0; 
+	left: 0; 
+	width: 100%; 
+	padding: 10px; 
+	font-family: Arial; 
+	font-size: 18px; 
+	background: rgba(0,0,0,0.5); 
+	color: #fff; 
+}
