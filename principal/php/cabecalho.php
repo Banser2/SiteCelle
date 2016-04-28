@@ -19,7 +19,7 @@ session_start();
         <div id="logo">
             <?php
             if(!isset($_SESSION['usuario'])){
-                ?>
+            ?>
                 <div class="login">
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
                         <table id="login" cellspacing="5">
@@ -77,12 +77,11 @@ session_start();
                     <ul>
                         <li><a href="paises_nacionalidades.php" class="botaoMenu" id="paises_nacionalidades.php">Países e Nacionalidades</a></li>
                         <li><a href="expressoes_termos.php" class="botaoMenu" id="expressoes_termos.php">Expressões e Termos</a></li>
-                                <li><a href="../php/numero.php" class="botaoMenu" id="../php/numero.php">Numerais</a></li>
-                                        <li><a href="../php/medidas.php" class="botaoMenu" id="../php/medidas.php">Medidas</a></li>
+                        <li><a href="numero.php" class="botaoMenu" id="numero.php">Numerais</a></li>
+                        <li><a href="medidas.php" class="botaoMenu" id="medidas.php">Medidas</a></li>
                         
                     </ul>    
                 </li>
-
                 <li><a href="arquivos.php" class="botaoMenu" id="arquivos.php">Envio</a></li>
                 <li><a href="sites_relacionados.php" class="botaoMenu" id="sites_relacionados.php">Sites Relacionados</a></li>        
                 <li><a href="contatos.php" class="botaoMenu" id="CONTATOS.php">Contato</a></li>
