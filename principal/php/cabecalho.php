@@ -77,9 +77,8 @@ session_start();
                     <ul>
                         <li><a href="paises_nacionalidades.php" class="botaoMenu" id="paises_nacionalidades.php">Países e Nacionalidades</a></li>
                         <li><a href="expressoes_termos.php" class="botaoMenu" id="expressoes_termos.php">Expressões e Termos</a></li>
-                        <li><a href="numero.php" class="botaoMenu" id="numero.php">Numerais</a></li>
-                        <li><a href="medidas.php" class="botaoMenu" id="medidas.php">Medidas</a></li>
-                        
+            <li><a href="numero.php" class="botaoMenu" id="numero.php">Numerais</a></li>
+    <li><a href="medidas.php" class="botaoMenu" id="medidas.php">Medidas</a></li>
                     </ul>    
                 </li>
                 <li><a href="arquivos.php" class="botaoMenu" id="arquivos.php">Envio</a></li>
@@ -99,7 +98,6 @@ session_start();
         $password = "";
         $dbname = "site_celle";
 
-        
         $link = mysqli_connect ($server, $username, $password, $dbname);
         $query = "SELECT senha, usuario FROM usuarios WHERE usuario='$user' AND senha='$pass'";
         $result = mysqli_query($link, $query);
@@ -108,7 +106,7 @@ session_start();
             $arr = mysqli_fetch_assoc($result);
             $row = mysqli_num_rows($result);
         // echo "entrou";
-            if($user == $arr['usuario']){
+            if($user == $arr['usuario'] && $pass == $arr['senha']){
                 $_SESSION['usuario'] = $user;
             }
             if($row != 0) {
