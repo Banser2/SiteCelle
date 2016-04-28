@@ -14,7 +14,7 @@ $(function(){
           
       }
   var texto = $(".ativo").attr("alt");
-  $('#slide p').hide().html(texto).delay(100).fadeIn();
+  $('#slide p').hide().html(texto).delay(50).fadeIn();
   }
     
     

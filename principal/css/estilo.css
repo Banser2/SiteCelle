@@ -279,8 +279,9 @@ span {
 
 #slide img { 
 	position: absolute; 
-	z-index: 1; display: 
-	none; left: 0;
+	/*z-index: 1;*/
+	display: none;
+	left: 0;
     width: 1000px;
     height: 500px;
     
@@ -288,7 +289,7 @@ span {
 
 #slide p { 
 	z-index:2; 
-	position: absolute; 
+	position: relative; 
 	bottom: 0; 
 	left: 0; 
 	width: 100%; 
