@@ -268,7 +268,7 @@ span {
 	margin-right: 10px;
 }
 #slide { 
-	width: 1000px; 
+	width: 800px; 
 	overflow: hidden; 
 	height: 500px; 
 	margin: 50px auto; 
@@ -282,7 +282,7 @@ span {
 	/*z-index: 1;*/
 	display: none;
 	left: 0;
-    width: 1000px;
+    width: 800px;
     height: 500px;
     
 } 
