@@ -2,7 +2,7 @@ $(function(){
     $('#slide img:eq(0)').addClass("ativo").show();
     var texto = $(".ativo").attr("alt");
     $('#slide').prepend("<p>"+texto+"</p>");    
-    setInterval(slide,4000);
+    setInterval(slide,5000);
 
   function slide(){
       if($('.ativo').next().size()){
@@ -14,10 +14,6 @@ $(function(){
           
       }
   var texto = $(".ativo").attr("alt");
-  $('#slide p').hide().html(texto).delay(50).fadeIn();
+  $('#slide p').hide().html(texto).delay(150).fadeIn();
   }
-    
-    
-	
-     
 });
