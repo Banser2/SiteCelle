@@ -38,6 +38,9 @@ $uploaddir = '/var/www/uploads/';
   <div id="conteudo">
     <h1 class="t1">Envio de Arquivos</h1>
     <hr id="hr-top"></hr>
+    <?php
+        if(isset($_SESSION['usuario'])) {
+            ?>
     <form method="post" id="envio_de_arquivo" onsubmit="validaForm(); return false;" class="form">
 		<div class="name">
             <label for="name">Nome da Atividade</label>
@@ -57,8 +60,12 @@ $uploaddir = '/var/www/uploads/';
    <br>
     <input type="submit" value="Enviar arquivo" /></p>
 </form>
-    
-  
+    <?php
+        }
+        else {
+            echo "<span style='font-size: 18px; font-family: sans-serif;'>Faça o login para enviar algum arquivo</span>";
+        }
+  ?>
 </body> 
 </html>
 </div>
