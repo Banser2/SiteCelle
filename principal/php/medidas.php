@@ -1,7 +1,7 @@
 <?php 
 include_once 'cabecalho.php';   
 ?>
-<html>
+<title>Medidas</title>
 <div id="conteudo">
     <h1 class="t1">Medidas</h1>
     <hr id="hr-top">
