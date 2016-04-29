@@ -193,7 +193,7 @@ include_once 'cabecalho.php';
             <td>Twenty-Ninth</td>
         </tr>
         <tr>
-            <td>3</td> 
+            <td>30</td> 
             <td>Thirty</td> 
             <td>30th</td> 
             <td>Thirtieth</td>
@@ -297,7 +297,7 @@ include_once 'cabecalho.php';
         <tr>
             <td>100.000</td>     
             <td>A Hundred Thousand</td>    
-            <td>1th</td>     
+            <td>1000th</td>     
             <td>Thousandth</td> 
         </tr>
         <tr>
