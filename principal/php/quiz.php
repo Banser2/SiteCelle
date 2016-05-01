@@ -1,18 +1,15 @@
 <?php
 include_once 'cabecalho.php';
-// require_once 'queries_quiz.php';
-// Inicia a Sessão
-// session_start();
 
-if (!isset($_SESSION['contexto'])) {
-	$_SESSION['contexto'] = 'default';
-	$contexto = $_SESSION['contexto'];
+if (!isset($_SESSION['ctxt'])) {
+	$_SESSION['ctxt'] = 'default';
+	$contexto = $_SESSION['ctxt'];
 }
 ?>
 <title>Quiz</title>
 <section>
 	<div id="conteudo">
-		<h1 class="t1"> Quiz </h1> 
+		<h1 class="t1"> Quiz </h1>
 		<hr id="hr-top"></hr>
 		<?php
 		if(isset($_SESSION['usuario'])) {
@@ -31,7 +28,6 @@ if (!isset($_SESSION['contexto'])) {
 					<option value="eletrodomesticos">Eletrodomésticos</option>
 				</select> 
 			</form>
-
 			<?php
 		}
 		else {
@@ -159,20 +155,20 @@ if (!isset($_SESSION['contexto'])) {
 		];
 
 		function resetContext() {
-			$_SESSION['indice'] = 0;
+			$_SESSION['indx'] = 0;
 			$_SESSION['acertos'] = 0;
 			$_SESSION['erros'] = 0;
-			$_SESSION['contexto'] = "default";
+			$_SESSION['ctxt'] = "default";
 			$_SESSION['id'] = 0;
 			unset($_SESSION['questoes']);
 		}
 
 		if ($_SERVER["REQUEST_METHOD"] == "POST" && (isset($_POST['contexto']) && $_POST['contexto'] !== "default")) {
 			resetContext();
-			$_SESSION['contexto'] = $_POST['contexto'];
+			$_SESSION['ctxt'] = $_POST['contexto'];
 		}
 
-		$contexto = $_SESSION['contexto'];
+		$contexto = $_SESSION['ctxt'];
 
 		$perguntas = $array[$contexto];
 
@@ -207,11 +203,11 @@ if (!isset($_SESSION['contexto'])) {
 			header("location: quiz.php");
 		}
 
-		if (!isset($_SESSION['indice'])) {
-			$_SESSION['indice'] = 0;
+		if (!isset($_SESSION['indx'])) {
+			$_SESSION['indx'] = 0;
 			$indice = 0;
 		} else {
-			$indice = $_SESSION['indice'];
+			$indice = $_SESSION['indx'];
 		}
 
 		if (!isset($_SESSION['acertos'])) {
@@ -252,7 +248,7 @@ if (!isset($_SESSION['contexto'])) {
 				</audio>';
 			}
 		}
-		$_SESSION['indice'] = $indice;
+		$_SESSION['indx'] = $indice;
 		$_SESSION['acertos'] = $acertos;
 		$_SESSION['erros'] = $erros;
 		$_SESSION['id'] = $id;

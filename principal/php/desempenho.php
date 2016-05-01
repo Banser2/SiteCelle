@@ -17,13 +17,20 @@ $erros = $_SESSION['erros'];
 $acertos = $_SESSION['acertos'];
 $percentual = $_SESSION['aproveitamento'];
 $matricula = $_POST['matricula'];
-$contexto = $_SESSION['contexto'];
+
+if(isset($_SESSION['ctxt'])){
+	$contexto = $_SESSION['ctxt'];
+}
+if(isset($_SESSION['contexto'])){
+	$contexto = $_SESSION['contexto'];
+}
 
 $sql = "INSERT INTO `resultados`(`erros`,`acertos`,`percentual`, `matricula`, `contexto`) VALUES ('$erros', '$acertos', '$percentual', '$matricula', '$contexto')";
 
 if (mysqli_query($conn, $sql)) {
 	$_SESSION['erros'] = 0;
 	$_SESSION['acertos'] = 0;
+	$_SESSION['ctxt'] = "default";
 	$_SESSION['contexto'] = "default";
 	$_SESSION['id'] = 0;
 

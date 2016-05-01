@@ -70,7 +70,8 @@ session_start();
                 </li>
                 <li><a href="#" id="#">Atividades</a>
                     <ul>
-                        <li><a href="php/quiz.php" class="botaoMenu" id="quiz.php">Quiz</a></li>
+                <li><a href="php/quiz.php" class="botaoMenu">Quiz 1</a></li>
+        <li><a href="php/exercicio.php" class="botaoMenu">Quiz 2</a></li>
                     </ul>
                 </li>
                 <li><a href="#" id="#">Conteúdos</a> 

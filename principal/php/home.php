@@ -1,10 +1,8 @@
 <?php 
 	include_once 'cabecalho.php';
 ?>
-<head>
 	<script type="text/javaScript" src="../javaScript/jquery.js"></script>
     <script type="text/javaScript" src="../javaScript/script.js"></script>
-</head>
 <title>Home</title>
 <section>
 	<div id="conteudo">

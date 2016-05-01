@@ -20,6 +20,7 @@ session_start();
             <?php
             if(!isset($_SESSION['usuario'])){
             ?>
+            <!-- formulário de login -->
                 <div class="login">
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
                         <table id="login" cellspacing="5">
@@ -70,7 +71,8 @@ session_start();
                 </li>
                 <li><a href="#" id="#">Atividades</a>
                     <ul>
-                        <li><a href="quiz.php" class="botaoMenu" id="quiz.php">Quiz</a></li>
+        <li><a href="quiz.php" class="botaoMenu">Quiz 1</a></li>
+        <li><a href="exercicio.php" class="botaoMenu">Quiz 2</a></li>
                     </ul>
                 </li>
                 <li><a href="#" id="#">Conteúdos</a>

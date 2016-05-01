@@ -299,3 +299,6 @@ span {
 	background: rgba(0,0,0,0.5); 
 	color: #fff; 
 }
+.error {
+	color: #FF0000;
+}
