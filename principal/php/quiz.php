@@ -2,6 +2,7 @@
 ob_start();
 require_once 'cabecalho.php';
 
+// Checa se a variável de sessão do índice contexto não está setada. Se verdadeiro, seta como "default" e salva na variável $contexto
 if (!isset($_SESSION['ctxt'])) {
 	$_SESSION['ctxt'] = 'default';
 	$contexto = $_SESSION['ctxt'];
@@ -13,6 +14,8 @@ if (!isset($_SESSION['ctxt'])) {
 		<h1 class="t1"> Quiz Tipo 1</h1>
 		<hr id="hr-top"></hr>
 		<?php
+
+		// Checa se existe usuário na sessão pois só vai exibir o quiz para usuários logados
 		if(isset($_SESSION['usuario'])) {
 			?>
 			<button class="results" onclick="window.open('resultados.php', 'pagina', 'width=630, height=300;')">Ver Seus Resultados</button>
@@ -31,10 +34,12 @@ if (!isset($_SESSION['ctxt'])) {
 			</form>
 			<?php
 		}
+		// Se não estiver logado, exibe uma mensagem para o usuário fazer o login
 		else {
 			echo "<span style='font-size: 18px; font-family: sans-serif;'>Faça o login para realizar o Quiz</span>";
 		}
 
+		// Arrays dos contextos
 		$cozinha = [
 			['spoon.mp3','spoon.jpg','knife.jpg','glass.jpg','cup.jpg','1', 'Spoon'],
 			['knife.mp3','fork_coz.jpg','coffee_filter.jpg','knife.jpg','drainer.jpg','3', 'Knife'],
@@ -163,7 +168,7 @@ if (!isset($_SESSION['ctxt'])) {
 			$_SESSION['id'] = 0;
 			unset($_SESSION['questoes']);
 		}
-
+		// Zera as variáveis de sessão ao iniciar o quiz (quando o usuário escolhe um contexto para responder)
 		if ($_SERVER["REQUEST_METHOD"] == "POST" && (isset($_POST['contexto']) && $_POST['contexto'] !== "default")) {
 			resetContext();
 			$_SESSION['ctxt'] = $_POST['contexto'];
@@ -192,9 +197,6 @@ if (!isset($_SESSION['ctxt'])) {
 			$questoes = $perguntas;
 			$id = 1;
 		}
-		// fazer uma página para query e incluir aqui;
-
-		// (isset($_GET['id']) && $_GET['id'] == 1)
 
 		if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["reset"])) {
 			$_POST['contexto'] = 'default';
@@ -227,7 +229,6 @@ if (!isset($_SESSION['ctxt'])) {
 
 		if (isset($_POST["escolha"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
 			$escolha = $_POST["escolha"];
-			// echo '<pre>';var_dump($questoes, $_SERVER, $_POST);echo '</pre>';
 			if($escolha === $questoes[$indice][5]){
 				$indice++;
 				$acertos++;

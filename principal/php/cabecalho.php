@@ -18,6 +18,8 @@ session_start();
     <header>
         <div id="logo">
             <?php
+
+            // Checa se não existe usuário salvo na sessão (Só vai exibir os campos para login se não existir)
             if(!isset($_SESSION['usuario'])){
             ?>
             <!-- formulário de login -->
@@ -38,7 +40,9 @@ session_start();
                     </form>
                 </div>
                 <?php
-            } else {            
+            }
+            // Se existir usuário salvo na sessão, exibe uma mensagem de boas vindas e o botão para logout
+            else {
                 ?>
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
                     <input class="submit logout" style="margin-right: 15%; margin-top: 52px;" type="submit" name="logout" value="Logout">
@@ -46,6 +50,7 @@ session_start();
                 <?php
                 echo "<span class='boas_vindas'>Bem vindo(a), <b>" . $_SESSION['usuario'] . "</b>!! </span>";
             }
+            // Se o botão para 'logout' for clicado, tira o usuário da sessão e redireciona para página home.php
             if(isset($_POST['logout'])) {
                 unset($_SESSION['usuario']);
                 header("location: home.php");
@@ -91,37 +96,51 @@ session_start();
         </nav>
     </header>
     <?php
+
+    // validação do usuário para login
+
     if(isset($_POST['enviar'])) {
-        $user = $_POST['usuario'];
-        $pass = md5($_POST['senha']);
+        $user = $_POST['usuario'];      // Salva o conteúdo do input name="usuario" do form de login na variável $user
+        $pass = md5($_POST['senha']);   // Salva o conteúdo do input name="senha" do form de login na variável $pass
         
+        // Salva os dados do servidor, usuario, senha e nome do banco de dados para fazer a conexão
+
         $server = "localhost";
         $username = "root";
         $password = "";
         $dbname = "site_celle";
 
-        $link = mysqli_connect ($server, $username, $password, $dbname);
-        $query = "SELECT senha, usuario FROM usuarios WHERE usuario='$user' AND senha='$pass'";
-        $result = mysqli_query($link, $query);
+        $link = mysqli_connect ($server, $username, $password, $dbname);    // Faz a conexão com o banco de dados
         
+        // consulta para puxar do banco usuario e senha que sejam iguais aos digitados no form de login
+
+        $query = "SELECT senha, usuario FROM usuarios WHERE usuario='$user' AND senha='$pass'";
+        $result = mysqli_query($link, $query);      // Executa a query e salva o resultado
+        
+        // Checa se houve resultado da consulta
         if($result){
-            $arr = mysqli_fetch_assoc($result);
-            $row = mysqli_num_rows($result);
-        // echo "entrou";
+            $arr = mysqli_fetch_assoc($result);     // Transforma o resultado da consulta em um array associativo (os índices são as colunas da tabela 'usuarios')
+            $row = mysqli_num_rows($result);        // Recebe o número de linhas retornadas da consulta ao banco
+
+            // Checa se o usuário e senha digitados no form de login são iguais aos que estão salvos no banco de dados
             if($user == $arr['usuario'] && $pass == $arr['senha']){
+                // Se verdadeiro, salva o usuário na sessão
                 $_SESSION['usuario'] = $user;
             }
+
+            // Checa se o número de linhas retornadas da consulta é diferente de zero. Se verdadeiro, redireciona para a página "home.php"
             if($row != 0) {
                 header("location: home.php");
             }
+
+            // Senão, exibe um alerta para o usuário
             else {
-            // header("location: sobre.php");
                 echo "<script>
                 alert('Usuário ou senha incorretos!!');
                 </script>";
             }
         }
-
+        // Encerra a conexão com o banco de dados
         mysqli_close($link);
     }
     ?>

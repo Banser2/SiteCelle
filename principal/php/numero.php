@@ -8,10 +8,10 @@ include_once 'cabecalho.php';
     <div class="paises">
         <table>
         <tr>
-            <td></td>
-            <td>Cardinais</td>
-            <td></td>
-            <td>Ordinais</td>
+            <th style="width: auto"></th>
+            <th style="width: auto">Cardinais</th>
+            <th style="width: auto"></th>
+            <th style="width: auto">Ordinais</th>
         </tr>
         <tr>
             <td>0</td> 
