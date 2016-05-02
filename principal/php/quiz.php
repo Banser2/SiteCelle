@@ -1,5 +1,6 @@
 <?php
-include_once 'cabecalho.php';
+ob_start();
+require_once 'cabecalho.php';
 
 if (!isset($_SESSION['ctxt'])) {
 	$_SESSION['ctxt'] = 'default';
@@ -9,7 +10,7 @@ if (!isset($_SESSION['ctxt'])) {
 <title>Quiz</title>
 <section>
 	<div id="conteudo">
-		<h1 class="t1"> Quiz </h1>
+		<h1 class="t1"> Quiz Tipo 1</h1>
 		<hr id="hr-top"></hr>
 		<?php
 		if(isset($_SESSION['usuario'])) {
@@ -300,5 +301,6 @@ if (!isset($_SESSION['ctxt'])) {
 	</div>
 </section>
 <?php
-include_once 'rodape.php';
+require_once 'rodape.php';
+ob_end_flush();
 ?>

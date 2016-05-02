@@ -1,5 +1,6 @@
-<?php 
-include_once 'cabecalho.php';
+<?php
+ob_start();
+require_once 'cabecalho.php';
 
 if(!isset($_SESSION['contexto'])){
 	$_SESSION['contexto'] = "default";
@@ -9,7 +10,7 @@ if(!isset($_SESSION['contexto'])){
 <title>Quiz</title>
 <section>
 	<div id="conteudo">
-		<h1 class="t1"> Quiz </h1>
+		<h1 class="t1"> Quiz Tipo 2</h1>
 			<hr id="hr-top"></hr>
 			<?php
 		if(isset($_SESSION['usuario'])) {
@@ -242,9 +243,8 @@ if(!isset($_SESSION['contexto'])){
 				<h2>Review Exercise</h2>
 				<p><span><b>What do you see? <b></span><br>
 					<span>Question <?php echo $indice + 1;?></span></p>
-
-<br>
-<br>
+				<br>
+				<br>
 				<?php
 				}
 				if($_SESSION['contexto'] !== "default"){
@@ -276,5 +276,6 @@ if(!isset($_SESSION['contexto'])){
 				</div>
 			</section> 
 			<?php 
-			include_once 'rodape.php';   
+			require_once 'rodape.php';
+			ob_end_flush(); 
 			?>
