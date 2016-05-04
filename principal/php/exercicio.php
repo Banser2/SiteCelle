@@ -20,7 +20,7 @@ if(!isset($_SESSION['contexto'])){
 			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 				<select name="contexto" onchange="this.form.submit()">
 					<option value="default">Selecione</option>
-					<option value="default">Todos</option>
+					<option value="todos">Todos</option>
 					<option value="comidas">Comida</option>
 					<option value="escolar">Escola</option>
 					<option value="transporte">Transporte</option>
@@ -264,12 +264,14 @@ if(!isset($_SESSION['contexto'])){
 
 							<?php } ?>
 							<br><br>
-							<input type="submit" name="submit" value="Submit"> 
+							<input style="float: left" type="submit" name="submit" value="Submit"> 
 						</form>
 						<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
 
-							<input type="submit" name="reset" value="Reset"> 
+							<input style="float: left; margin-left: 15px;" type="submit" name="reset" value="Reset"> 
 						</form>
+						<br>
+						<br>
 						<?php 
 					}
 					?> 
@@ -277,5 +279,5 @@ if(!isset($_SESSION['contexto'])){
 			</section> 
 			<?php 
 			require_once 'rodape.php';
-			ob_end_flush(); 
+			ob_end_flush();
 			?>

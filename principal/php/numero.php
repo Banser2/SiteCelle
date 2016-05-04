@@ -278,7 +278,7 @@ include_once 'cabecalho.php';
         </tr>
         <tr>
             <td>1010 </td>     
-            <td>A Thousand one ten</td>
+            <td>A Thousand and ten</td>
             <td>100th</td>     
             <td>Hundredth </td> 
         </tr>

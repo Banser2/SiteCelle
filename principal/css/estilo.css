@@ -208,7 +208,7 @@ h2 {
 .paises table th, .expressoes table th {
     text-align: left;
 }
-.paises th:first-child, .paises th:nth-child(2), .paises th:last-child {
+.paises th {
     width: 220px;
 }
 .paises {

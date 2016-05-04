@@ -13,13 +13,13 @@ include_once 'cabecalho.php';
                 <th>Equivalente Métrico</th>
             </tr>
             <tr>
-                <td>1 Inch</td> 
+                <td>1 inch</td> 
                 <td>  </td>
                 <td>2,54 cm</td> 
             </tr>
             <tr>
-                <td>1 Foor</td> 
-                <td>12 Inches</td> 
+                <td>1 foot</td> 
+                <td>12 inches</td> 
                 <td>30,48 cm</td> 
             </tr> 
             <tr>
@@ -28,22 +28,22 @@ include_once 'cabecalho.php';
                 <td>91,44 cm</td> 
             </tr>  
             <tr>
-                <td>1 Pole, Rod, Perch</td> 
+                <td>1 pole, rod, perch</td> 
                 <td>5 1/2</td> 
                 <td>5,03 m</td> 
             </tr> 
             <tr>
-                <td>1 Chain(Ingl.)</td> 
-                <td>4 poles, Rod, Perch</td> 
+                <td>1 chain(Ingl.)</td> 
+                <td>4 poles, rod, perch</td> 
                 <td>20,12 m</td> 
             </tr>
             <tr>
-                <td>1 Furlong (200 yards)</td>
-                <td>10 Chains (40 rods)</td> 
+                <td>1 furlong (200 yards)</td>
+                <td>10 chains (40 rods)</td> 
                 <td>201,17 m</td> 
             </tr>
             <tr>
-                <td>1 Statute mile (1760 yards)</td> 
+                <td>1 statute mile (1760 yards)</td> 
                 <td>8 furlongs (5280 feet)</td> 
                 <td>1.609 km</td> 
             </tr>
@@ -72,7 +72,7 @@ include_once 'cabecalho.php';
                 <td>6,45 cm<sup>2</sup> </td> 
             </tr> 
             <tr>
-                <td>1 square foor  </td> 
+                <td>1 square foot  </td> 
                 <td> </td> <td>9,29 dm<sup>2</sup> </td> 
             </tr> 
             <tr>
