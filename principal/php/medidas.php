@@ -29,7 +29,7 @@ include_once 'cabecalho.php';
             </tr>  
             <tr>
                 <td>1 pole, rod, perch</td> 
-                <td>5 1/2</td> 
+                <td>5 <small><sup>1</sup>/<sub>2</sub></small> yards</td> 
                 <td>5,03 m</td> 
             </tr> 
             <tr>

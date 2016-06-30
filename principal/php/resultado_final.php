@@ -1,5 +1,22 @@
 <?php 
 include_once 'cabecalho.php';
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "site_celle";
+
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+if (!$conn) {
+	die("Connection failed: " . mysqli_connect_error());
+}
+
+$usuario = $_SESSION['usuario'];
+
+$query = "SELECT matricula FROM usuarios WHERE usuario = '$usuario'";
+$result = mysqli_query($conn, $query);
+$arr = mysqli_fetch_assoc($result);
+$matric = $arr['matricula'];
 ?>
 <title>Resultado Quiz</title>
 <section>
@@ -111,12 +128,21 @@ include_once 'cabecalho.php';
 		<br>
 		<form action="desempenho.php" method="POST">
 			<label for="matricula">Matricula:</label>
-			<input type="text" name="matricula"  maxlength="14" style="min-width: 100px; width: 10%;"/> 
-			<input class="submit" name="submeter" type="submit" value="Salvar Resultado"/>
+			<input id="matricula" type="text" name="matricula"  maxlength="14" style="min-width: 100px; width: 10%;"/> 
+			<input class="submit" name="submit" type="submit" value="Salvar Resultado"/>
 		</form>
 	</div>
 	<br/>
 </section>
+<script type="text/javascript">
+$('form').on('submit', function () {
+    if($(this).find('input[name="matricula"]').val() != <?= $matric ?> {
+        alert("A matrícula informada não pertence ao usuário logado ou não existe!!!!");
+        $('#matricula').focus();
+        return false;
+    }
+});
+</script>
 <?php
 include_once 'rodape.php';
 ?>

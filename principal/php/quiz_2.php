@@ -185,7 +185,7 @@ if(!isset($_SESSION['contexto'])){
 				$_SESSION['erros'] = 0;
 				$_SESSION['contexto'] = "default";
 				$indice = 0;
-				header("location: exercicio.php");
+				header("location: quiz_2.php");
 			}
 
 			if (!isset($_SESSION['indice'])) {
