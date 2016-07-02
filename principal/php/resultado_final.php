@@ -29,6 +29,12 @@ $matric = $arr['matricula'];
 		<br/>
 		<div class="resultado">
 			<?php
+			if(isset($_SESSION['contexto']) && $_SESSION['contexto'] != 'default'){
+				$contexto = $_SESSION['contexto'];
+			}
+			if(isset($_SESSION['ctxt']) && $_SESSION['ctxt'] != 'default'){
+				$contexto = $_SESSION['ctxt'];
+			}
 			if(isset($_POST['voltar'])){
 				$_SESSION['acertos'] = 0;
 				$_SESSION['erros'] = 0;
@@ -136,7 +142,7 @@ $matric = $arr['matricula'];
 </section>
 <script type="text/javascript">
 $('form').on('submit', function () {
-    if($(this).find('input[name="matricula"]').val() != <?= $matric ?> {
+    if($(this).find('input[name="matricula"]').val() != <?= $matric ?>) {
         alert("A matrícula informada não pertence ao usuário logado ou não existe!!!!");
         $('#matricula').focus();
         return false;

@@ -19,10 +19,10 @@ if(isset($_POST['submit'])){
 	$matricula = $_POST['matricula'];
 	$usuario = $_SESSION['usuario'];
 
-	if(isset($_SESSION['ctxt'])){
+	if(isset($_SESSION['ctxt']) && $_SESSION['ctxt'] != 'default'){
 		$contexto = $_SESSION['ctxt'];
 	}
-	if(isset($_SESSION['contexto'])){
+	if(isset($_SESSION['contexto']) && $_SESSION['contexto'] != 'default'){
 		$contexto = $_SESSION['contexto'];
 	}
 
@@ -30,8 +30,6 @@ if(isset($_POST['submit'])){
 	$result = mysqli_query($conn, $query);
 	$arr = mysqli_fetch_assoc($result);
 	$matric = $arr['matricula'];
-
-	if($matric == $matricula){
 
 		$sql = "INSERT INTO `resultados`(`erros`,`acertos`,`percentual`, `matricula`, `contexto`) VALUES ('$erros', '$acertos', '$percentual', '$matricula', '$contexto')";
 
@@ -52,15 +50,6 @@ if(isset($_POST['submit'])){
 		} else {
 			echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 		}
-	} else {
-		echo "<div id='conteudo'>
-				<h3 style='margin-top: 30px;'>A matrícula informada não pertence ao usuário logado ou não existe!!</h3>
-				<br/><br/>
-				<a style='float: left;' href='cadastro.php'>Clique aqui para fazer o cadastro</a>
-				<a style='float: left; margin-left: 15px;' href='quiz.php'>Clique aqui para voltar ao quiz</a>
-			</div>
-			";
-	}
 
 	mysqli_close($conn);
 }
