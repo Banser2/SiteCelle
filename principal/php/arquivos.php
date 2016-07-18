@@ -19,11 +19,13 @@ $uploaddir = '/var/www/uploads/';
             erro = false;
             if($('#nome').val() == '')
             {
-                alert('Você precisa preencher o campo Nome');erro = true;
+                alert('Você precisa preencher o campo Nome');
+                erro = true;
             }
             if($('#matricula').val() == '' && !erro)
             {
-                alert('Você precisa preencher o campo Matricula');erro = true;
+                alert('Você precisa preencher o campo Matricula');
+                erro = true;
             }
             
             //se nao tiver erros
